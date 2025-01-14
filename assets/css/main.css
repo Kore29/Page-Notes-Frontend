@@ -1,0 +1,45 @@
+/**Principal**/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Noto Sans", serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.header {
+    background-color: rgb(136, 136, 136);
+}
+
+/**Todo el nav here**/
+
+.navbar ul {
+    list-style-type: none;
+    background-color: rgb(56, 56, 56);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    color: antiquewhite;
+    background-color: black;
+}
+
+.navbar li {
+    float: left
+}
+
+/**Contenedores**/
