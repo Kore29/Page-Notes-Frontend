@@ -1,4 +1,4 @@
-/**Principal**/
+/**------------------------ General ------------------------**/
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -7,12 +7,53 @@
     font-family: "Noto Sans", serif;
 }
 
-h1 {
-    text-align: center;
-}
-
 .header {
     background-color: rgb(136, 136, 136);
+}
+
+body {
+    background-color: rgb(38, 38, 38);
+    margin-top: 0;
+}
+
+h1 {
+    color: rgb(183, 183, 183);
+    font-size: 65px;
+}
+
+
+h2 {
+    color: rgb(183, 183, 183);
+    font-size: 30px;
+    margin: 30px;
+}
+
+h3 {
+    color: rgb(124, 124, 124);
+    font-size: 25px;
+}
+
+hr {
+    border-radius: 10px;
+    border: none;
+
+    height: 8px; 
+    background-color: #333;
+    
+    margin: 20px; 
+}
+
+.code {
+    background-color: #303030;
+    margin: 25px;
+    padding: 10px;
+
+    border-radius: 5px;
+    overflow-x: auto;
+
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
 }
 
 /**Todo el nav here**/
@@ -20,26 +61,118 @@ h1 {
 .navbar ul {
     list-style-type: none;
     background-color: rgb(56, 56, 56);
-    padding: 0;
     margin: 0;
     overflow: hidden;
+    padding: 10px 0
 }
 
-.navbar a{
+.navbar a {
     color: white;
     text-decoration: none;
     padding: 15px;
     display: block;
     text-align: center;
+    font-size: 20px;
+
+    background-color: #9EB7E5;
+    border-radius: 15px;
+    size-adjust: 10px;
+
+    margin: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
 }
 
 .navbar a:hover {
     color: antiquewhite;
-    background-color: black;
+    background-color: #648DE5;
 }
 
 .navbar li {
     float: left
 }
 
-/**Contenedores**/
+/**Todo el Asidebar here**/
+
+.sidebar {
+    flex: 1;
+    background-color: #4a4a4a;
+    padding: 20px;
+    border-left: 1px solid #4c4c4c;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 25px;
+}
+
+.sidebar ul li a {
+    margin-left: 15px;
+    text-decoration: underline;
+    color: #bbbbbb;
+    font-size: 20px;
+}
+
+/**------------------------ Contenedores ------------------------**/
+
+/**Principal**/
+
+.main-container {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.main-tittle {
+    display: inline-block;
+    vertical-align: auto;
+    margin: 0 10px;
+    max-width: 900px;
+    font-size: 170px;
+    height: auto;
+    line-height: 1.1;
+}
+
+.container-icons {
+    display: flex;
+    margin-left: 180px;
+    margin-top: 0;
+    margin-right: 80px;
+    height: 400px;
+}
+
+.main-icons {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.main-icons:hover {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+/**HTML**/
+
+.html-container {
+    display: flex;
+    margin: 0;
+}
+
+.html-content {
+    flex: 5;
+    padding-right: 20px;
+    margin: 20px
+}
+
+
+.html-text {
+    color: rgb(206, 206, 206);
+    margin: 25px;
+    font-size: 25px;
+}
+
+/**CSS**/

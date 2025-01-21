@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice con barra lateral</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        /* Contenido principal */
+      
+
+        /* Barra lateral (índice) */
+        aside {
+            flex: 1;
+            background-color: #f4f4f4;
+            border-left: 1px solid #ddd;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+            overflow-y: auto;
+        }
+        /* Estilo de los enlaces del índice */
+        aside a {
+            display: block;
+            color: #35424a;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        aside a:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Contenido Principal</h1>
+            <section id="seccion1">
+                <h2>Sección 1</h2>
+                <p>Texto de la sección 1...</p>
+            </section>
+            <section id="seccion2">
+                <h2>Sección 2</h2>
+                <p>Texto de la sección 2...</p>
+            </section>
+            <section id="seccion3">
+                <h2>Sección 3</h2>
+                <p>Texto de la sección 3...</p>
+            </section>
+        </div>
+        <aside>
+            <h3>Índice</h3>
+            <a href="#seccion1">Sección 1</a>
+            <a href="#seccion2">Sección 2</a>
+            <a href="#seccion3">Sección 3</a>
+        </aside>
+    </div>
+</body>
+</html>
