@@ -37,10 +37,11 @@ hr {
     border-radius: 10px;
     border: none;
 
-    height: 8px; 
+    height: 8px;
     background-color: #333;
-    
-    margin: 20px; 
+
+    margin: 20px;
+    margin-bottom: 350px;
 }
 
 .code {
@@ -136,7 +137,55 @@ hr {
     font-size: 170px;
     height: auto;
     line-height: 1.1;
+
+    transition: color 0.5s ease;
 }
+
+.main-tittle:hover {
+    color: rgb(223, 223, 223)
+}
+
+.main-table {
+    opacity: 0;
+    transform: scale(0.1);
+    transition: opacity 1s ease, transform 1s ease;
+
+    border-collapse: collapse;
+    margin: auto;
+}
+
+table.animate {
+    opacity: 1;
+    /* Visible */
+    transform: scale(1);
+    /* Escala normal */
+}
+
+.main-table td {
+    vertical-align: top;
+    padding: 0px;
+    text-align: center;
+}
+
+.main-img {
+    max-width: auto;
+    height: 350px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.main-content-text {
+    margin-right: 100px;
+    margin-left: 100px;
+    font-size: 22px;
+    color: aliceblue;
+    text-align: justify;
+}
+
+.main-content-text p {
+    margin-bottom: 20px;
+}
+
 
 .container-icons {
     display: flex;
@@ -174,5 +223,7 @@ hr {
     margin: 25px;
     font-size: 25px;
 }
+
+
 
 /**CSS**/
