@@ -23,8 +23,8 @@
         <div class="html-content">
             <h1 id="html-title">HyperText Markup Language</h1>
 
-            <h2 id="estructura-html">Estructura fonamental de HTML</h2>
 
+            <h2 id="estructura-html">Estructura fonamental de HTML</h2>
             <div class="html-text">
                 <p>
                     Un documento HTML debe tener siempre una estructura inicial, con
@@ -169,6 +169,8 @@
                 </ul>
             </div>
 
+
+            <h2 id="etiquetes-principals">Etiquetes principals d'una secció</h2>
             <div class="html-text">
                 <p>Las etiquetas semánticas en HTML mejoran la estructura del contenido, haciéndolo más accesible y
                     comprensible para los navegadores y motores de búsqueda.</p>
@@ -240,8 +242,8 @@
 
             </div>
 
-            <h2 id="estructura-element">Estructura d'un element</h2>
 
+            <h2 id="estructura-element">Estructura d'un element</h2>
             <div class="html-text">
                 <p>Un elemento HTML está compuesto por varias partes fundamentales, que incluyen:</p>
                 <ul>
@@ -327,15 +329,135 @@
                     agrupación, que veremos más adelante.</p>
             </div>
 
+
             <h2 id="etiquetes-basiques">Etiquetes bàsiques de HTML</h2>
+            <div class="html-text">
+                <h3>Agrupaciones</h3>
 
-            <h2 id="enllacos">Creació d'enllaços interns i externs</h2>
+                <p>Las siguientes etiquetas se utilizan para agrupar información, como es el caso de las etiquetas <code
+                        class="code">&lt;div&gt;</code> o <code class="code">&lt;p&gt;</code> que vimos en el ejemplo
+                    mostrado anteriormente:</p>
 
-            <h2 id="imatges">Gestió i estils d'imatges</h2>
+                <ul>
+                    <li><code class="code">&lt;div&gt;</code> Capa o división utilizado para agrupar varias etiquetas
+                        HTML.</li>
+                    <li><code class="code">&lt;p&gt;</code> Define un párrafo de texto (con sus etiquetas HTML para
+                        texto).</li>
+                    <li><code class="code">&lt;pre&gt;</code> Establece un texto preformateado (respetando espacios y
+                        saltos de línea).</li>
+                    <li><code class="code">&lt;blockquote&gt;</code> cite Agrupa información y características de una
+                        cita (autor, fuente, etc...).</li>
+                    <li><code class="code">&lt;main&gt;</code> Contenedor para englobar la parte principal de la página.
+                    </li>
+                    <li><code class="code">&lt;hr&gt;</code> Indica una separación temática del texto.</li>
+                </ul>
+
+                <p>La etiqueta <code class="code">&lt;pre&gt;</code> se utiliza para mostrar texto respetando el formato
+                    con el que
+                    está escrito (espacios en blanco, saltos de línea, etc...). También es muy habitual utilizarlo junto
+                    a la etiqueta <code class="code">&lt;code&gt;</code> anidada en su interior, de forma que tenemos un
+                    bloque de código preformateado:</p>
+
+                <pre><code>&lt;pre&gt;
+    &lt;code class="language-javascript"&gt;
+        function masaje(s) {
+            console.log(s)
+        }
+    &lt;code class="language-javascript"&gt;
+&lt;/pre&gt;</code></pre>
+
+                <p>Como se puede ver, en el caso de crear bloques de código, suele ser una buena práctica incluir un
+                    atributo class con el lenguaje que estamos utilizando. Esto no es una funcionalidad nativa de HTML5,
+                    pero muchas librerías de Javascript nos permiten resaltar la sintaxis dependiendo del lenguaje de
+                    programación indicado (ya que varía de uno a otro).</p>
+
+                <P>Por otro lado, la etiqueta <code class="code">&lt;blockquote&gt;</code> suele utilizarse para agrupar
+                    información referida a una cita o frase:</P>
+
+                <pre><code>&lt;blockquote cite="http://es.wikiquote.org/wiki/Fight_Club"&gt;
+&lt;p&gt;La primera regla del Club de la Lucha es: Nadie habla sobre el Club de la Lucha.&lt;/p&gt;
+    &lt;footer&gt;
+        &lt;cite class="author"&gt;Tyler Durden&lt;/cite&gt; en
+        &lt;cite class="title"&gt;El Club de la Lucha&lt;/cite&gt;
+    &lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+
+                <h3>Texto</h3>
+
+                <p>En un documento HTML existen dos tipos de etiquetas HTML: las etiquetas que contienen fragmentos de
+                    texto (se utilizan para dar significado a esas palabras o fragmentos) y las etiquetas que agrupan
+                    conjunto de información (fragmentos de texto y/u otras etiquetas).</p>
+
+                <p><i>También se pueden diferenciar como enlementos en bloque o elementos en línea (pero como eso
+                        significa presentación está un poco desaconsejado)</i></p>
+
+                <p>En el siguiente ejemplo, tenemos la etiqueta <code class="code">&lt;p&gt;</code>, que pertenece al
+                    segundo grupo (agrupación), mientras que la etiqueta <code class="code">&lt;strong&gt;</code> forma
+                    parte del primer grupo, que es del que vamos a hablar en esta sección:</p>
+
+                <pre><code>&lt;p&gt;
+    Hola, juan si les esto te deseo lo &lt;strong&gt;mejor&lt;/strong&gt;
+&lt;/p&gt;</code></pre>
+
+                <h3>Fragmentos de texto</h3>
+                <p>Existe una serie de etiquetas HTML simples para seleccionar un fragmento de texto y dotarlo de un
+                    significado especial. Por ejemplo:</p>
+
+                <ul>
+                    <li><code class="code">&lt;strong&gt;</code> Fragmento de texto importante o palabras clave.</li>
+                    <li><code class="code">&lt;em&gt;</code> Fragmento de texto enfatizado respecto a la frase que lo
+                        contiene.</li>
+                    <li><code class="code">&lt;mark&gt;</code> Fragmento de texto resaltado, simulando estar marcado con
+                        rotulador amarillo.</li>
+                    <li><code class="code">&lt;i&gt;</code> Fragmento de texto con voz o tono alternativo al resto.</li>
+                    <li><code class="code">&lt;b&gt;</code> Fragmento de texto sin importancia destacable (fines
+                        utilitarios).</li>
+                    <li><code class="code">&lt;u&gt;</code> Fragmento de texto para nombres propios o escritura
+                        incorrecta intencionada (sic).</li>
+                    <li><code class="code">&lt;s&gt;</code> Fragmento de texto inexacto o que ya no es relevante.
+                        (errores o inexactitudes)</li>
+                    <li><code class="code">&lt;span&gt;</code> Fragmento de texto sin significado (útil para
+                        seleccionar).</li>
+                    <li><code class="code">&lt;cite&gt;</code> Fragmento de texto con el título de un trabajo creativo:
+                        obras, libros...</li>
+                </ul>
+
+                <p>Por su parte, la etiqueta <code class="code">&lt;span&gt;</code> es una versión en línea de la
+                    etiqueta <code class="code">&lt;div&gt;</code>, ya que su misión es agrupar contenido de texto,
+                    mientras que la misión del <code class="code">&lt;div&gt;</code> es agrupar otras etiquetas HTML que
+                    a su vez pueden agrupar otras y otras etiquetas HTML.</p>
+
+                <h3>Modificación de significado</h3>
+
+                <h3>Los saltos de línea</h3>
+
+                <h3>Aspectos Informáticos</h3>
+            </div>
+
+
+            <h2 id="llistes">Llistes: ordenades, no ordenades i símbols</h2>
+
 
             <h2 id="taules">Creació i personalització de taules</h2>
 
-            <h2 id="llistes">Llistes: ordenades, no ordenades i símbols</h2>
+
+            <h2 id="enllacos">Creació d'enllaços interns i externs</h2>
+            <div class="html-text">
+                <h3>Enlaces</h3>
+
+                <h3>URLs y rutas</h3>
+
+            </div>
+
+
+            <h2 id="multimedia">Gestió i estils dels arxius multimedia</h2>
+            <div class="html-text">
+                <h3>Imagenes</h3>
+
+                <h3>Video</h3>
+
+            </div>
+
 
             <h2 id="formularis">Formularis: tipus d'inputs i configuració</h2>
         </div>
@@ -347,12 +469,12 @@
                     <li><a href="#html-title">HyperText Markup Language</a></li>
                     <li class="side-element"><a href="#estructura-html">Estructura fonamental de HTML</a></li>
                     <li class="side-element"><a href="#etiquetes-principals">Etiquetes principals de la secció</a></li>
-                    <li class="side-element"><a href="#estil-document">Maneres de donar estil al document HTML</a></li>
+                    <li class="side-element"><a href="#estructura-element">Etiquetes d'un element</a></li>
                     <li class="side-element"><a href="#etiquetes-basiques">Etiquetes bàsiques de HTML</a></li>
-                    <li class="side-element"><a href="#enllacos">Creació d'enllaços interns i externs</a></li>
-                    <li class="side-element"><a href="#imatges">Gestió i estils d'imatges</a></li>
-                    <li class="side-element"><a href="#taules">Creació i personalització de taules</a></li>
                     <li class="side-element"><a href="#llistes">Llistes: ordenades, no ordenades i símbols</a></li>
+                    <li class="side-element"><a href="#taules">Creació i personalització de taules</a></li>
+                    <li class="side-element"><a href="#enllacos">Creació d'enllaços interns i externs</a></li>
+                    <li class="side-element"><a href="#multimedia">Gestió i estils d'arxius multimedia</a></li>
                     <li class="side-element"><a href="#formularis">Formularis: tipus d'inputs i configuració</a></li>
                 </ul>
             </div>

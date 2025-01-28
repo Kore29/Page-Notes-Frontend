@@ -22,10 +22,9 @@ h1 {
     font-size: 65px !important;
 }
 
-
 h2 {
-    color: rgb(111, 113, 222);
-    font-size: 35px !important;
+    color: rgb(183, 183, 183);
+    font-size: 35px;
     margin: 30px;
 }
 
@@ -220,6 +219,10 @@ table.animate {
     margin: 0;
 }
 
+.html-container h2 {
+    color: rgb(111, 113, 222) !important;
+}
+
 .html-content {
     flex: 5;
     padding-right: 20px;
@@ -261,6 +264,11 @@ table.animate {
 
 .html-text pre {
     margin: 20px;
+}
+
+
+#etiquetes-basiques, #etiquetes-principals, #estructura-element, #llistes, #taules, #enllacos, #multimedia, #formularis {
+    scroll-margin-top: 200px;
 }
 
 /**CSS**/
