@@ -2,10 +2,12 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
     <title>Notes Frontend - HTML</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css" />
 </head>
 
 <body>
@@ -18,47 +20,266 @@
         </ul>
     </nav>
     <div class="html-container">
-        
         <div class="html-content">
-
             <h1 id="html-title">HyperText Markup Language</h1>
 
             <h2 id="estructura-html">Estructura fonamental de HTML</h2>
-        
-            <h2 id="etiquetes-principals">Etiquetes principals de la secció</h2>
-        
-            <h2 id="estil-document">Maneres de donar estil al document HTML</h2>
-        
-            <h2 id="etiquetes-basiques">Etiquetes bàsiques de HTML</h2>
-        
-            <h2 id="enllacos">Creació d'enllaços interns i externs</h2>
-        
-            <h2 id="imatges">Gestió i estils d'imatges</h2>
-        
-            <h2 id="taules">Creació i personalització de taules</h2>
-        
-            <h2 id="llistes">Llistes: ordenades, no ordenades i símbols</h2>
-        
-            <h2 id="formularis">Formularis: tipus d'inputs i configuració</h2>
-            
 
+            <div class="html-text">
+                <p>
+                    Un documento HTML debe tener siempre una estructura inicial, con
+                    algunas etiquetas y características obligatorias y otras
+                    recomendables. Ese esquema es el siguiente, donde se diferencian
+                    tres elementos principales:
+                </p>
+
+                <p>
+                    El elemento HTML (o elemento HTML raíz) representa la raíz de un
+                    documento HTML. El resto de elementos descienden de este elemento.
+                </p>
+
+                <ul>
+                    <li>
+                        El elemento Head en el documento HTML se especificarán todos los
+                        metadatos del documento, es decir, la parte «que no se ve»
+                        directamente en el navegador de forma visual.
+                    </li>
+                    <li>
+                        Representa el contenido de un documento HTML. Solo puede haber un
+                        elemento body en un documento.
+                    </li>
+                </ul>
+
+                <h3>Tipo de documento</h3>
+                <p>
+                    En la primera línea del documento HTML debe ir especificado siempre
+                    de qué tipo de documento HTML se trata. No es absolutamente
+                    obligatorio indicarlo (de hecho, hay páginas webs que no lo tienen),
+                    pero eso trae algunas consecuencias que veremos más adelante.
+                </p>
+                <p>
+                    Para indicar que se trata de un documento HTML5, colocaremos la
+                    siguiente línea:
+                </p>
+
+                <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+
+                <p>
+                    En versiones anteriores, como HTML4 o XHTML, el tipo de documento se
+                    especificaba de forma más compleja:
+                </p>
+
+                <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</code></pre>
+
+                <p>
+                    Los navegadores, antes de comenzar a dibujar una página web, lo
+                    primero que hacen es leer esta línea. Si no se especifica, el
+                    navegador entra en lo que se llama <strong>Quirk mode</strong> (modo
+                    peculiar o no estándar), donde activa un modo de retrocompatibilidad
+                    con páginas antiguas.
+                </p>
+
+                <h3>Elementos en el head</h3>
+
+                <p>
+                    La estructura de un documento HTML debe contener siempre dos
+                    etiquetas principales: la cabecera de la página <code class="code">head</code> y el cuerpo de la
+                    página <code class="code">body</code>.
+                </p>
+
+                <h3>Cabecera del documento: el <code class="code">head</code></h3>
+
+                <p>
+                    En la sección de cabecera del documento se suelen incluir las
+                    siguientes etiquetas:
+                </p>
+                <ul>
+                    <li>
+                        <code>&lt;title&gt;</code>: Título de la página (visible en la
+                        pestaña del navegador o en buscadores).
+                    </li>
+                    <li>
+                        <code>&lt;base&gt;</code>: Define la URL base del documento para
+                        gestionar rutas relativas.
+                    </li>
+                    <li>
+                        <code>&lt;link&gt;</code>: Establece relaciones del documento con
+                        otros externos.
+                    </li>
+                    <li>
+                        <code>&lt;meta&gt;</code>: Establece metadatos específicos (por
+                        ejemplo, codificación).
+                    </li>
+                    <li>
+                        <code>&lt;style&gt;</code>: Incluye estilos CSS que afectan
+                        únicamente al documento actual.
+                    </li>
+                    <li>
+                        <code>&lt;script&gt;</code>: Define scripts que se cargan o
+                        ejecutan en la página.
+                    </li>
+                </ul>
+
+                <h3><code>Style</code> y <code>Script</code></h3>
+                <p>
+                    Estas dos etiquetas tradicionalmente se incluían en la cabecera,
+                    pero actualmente también pueden utilizarse en el cuerpo:
+                </p>
+                <ul>
+                    <li>
+                        <code>&lt;style&gt;</code>: Para incluir estilos CSS en la propia
+                        página.
+                    </li>
+                    <li>
+                        <code>&lt;script&gt;</code>: Para incluir código JavaScript, ya
+                        sea interno o externo.
+                    </li>
+                </ul>
+
+                <h3>Título y codificación de caracteres</h3>
+                <p>
+                    En el interior de la etiqueta <code>&lt;head&gt;</code> se
+                    recomienda incluir, como mínimo:
+                </p>
+
+                <pre><code>&lt;head&gt;
+      &lt;title&gt;Título del documento&lt;/title&gt;
+      &lt;meta charset="utf-8" /&gt;
+    &lt;/head&gt;</code></pre>
+
+                <p>
+                    La etiqueta <code>&lt;meta charset="utf-8"&gt;</code> asegura que el
+                    navegador utilice la codificación UTF-8, evitando problemas con
+                    caracteres como vocales acentuadas, la ñ, ¿, ¡, entre otros.
+                </p>
+
+                <h3>Recomendaciones para evitar problemas de codificación:</h3>
+                <ul>
+                    <li>
+                        Usar siempre <code>&lt;meta charset="utf-8"&gt;</code> en la
+                        cabecera.
+                    </li>
+                    <li>
+                        Guardar el archivo HTML con codificación UTF-8 en el editor
+                        utilizado.
+                    </li>
+                    <li>
+                        Si persisten problemas, revisar la configuración del servidor web.
+                    </li>
+                </ul>
+            </div>
+
+            <h2 id="etiquetes-principals">Etiquetes principals de la secció</h2>
+
+            <div class="html-text">
+                <p>Las etiquetas semánticas en HTML mejoran la estructura del contenido, haciéndolo más accesible y
+                    comprensible para los navegadores y motores de búsqueda.</p>
+
+                <h3>1. &lt;header&gt;</h3>
+                <p>Define un encabezado para el documento o sección.</p>
+                <pre><code>&lt;header&gt;
+  &lt;h1&gt;Mi sitio web&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;!-- enlaces de navegación --&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+
+                <h3>2. &lt;footer&gt;</h3>
+                <p>Define un pie de página, generalmente con información como derechos de autor o enlaces legales.</p>
+                <pre><code>&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2025 Mi sitio web&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+
+                <h3>3. &lt;article&gt;</h3>
+                <p>Define contenido independiente que puede ser reutilizado o distribuido, como artículos, entradas de
+                    blog, etc.</p>
+                <pre><code>&lt;article&gt;
+  &lt;h2&gt;Título del artículo&lt;/h2&gt;
+  &lt;p&gt;Contenido del artículo...&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+                <h3>4. &lt;section&gt;</h3>
+                <p>Define una sección dentro del documento, como una parte de una página relacionada por temática.</p>
+                <pre><code>&lt;section&gt;
+  &lt;h2&gt;Sección de noticias&lt;/h2&gt;
+  &lt;p&gt;Contenido de noticias...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+                <h3>5. &lt;nav&gt;</h3>
+                <p>Define una sección de navegación, comúnmente con enlaces a otras partes del sitio.</p>
+                <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Acerca de&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+                <h3>6. &lt;aside&gt;</h3>
+                <p>Define contenido relacionado con el contenido principal, como una barra lateral o enlaces
+                    relacionados.</p>
+                <pre><code>&lt;aside&gt;
+  &lt;h3&gt;Noticias relacionadas&lt;/h3&gt;
+  &lt;p&gt;Contenido de noticias...&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+
+                <h3>7. &lt;main&gt;</h3>
+                <p>Define el contenido principal de la página, único y relevante para la temática.</p>
+                <pre><code>&lt;main&gt;
+  &lt;h1&gt;Bienvenido a mi página&lt;/h1&gt;
+  &lt;p&gt;Contenido principal...&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+
+                <h3>8. &lt;mark&gt;</h3>
+                <p>Destaca un texto que ha sido resaltado por relevancia o búsqueda.</p>
+                <pre><code>&lt;p&gt;Este es un &lt;mark&gt;texto resaltado&lt;/mark&gt;&lt;/p&gt;</code></pre>
+
+                <h3>9. &lt;figure&gt; y &lt;figcaption&gt;</h3>
+                <p>Agrupa contenido multimedia como imágenes y proporciona una descripción de ese contenido.</p>
+                <pre><code>&lt;figure&gt;
+  &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+  &lt;figcaption&gt;Descripción de la imagen&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+            </div>
+
+            <h2 id="estil-document">Estructura d'un element</h2>
+
+            <h2 id="etiquetes-basiques">Etiquetes bàsiques de HTML</h2>
+
+            <h2 id="enllacos">Creació d'enllaços interns i externs</h2>
+
+            <h2 id="imatges">Gestió i estils d'imatges</h2>
+
+            <h2 id="taules">Creació i personalització de taules</h2>
+
+            <h2 id="llistes">Llistes: ordenades, no ordenades i símbols</h2>
+
+            <h2 id="formularis">Formularis: tipus d'inputs i configuració</h2>
         </div>
+
         <aside class="sidebar">
-            <h3>Índice</h3>
-            <ul>
-                <li><a href="#html-title">HyperText Markup Language</a></li>
-                <li><a href="#estructura-html">Estructura fonamental de HTML</a></li>
-                <li><a href="#etiquetes-principals">Etiquetes principals de la secció</a></li>
-                <li><a href="#estil-document">Maneres de donar estil al document HTML</a></li>
-                <li><a href="#etiquetes-basiques">Etiquetes bàsiques de HTML</a></li>
-                <li><a href="#enllacos">Creació d'enllaços interns i externs</a></li>
-                <li><a href="#imatges">Gestió i estils d'imatges</a></li>
-                <li><a href="#taules">Creació i personalització de taules</a></li>
-                <li><a href="#llistes">Llistes: ordenades, no ordenades i símbols</a></li>
-                <li><a href="#formularis">Formularis: tipus d'inputs i configuració</a></li>
-            </ul>
+            <div class="sticky">
+                <h3>Índice</h3>
+                <ul>
+                    <li><a href="#html-title">HyperText Markup Language</a></li>
+                    <li class="side-element"><a href="#estructura-html">Estructura fonamental de HTML</a></li>
+                    <li class="side-element"><a href="#etiquetes-principals">Etiquetes principals de la secció</a></li>
+                    <li class="side-element"><a href="#estil-document">Maneres de donar estil al document HTML</a></li>
+                    <li class="side-element"><a href="#etiquetes-basiques">Etiquetes bàsiques de HTML</a></li>
+                    <li class="side-element"><a href="#enllacos">Creació d'enllaços interns i externs</a></li>
+                    <li class="side-element"><a href="#imatges">Gestió i estils d'imatges</a></li>
+                    <li class="side-element"><a href="#taules">Creació i personalització de taules</a></li>
+                    <li class="side-element"><a href="#llistes">Llistes: ordenades, no ordenades i símbols</a></li>
+                    <li class="side-element"><a href="#formularis">Formularis: tipus d'inputs i configuració</a></li>
+                </ul>
+            </div>
         </aside>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
 </body>
 
 </html>

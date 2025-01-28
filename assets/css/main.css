@@ -1,6 +1,7 @@
 /**------------------------ General ------------------------**/
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
 
 * {
     margin: 0;
@@ -18,19 +19,19 @@ body {
 
 h1 {
     color: rgb(183, 183, 183);
-    font-size: 65px;
+    font-size: 65px !important;
 }
 
 
 h2 {
-    color: rgb(183, 183, 183);
-    font-size: 30px;
+    color: rgb(111, 113, 222);
+    font-size: 35px !important;
     margin: 30px;
 }
 
 h3 {
-    color: rgb(124, 124, 124);
-    font-size: 25px;
+    color: rgb(156, 156, 156);
+    font-size: 25px !important;
 }
 
 hr {
@@ -45,17 +46,16 @@ hr {
 }
 
 .code {
-    background-color: #303030;
-    margin: 25px;
-    padding: 10px;
-
-    border-radius: 5px;
-    overflow-x: auto;
-
-    font-size: 25px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 1.5;
+    color:#979797;
+    font-family: 'Cascadia Code', sans-serif;
+    font-size: 20px;
+    background-color: #363A3F;
+    border-radius: 8px !important; 
+    margin: 0 !important;
+    margin-left: 0;
+    padding:8px;
 }
+
 
 /**Todo el nav here**/
 
@@ -103,6 +103,12 @@ hr {
     border-left: 1px solid #4c4c4c;
 }
 
+.sticky {
+    position: sticky;
+    top: 40px;
+    font-size: 20px;
+}
+
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -113,9 +119,15 @@ hr {
 }
 
 .sidebar ul li a {
-    margin-left: 15px;
+    margin-left: 0;
     text-decoration: underline;
     color: #bbbbbb;
+    font-size: 20px;
+}
+
+.sidebar ul li:hover a {
+    text-decoration: underline;
+    color: #615ac5;
     font-size: 20px;
 }
 
@@ -156,9 +168,7 @@ hr {
 
 table.animate {
     opacity: 1;
-    /* Visible */
     transform: scale(1);
-    /* Escala normal */
 }
 
 .main-table td {
@@ -185,7 +195,6 @@ table.animate {
 .main-content-text p {
     margin-bottom: 20px;
 }
-
 
 .container-icons {
     display: flex;
@@ -217,13 +226,41 @@ table.animate {
     margin: 20px
 }
 
-
-.html-text {
+.html-text p {
     color: rgb(206, 206, 206);
-    margin: 25px;
-    font-size: 25px;
+    margin: 30px;
+    font-size: 20px;
+    text-align: justify;
 }
 
+.html-text h3 {
+    color: rgb(134, 134, 134);
+    margin: 30px;
+    font-size: 23px !important;
+    text-decoration: underline;
+}
 
+.html-text li {
+    color: rgb(206, 206, 206);
+    margin-top: 10px;
+    margin-left: 35px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.html-text code pre {
+    background-color: 0;
+    font-size: 15px;
+    border: #4c4c4c;
+}
+
+.html-text code {
+    border-radius: 19px;
+    margin-left: 15px;
+}
+
+.html-text pre {
+    margin: 20px;
+}
 
 /**CSS**/
