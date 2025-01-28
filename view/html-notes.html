@@ -88,51 +88,50 @@
                     página <code class="code">body</code>.
                 </p>
 
-                <h3>Cabecera del documento: el <code class="code">head</code></h3>
-
                 <p>
+                    <u>Cabecera del documento head</u><br>
                     En la sección de cabecera del documento se suelen incluir las
                     siguientes etiquetas:
                 </p>
                 <ul>
                     <li>
-                        <code>&lt;title&gt;</code>: Título de la página (visible en la
+                        <code class="code">&lt;title&gt;</code>: Título de la página (visible en la
                         pestaña del navegador o en buscadores).
                     </li>
                     <li>
-                        <code>&lt;base&gt;</code>: Define la URL base del documento para
+                        <code class="code">&lt;base&gt;</code>: Define la URL base del documento para
                         gestionar rutas relativas.
                     </li>
                     <li>
-                        <code>&lt;link&gt;</code>: Establece relaciones del documento con
+                        <code class="code">&lt;link&gt;</code>: Establece relaciones del documento con
                         otros externos.
                     </li>
                     <li>
-                        <code>&lt;meta&gt;</code>: Establece metadatos específicos (por
+                        <code class="code">&lt;meta&gt;</code>: Establece metadatos específicos (por
                         ejemplo, codificación).
                     </li>
                     <li>
-                        <code>&lt;style&gt;</code>: Incluye estilos CSS que afectan
+                        <code class="code">&lt;style&gt;</code>: Incluye estilos CSS que afectan
                         únicamente al documento actual.
                     </li>
                     <li>
-                        <code>&lt;script&gt;</code>: Define scripts que se cargan o
+                        <code class="code">&lt;script&gt;</code>: Define scripts que se cargan o
                         ejecutan en la página.
                     </li>
                 </ul>
 
-                <h3><code>Style</code> y <code>Script</code></h3>
+                <h3>Style y Script</h3>
                 <p>
                     Estas dos etiquetas tradicionalmente se incluían en la cabecera,
                     pero actualmente también pueden utilizarse en el cuerpo:
                 </p>
                 <ul>
                     <li>
-                        <code>&lt;style&gt;</code>: Para incluir estilos CSS en la propia
+                        <code class="code">&lt;style&gt;</code>: Para incluir estilos CSS en la propia
                         página.
                     </li>
                     <li>
-                        <code>&lt;script&gt;</code>: Para incluir código JavaScript, ya
+                        <code class="code">&lt;script&gt;</code>: Para incluir código JavaScript, ya
                         sea interno o externo.
                     </li>
                 </ul>
@@ -170,13 +169,11 @@
                 </ul>
             </div>
 
-            <h2 id="etiquetes-principals">Etiquetes principals de la secció</h2>
-
             <div class="html-text">
                 <p>Las etiquetas semánticas en HTML mejoran la estructura del contenido, haciéndolo más accesible y
                     comprensible para los navegadores y motores de búsqueda.</p>
 
-                <h3>1. &lt;header&gt;</h3>
+                <h3>1. <code class="code">&lt;header&gt;</code></h3>
                 <p>Define un encabezado para el documento o sección.</p>
                 <pre><code>&lt;header&gt;
   &lt;h1&gt;Mi sitio web&lt;/h1&gt;
@@ -185,13 +182,13 @@
   &lt;/nav&gt;
 &lt;/header&gt;</code></pre>
 
-                <h3>2. &lt;footer&gt;</h3>
+                <h3>2. <code class="code">&lt;footer&gt;</code></h3>
                 <p>Define un pie de página, generalmente con información como derechos de autor o enlaces legales.</p>
                 <pre><code>&lt;footer&gt;
   &lt;p&gt;&amp;copy; 2025 Mi sitio web&lt;/p&gt;
 &lt;/footer&gt;</code></pre>
 
-                <h3>3. &lt;article&gt;</h3>
+                <h3>3. <code class="code">&lt;article&gt;</code></h3>
                 <p>Define contenido independiente que puede ser reutilizado o distribuido, como artículos, entradas de
                     blog, etc.</p>
                 <pre><code>&lt;article&gt;
@@ -199,14 +196,14 @@
   &lt;p&gt;Contenido del artículo...&lt;/p&gt;
 &lt;/article&gt;</code></pre>
 
-                <h3>4. &lt;section&gt;</h3>
+                <h3>4. <code class="code">&lt;section&gt;</code></h3>
                 <p>Define una sección dentro del documento, como una parte de una página relacionada por temática.</p>
                 <pre><code>&lt;section&gt;
   &lt;h2&gt;Sección de noticias&lt;/h2&gt;
   &lt;p&gt;Contenido de noticias...&lt;/p&gt;
 &lt;/section&gt;</code></pre>
 
-                <h3>5. &lt;nav&gt;</h3>
+                <h3>5. <code class="code">&lt;nav&gt;</code></h3>
                 <p>Define una sección de navegación, comúnmente con enlaces a otras partes del sitio.</p>
                 <pre><code>&lt;nav&gt;
   &lt;ul&gt;
@@ -215,7 +212,7 @@
   &lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
 
-                <h3>6. &lt;aside&gt;</h3>
+                <h3>6. <code class="code">&lt;aside&gt;</code></h3>
                 <p>Define contenido relacionado con el contenido principal, como una barra lateral o enlaces
                     relacionados.</p>
                 <pre><code>&lt;aside&gt;
@@ -223,18 +220,18 @@
   &lt;p&gt;Contenido de noticias...&lt;/p&gt;
 &lt;/aside&gt;</code></pre>
 
-                <h3>7. &lt;main&gt;</h3>
+                <h3>7. <code class="code">&lt;main&gt;</code></h3>
                 <p>Define el contenido principal de la página, único y relevante para la temática.</p>
                 <pre><code>&lt;main&gt;
   &lt;h1&gt;Bienvenido a mi página&lt;/h1&gt;
   &lt;p&gt;Contenido principal...&lt;/p&gt;
 &lt;/main&gt;</code></pre>
 
-                <h3>8. &lt;mark&gt;</h3>
+                <h3>8. <code class="code">&lt;mark&gt;</code></h3>
                 <p>Destaca un texto que ha sido resaltado por relevancia o búsqueda.</p>
                 <pre><code>&lt;p&gt;Este es un &lt;mark&gt;texto resaltado&lt;/mark&gt;&lt;/p&gt;</code></pre>
 
-                <h3>9. &lt;figure&gt; y &lt;figcaption&gt;</h3>
+                <h3>9. <code class="code">&lt;figure&gt; y &lt;figcaption&gt;</code></h3>
                 <p>Agrupa contenido multimedia como imágenes y proporciona una descripción de ese contenido.</p>
                 <pre><code>&lt;figure&gt;
   &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
@@ -243,7 +240,92 @@
 
             </div>
 
-            <h2 id="estil-document">Estructura d'un element</h2>
+            <h2 id="estructura-element">Estructura d'un element</h2>
+
+            <div class="html-text">
+                <p>Un elemento HTML está compuesto por varias partes fundamentales, que incluyen:</p>
+                <ul>
+                    <li>Tag - Nombre de elemento (example: <code class="code">a</code>)</li>
+                    <li>Attribute - modificadores HTML (example: <code class="code">href</code>)</li>
+                    <li>Value - valor aplicado a un atributo (example: http://tania.dev)</li>
+                    <li>Element -todo dentro de la etiqueta HTML: atributos, valores y contenido..</li>
+                </ul>
+
+                <pre><code>&lt;tag attribute="value">Contenidos del elemento&lt;/tag&gt;</code></pre>
+                <pre><code>&lt;a href="http://tania.dev">La Web de Tania&lt;/a&gt;</code></pre>
+
+
+                <p>La parte esencial de una etiqueta HTML es lo que se denomina la etiqueta de apertura. Se trata de
+                    escribir el nombre de la etiqueta en cuestión, colocándola entre los carácteres < y>. Aunque no es
+                        terminantemente obligatorio, se recomienda y considera una buena costumbre escribir las
+                        etiquetas
+                        siempre en minúsculas.</p>
+
+                <p>En HTML5 no se puede colocar cualquier palabra como etiqueta, sino que existen una serie específica
+                    de etiquetas, cada una con una misión y objetivo diferente. Por ejemplo, la etiqueta <code
+                        class="code">&lt;Strong&gt;</Strong></code></p>
+
+                <p>Como se puede ver, la mayoría de las etiquetas requieren que se especifique un cierre de
+                    etiqueta para saber donde termina de actuar. Se caracteriza en que se escribe igual que la
+                    etiqueta de apertura, pero con la barra / inmediatamente después del <code class="code">&lt;</code>.
+                </p>
+
+                <h3>Atributos</h3>
+
+                <p>En algunas etiquetas
+                    HTML, existen algunos atributos específicos (que pueden ser opcionales u obligatorios). Los
+                    atributos determinan cierta información sobre la etiqueta (o su modo de actuar) y generalmente van
+                    asociados a un valor determinado. Este par atributo-valor se escribe después del nombre de la
+                    etiqueta, separándola por espacio y antes del carácter> de
+                    la etiqueta de apertura:</p>
+
+                <pre><code>&lt;strong id="dato">Prueba&lt;/strong&gt;</code></pre>
+
+                <p>En este caso, la etiqueta sería strong, el atributo id, el valor de id sería dato, mientras
+                    que el contenido de la etiqueta es Contenido. Por otro lado, y al igual que las etiquetas,
+                    cada atributo tiene una misión y comportamiento concreto. Aunque los valores pueden ir
+                    rodeados por comillas simples, se recomienda escribir el valor siempre entre comillas
+                    dobles.</p>
+
+                <p>Existen 3 tipos de atributos dependiendo de sus valores:</p>
+
+                <ul>
+                    <li>Conjunto finito de valores: Son los atributos en los que puedes especificarle una serie de
+                        valores limitada. Cualquier otro valor que no sea uno de ellos, no será <code
+                            class="code">válido.lang="es"</code>
+                    </li>
+                    <li>Valores libres: Son los atributos en los que puedes especificar un valor libremente, como
+                        una dirección URL o un texto, y no existe una serie de valores específicos para escribir.</li>
+                    <li>Valores booleanos: Son los atributos que deben tener un valor verdadero (true) o un valor
+                        falso (false). En HTML5 estos atributos se escriben sin valor (solo el atributo) si son
+                        verdaderos y se omiten para indicar que son falsos.</li>
+                </ul>
+
+
+                <p>En el interior de la etiqueta HTML (después de la etiqueta de apertura y antes de la
+                    etiqueta de cierre) se debe colocar la información que queremos que sea afectada por dicha
+                    etiqueta. En el siguiente ejemplo se ve como contiene un fragmento de texto:</p>
+
+                <pre><code>&lt;strong id="dato" class="clase1" lang="es"&gt;Contenido de texto&lt;/strong&gt;</code></pre>
+
+                <p>Ten en cuenta que una etiqueta puede tener varios pares atributo-valor, como se ve en el
+                    ejemplo anterior, pero nunca se debe repetir el mismo atributo en una misma etiqueta varias
+                    veces, ya que sobreescribiría al anterior. El orden de los atributos no importa. Más
+                    adelante explicaremos que tipos de atributos existen y para que sirven.</p>
+
+                <p>Sin embargo, una etiqueta puede contener desde un fragmento de texto hasta un grupo de
+                    etiquetas. Esto depende mucho de la etiqueta a utilizar, y se verá más adelante en el
+                    apartado de etiquetas. Un posible ejemplo sería el siguiente:</p>
+
+                <pre><code>&lt;div id="pagina"&gt;
+    &lt;strong>Contenido importante&lt;/strong&gt;
+&lt;/div&gt;</code></pre>
+
+                <p>Nótese que dentro de la etiqueta vemos que no sólo hay un fragmento de texto, sino que
+                    además incluye otra etiqueta, <code class="code">&lt;strong&gt;</code> en este caso. Esto ocurre en
+                    las etiquetas de
+                    agrupación, que veremos más adelante.</p>
+            </div>
 
             <h2 id="etiquetes-basiques">Etiquetes bàsiques de HTML</h2>
 
