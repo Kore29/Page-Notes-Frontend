@@ -44,6 +44,10 @@ hr {
     margin-bottom: 350px;
 }
 
+pre code {
+    font-size: 19px !important;
+}
+
 .code {
     color:#979797;
     font-family: 'Cascadia Code', sans-serif;
@@ -63,7 +67,7 @@ hr {
     background-color: rgb(56, 56, 56);
     margin: 0;
     overflow: hidden;
-    padding: 10px 0
+    padding: 10px 0;
 }
 
 .navbar a {
@@ -122,6 +126,8 @@ hr {
     text-decoration: underline;
     color: #bbbbbb;
     font-size: 20px;
+
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .sidebar ul li:hover a {
@@ -131,6 +137,24 @@ hr {
 }
 
 /**------------------------ Contenedores ------------------------**/
+
+/**Animaciones**/
+
+/**Hola Juan, se que esto no apareció en el temario, pero me hacia ilusión ponerlo porque hace poco hice un curso sobre esto**/
+:target {
+    animation: highlight 2s;
+}
+
+@keyframes highlight {
+    from { 
+        background-color: rgb(80, 80, 80); 
+        border-radius: 10px;
+    }
+    to { 
+        background-color: transparent; 
+        border-radius: 10px;
+    }
+}
 
 /**Principal**/
 
@@ -221,6 +245,7 @@ table.animate {
 
 .html-container h2 {
     color: rgb(111, 113, 222) !important;
+    padding: 10px; padding-left: 0 !important;
 }
 
 .html-content {
@@ -267,7 +292,7 @@ table.animate {
 }
 
 
-#etiquetes-basiques, #etiquetes-principals, #estructura-element, #llistes, #taules, #enllacos, #multimedia, #formularis {
+#etiquetes-basiques, #etiquetes-principals, #estructura-html, #estructura-element, #llistes, #taules, #enllacos, #multimedia, #formularis {
     scroll-margin-top: 200px;
 }
 

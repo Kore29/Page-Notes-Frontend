@@ -145,10 +145,10 @@
                 <pre><code>&lt;head&gt;
       &lt;title&gt;Título del documento&lt;/title&gt;
       &lt;meta charset="utf-8" /&gt;
-    &lt;/head&gt;</code></pre>
+&lt;/head&gt;</code></pre>
 
                 <p>
-                    La etiqueta <code>&lt;meta charset="utf-8"&gt;</code> asegura que el
+                    La etiqueta <code class="code">&lt;meta charset="utf-8"&gt;</code> asegura que el
                     navegador utilice la codificación UTF-8, evitando problemas con
                     caracteres como vocales acentuadas, la ñ, ¿, ¡, entre otros.
                 </p>
@@ -156,7 +156,7 @@
                 <h3>Recomendaciones para evitar problemas de codificación:</h3>
                 <ul>
                     <li>
-                        Usar siempre <code>&lt;meta charset="utf-8"&gt;</code> en la
+                        Usar siempre <code class="code">&lt;meta charset="utf-8"&gt;</code> en la
                         cabecera.
                     </li>
                     <li>
@@ -173,10 +173,12 @@
             <h2 id="etiquetes-principals">Etiquetes principals d'una secció</h2>
             <div class="html-text">
                 <p>Las etiquetas semánticas en HTML mejoran la estructura del contenido, haciéndolo más accesible y
-                    comprensible para los navegadores y motores de búsqueda.</p>
+                    comprensible para los navegadores y motores de búsqueda. A continuación, se presentan algunas de las
+                    etiquetas semánticas más importantes y sus usos:</p>
 
                 <h3>1. <code class="code">&lt;header&gt;</code></h3>
-                <p>Define un encabezado para el documento o sección.</p>
+                <p>Define un encabezado para el documento o sección. Suele contener elementos como el logotipo, el
+                    título del sitio web y la navegación principal.</p>
                 <pre><code>&lt;header&gt;
   &lt;h1&gt;Mi sitio web&lt;/h1&gt;
   &lt;nav&gt;
@@ -185,28 +187,32 @@
 &lt;/header&gt;</code></pre>
 
                 <h3>2. <code class="code">&lt;footer&gt;</code></h3>
-                <p>Define un pie de página, generalmente con información como derechos de autor o enlaces legales.</p>
+                <p>Define un pie de página, generalmente con información como derechos de autor, enlaces legales,
+                    información de contacto, etc.</p>
                 <pre><code>&lt;footer&gt;
   &lt;p&gt;&amp;copy; 2025 Mi sitio web&lt;/p&gt;
 &lt;/footer&gt;</code></pre>
 
                 <h3>3. <code class="code">&lt;article&gt;</code></h3>
                 <p>Define contenido independiente que puede ser reutilizado o distribuido, como artículos, entradas de
-                    blog, etc.</p>
+                    blog, comentarios, etc. Cada <code class="code">&lt;article&gt;</code> debe tener sentido por sí
+                    mismo.</p>
                 <pre><code>&lt;article&gt;
   &lt;h2&gt;Título del artículo&lt;/h2&gt;
   &lt;p&gt;Contenido del artículo...&lt;/p&gt;
 &lt;/article&gt;</code></pre>
 
                 <h3>4. <code class="code">&lt;section&gt;</code></h3>
-                <p>Define una sección dentro del documento, como una parte de una página relacionada por temática.</p>
+                <p>Define una sección dentro del documento, como una parte de una página relacionada por temática. Es
+                    útil para dividir el contenido en partes lógicas.</p>
                 <pre><code>&lt;section&gt;
   &lt;h2&gt;Sección de noticias&lt;/h2&gt;
   &lt;p&gt;Contenido de noticias...&lt;/p&gt;
 &lt;/section&gt;</code></pre>
 
                 <h3>5. <code class="code">&lt;nav&gt;</code></h3>
-                <p>Define una sección de navegación, comúnmente con enlaces a otras partes del sitio.</p>
+                <p>Define una sección de navegación, comúnmente con enlaces a otras partes del sitio. Es esencial para
+                    la accesibilidad y la usabilidad del sitio web.</p>
                 <pre><code>&lt;nav&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
@@ -215,31 +221,20 @@
 &lt;/nav&gt;</code></pre>
 
                 <h3>6. <code class="code">&lt;aside&gt;</code></h3>
-                <p>Define contenido relacionado con el contenido principal, como una barra lateral o enlaces
-                    relacionados.</p>
+                <p>Define contenido relacionado con el contenido principal, como una barra lateral, enlaces
+                    relacionados, anuncios, etc. Es útil para contenido complementario.</p>
                 <pre><code>&lt;aside&gt;
   &lt;h3&gt;Noticias relacionadas&lt;/h3&gt;
   &lt;p&gt;Contenido de noticias...&lt;/p&gt;
 &lt;/aside&gt;</code></pre>
 
                 <h3>7. <code class="code">&lt;main&gt;</code></h3>
-                <p>Define el contenido principal de la página, único y relevante para la temática.</p>
+                <p>Define el contenido principal de la página, único y relevante para la temática. Solo debe haber un
+                    <code class="code">&lt;main&gt;</code> por documento.</p>
                 <pre><code>&lt;main&gt;
   &lt;h1&gt;Bienvenido a mi página&lt;/h1&gt;
   &lt;p&gt;Contenido principal...&lt;/p&gt;
 &lt;/main&gt;</code></pre>
-
-                <h3>8. <code class="code">&lt;mark&gt;</code></h3>
-                <p>Destaca un texto que ha sido resaltado por relevancia o búsqueda.</p>
-                <pre><code>&lt;p&gt;Este es un &lt;mark&gt;texto resaltado&lt;/mark&gt;&lt;/p&gt;</code></pre>
-
-                <h3>9. <code class="code">&lt;figure&gt; y &lt;figcaption&gt;</code></h3>
-                <p>Agrupa contenido multimedia como imágenes y proporciona una descripción de ese contenido.</p>
-                <pre><code>&lt;figure&gt;
-  &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
-  &lt;figcaption&gt;Descripción de la imagen&lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
-
             </div>
 
 
@@ -436,9 +431,134 @@
 
 
             <h2 id="llistes">Llistes: ordenades, no ordenades i símbols</h2>
+            <div class="html-text">
+                <p>En HTML podemos crear listas de información de una forma muy sencilla. Empecemos por las etiquetas
+                    disponibles:</p>
+                <ul>
+                    <li><code class="code">ul</code>Define una lista sin orden. Se trata de la etiqueta contenedora.
+                    </li>
+                    <li><code class="code">ol</code>start, reversed, type Define una lista numerada (con orden).
+                        Etiqueta contenedora.</li>
+                    <li><code class="code">li</code>value Define un ítem de la lista.</li>
+                </ul>
+                <p>En primer lugar debemos elegir la etiqueta
+                    <code class="code">&lt;ul&gt;</code> o la etiqueta <code class="code">&lt;ol&gt;</code> dependiendo
+                    de si queremos una lista donde no
+                    importa el orden (lista de objetos
+                    que tengo en el bolsillo) o una lista en la que si importa el orden (lista de canciones
+                    preferidas de mayor a menor). Una vez elegido, comenzamos a añadir ítems, uno por etiqueta <code
+                        class="code">&lt;li&gt;</code>.
+                    La forma más básica de crear una lista sería la siguiente:
+                </p>
 
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;Primer Item.&lt;/li&gt;
+    &lt;li&gt;Segundo Item.&lt;/li&gt;
+    &lt;li&gt;Tercer Item.&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                <p>Si reemplazamos la etiqueta <code class="code">&lt;ul&gt;</code> por <code
+                        class="code">&lt;ol&gt;</code> los ítems pasan a ser ítems numerados (por defecto, números
+                    enteros a partir de 1).</p>
+                <p>Las etiquetas permiten indicar varios atributos opcionales para modificar la forma en que se numera
+                    cada ítem:</p>
+
+                <pre><code> &lt;ol start="c" type="a" reversed&gt;&lt;/ol&gt;
+    &lt;li value="1"&gt;Primer Item.&lt;/li&gt;
+    &lt;li value="1"&gt;Segundo Item.&lt;/li&gt;
+    &lt;li value="1"&gt;Tercer Item.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                <p>Obsérvese que también se puede establecer el atributo value a cada ítem de la lista para asignarle,
+                    por ejemplo, un valor numérico o ponderarlos.</p>
+            </div>
 
             <h2 id="taules">Creació i personalització de taules</h2>
+            <div class="html-text">
+                <p>Las tablas están incluidas en HTML desde sus primeras versiones y son una forma fantástica de mostrar
+                    datos claramente. Además, si las construimos de forma semántica y correctamente, es muy sencillo
+                    darle estilos desde CSS y cambiar su diseño con unas cuantas propiedades CSS, puesto que mediante
+                    las etiquetas que la componen se puede hacer referencia a cada parte de la misma.</p>
+
+                <h3>Tablas básicas</h3>
+                <p>Una tabla puede ser sencilla o compleja, dependiendo de nuestro objetivo y la cantidad de etiquetas o
+                    atributos a utilizar. Así pues, veamos primero las etiquetas básicas para crear una tabla de la
+                    forma más sencilla posible:</p>
+                <ul>
+                    <li><code class="code">&lt;table&gt;</code>Etiqueta contenedora que tendrá en su interior toda la
+                        tabla.</li>
+                    <li><code class="code">&lt;tr&gt;</code>Table Row. Etiqueta contenedora de cada fila de la tabla.
+                    </li>
+                    <li><code class="code">&lt;td&gt;</code>Table Data. Cada una de las celdas de la tabla.</li>
+                    <li><code class="code">&lt;th&gt;</code>Table Header. Cada una de las celdas de cabecera de la
+                        tabla.</li>
+                </ul>
+
+                <p>
+                    La etiqueta <code class="code">&lt;table&gt;</code> sería el elemento que contendría todos los
+                    elementos de la tabla, mientras que <code class="code">&lt;th&gt;</code> y
+                    <code class="code">&lt;td&gt;</code> se utilizarían para cada uno de los campos de la tabla
+                    (cabecera y celda respectivamente). Cada
+                    vez que se quisiera añadir una nueva fila, habría que incluirlo todo dentro de una etiqueta <code
+                        class="code">&lt;tr&gt;</code>.
+                </p>
+                <p>Estas cuatro etiquetas serían las etiquetas necesarias para crear una tabla. Un ejemplo muy sencillo
+                    de una tabla de 3x2 celdas (exceptuando las cabeceras), sería la siguiente:</p>
+
+                <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Título columna 1&lt;/th&gt;
+        &lt;th&gt;Título columna 2&lt;/th&gt;
+        &lt;th&gt;Título columna 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Celda 1x1&lt;/th&gt;
+        &lt;th&gt;Celda 2x1&lt;/th&gt;
+        &lt;th&gt;Celda 3x1&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Celda 1x2&lt;/th&gt;
+        &lt;th&gt;Celda 2x2&lt;/th&gt;
+        &lt;th&gt;Celda 3x2&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+                <p>En este caso de ejemplo tendríamos una sencilla tabla de 3x2 celdas. Por defecto, en la tabla se crea
+                    de
+                    forma que se adapta al número de celdas que tiene la primera fila. Es decir, si en el primer
+                    elemento
+                    <code class="code">&lt;tr&gt;</code> se indican 3 elementos <code class="code">&lt;th&gt;</code>, la
+                    tabla esperará siempre 3 elementos en cada fila. Si
+                    indicaramos menos, las celdas correspondientes donde deberían estar aparecerían vacías (sin
+                    celda). Si añadieramos una de más, se saldría de la tabla.
+                </p>
+
+                <p>Además, si al código HTML anterior le aplicamos unos apropiados estilos CSS de tablas, junto a
+                    cambios de
+                    colores, fuentes, márgenes, rellenos y otros aspectos visuales, podremos cambiar el diseño de la
+                    tabla
+                    en poco más que un par de líneas.</p>
+
+                <table
+                    style="color:rgb(206, 206, 206); margin-left: 2%; margin-right: auto; font-size: 23px; border-collapse: collapse;">
+                    <tr>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Título columna 1</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Título columna 2</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Título columna 3</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Celda 1x1</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Celda 2x1</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Celda 3x1</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Celda 1x2</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Celda 2x2</td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">Celda 3x2</td>
+                    </tr>
+                </table>
+
+            </div>
 
 
             <h2 id="enllacos">Creació d'enllaços interns i externs</h2>
@@ -460,22 +580,197 @@
 
 
             <h2 id="formularis">Formularis: tipus d'inputs i configuració</h2>
+            <div class="html-text">
+                <h3>Organización Campos</h3>
+                <p>Vamos a ver unos elementos que nos ayudan a organizar el formulario y a orientar al ususario en el
+                    manejo del mismo. <br>Las etiquetas que veremos son las siguientes:</p>
+                <ul>
+                    <li>Relación de campo y texto <code class="code">&lt;label&gt;</code></li>
+                    <li>Agrupación visual o temática de campos de entrada <code class="code">&lt;fieldset&gt;</code>
+                    </li>
+                    <li>Leyenda para la etiqueta <code class="code">&lt;legend&gt;</code></li>
+                </ul>
+
+                <h3>Agrupación Visual</h3>
+
+                <p>La primera etiqueta es <code class="code">&lt;fieldset&gt;</code>, un elemento utilizado como
+                    etiqueta contenedora para agrupar visualmente, mediante un trazo simple, todos los campos de un
+                    formulario que estén relacionados (misma temática o apartado, por ejemplo). La etiqueta <code
+                        class="code">&lt;legend&gt;</code>, suele incluirse en el interior de <code
+                        class="code">&lt;fieldset&gt;</code> para mostrar un título en el trazo de esa agrupación.</p>
+                <pre><code>&lt;form name="formulario" method="post" action="/send.php"&gt;
+    &lt;!-- Agrupación de campos --&gt;
+        &lt;fieldset&gt;
+        &lt;legend&gt;Datos personales&lt;/legend&gt;
+        &lt;!-- Campo de texto --&gt;
+        Nombre de usuario:
+        &lt;input type="text" name="nombre" placeholder="Por ej: John Smith" /&gt;
+        &lt;!-- Campo numérico --&gt;
+        Edad:
+        &lt;input type="number" name="edad" min="18" max="100" placeholder="18" /&gt;
+        &lt;!-- Botón radio de opción --&gt;
+        Sexo:
+        &lt;!-- Primera opción --&gt;
+        &lt;input type="radio" name="sexo" value="H" /&gt; Hombre
+        &lt;!-- Segunda opción --&gt;
+        &lt;input type="radio" name="sexo" value="M" /&gt; Mujer
+        &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+
+                <h3>Formularios</h3>
+                <p>Los formularios son una forma sencilla de establecer mecanismos para que el usuario pueda introducir
+                    información en una página web de forma sencilla e intuitiva, ya sea que el sitio web sea capaz de
+                    procesarla correctamente y añadirla en una base de datos, enviarla por email o procesarla para
+                    mostrar información final al usuario.</p>
+
+                <p>Nuestros objetivos al crear un formulario HTML5 deben ser los siguientes:</p>
+                <ul>
+                    <li>Hacer lo más sencillo posible el proceso de inserción de datos por parte del usuario.</li>
+                    <li>Intentar que la experiencia de usuario sea lo más agradable posible.</li>
+                    <li>Intentar que los datos introducidos estén en un formato predecible y esperado.</li>
+                    <li>Reducir los errores al introducir datos en la medida de lo posible.</li>
+                    <li>Comunicar claramente si ocurren errores al introducir datos.</li>
+                </ul>
+
+                <h3>Contenedor de formulario</h3>
+
+                <p>De esta forma, se puede incluso crear varias etiquetas <code class="code">&lt;form&gt;</code> por
+                    página, pudiendo así crear varios formularios diferentes, como por ejemplo, uno para realizar una
+                    búsqueda en la página, otro para dejar un comentario y otro para enviar un email al autor.</p>
+
+                <p>También es posible colocar campos de formulario fuera de una etiqueta <code
+                        class="code">&lt;form&gt;</code>, sin embargo, no tendrán el funcionamiento específico de enviar
+                    al servidor aunque sí podrían manejarse desde javascript.</p>
+
+                <p>La etiqueta <code class="code">&lt;form&gt;</code> dispone de varios atributos para utilizar:</p>
+
+                <ul>
+                    <li>action URL Dirección URL del back-end donde se enviará la información del formulario.</li>
+                    <li>method get | post Método HTTP de envío. GET a través de URL, POST para envío extenso.</li>
+                    <li>name nombre Nombre del formulario. Útil para procesar posteriormente.</li>
+                    <li>target destino Nombre del lugar donde se abrirá el formulario. <code class="code">_blank</code>
+                        para nueva pestaña.</li>
+                    <li>enctype tipo Codificación para el envío del formulario. Importante para envío de archivos.</li>
+                    <li>accept-charset codificación Fuerza a utilizar una codificación en los parámetros de texto del
+                        formulario.</li>
+                    <li>autocomplete on | off Activa o desactiva el autocompletado para todos los campos del formulario.
+                    </li>
+                    <li>novalidate Con este atributo presente, el formulario obvia la validación HTML5.</li>
+                </ul>
+
+                <p>Así pues, un primer formulario base de ejemplo (aún vacío, sin campos de entrada de datos, sólo con
+                    la etiqueta contenedora) podría ser el que vemos en el siguiente ejemplo:</p>
+
+                <pre><code>&lt;form name="formulario" method="post" action="/send.php"&gt;</form></code></pre>
+
+                <p>En <code class="code">action</code> se indica la dirección donde se enviarán los datos cuando el
+                    usuario pulse el botón de enviar. En caso de omitirse esta información, se enviarían los datos a la
+                    propia página actual, volviéndola a cargar.</p>
+                <p>En <code class="code">method</code> se define el tipo de método HTTP a utilizar. Utilizaremos el
+                    método <code class="code">GET</code> cuando nos interese que los datos se envíen en la propia URL.
+                    En caso contrario, <code class="code">POST</code>.</p>
+                <p>En <code class="code">name</code> el nombre del formulario para cuando necesitemos hacer referencia a
+                    él (generalmente desde <code class="code">Javascript</code> o desde <code
+                        class="code">backend</code>).</p>
+
+                <h3>Tipos de datos</h3>
+
+                <p>Para que un usuario pueda introducir información en un formulario, requiere que se le indiquen una
+                    serie de campos que le permitan introducir la información de la forma más cómoda y rápida posible.
+                    Para ello, debemos saber a priori que tipo de dato le vamos a pedir al usuario (texto, numérico,
+                    fecha, etc...), y así saber que tipo de campo de entrada de datos es más conveniente colocar.</p>
+                <ul>
+                    <li>Información de texto Nombres, apellidos, direcciones físicas... <code
+                            class="code">&lt;input&gt;</code> <code class="code">&lt;textarea&gt;</code></li>
+                    <li>Números o cantidades Edades, precios, cuantías... <code class="code">&lt;input&gt;</code> para
+                        números</li>
+                    <li>Fechas u horas Fecha de nacimiento, inicio de evento... <code class="code">&lt;input&gt;</code>
+                        para fechas</li>
+                    <li>Verdadero/falso Si/No, Opción A/B, ON/OFF... <code
+                            class="code">&lt;input type="checkbox"&gt;</code></li>
+                    <li>Opción única (Elegir una opción de 2 ó más posibles) <code
+                            class="code">&lt;input type="radio"&gt;</code> <code class="code">&lt;select&gt;</code></li>
+                    <li>Varias opciones (Elegir varias opciones de 2 ó más posibles) <code
+                            class="code">&lt;select multiple&gt;</code> <code
+                            class="code">&lt;input type="checkbox"&gt;</code></li>
+                    <li>Opción única abierta (Elegir una opción o indicar una propia) <code
+                            class="code">&lt;datalist&gt;</code></li>
+                    <li>Selección de color (Escoger un color o tonalidad) <code
+                            class="code">&lt;input type="color"&gt;</code></li>
+                    <li>Selección de archivo (Escoger un archivo para enviar) <code
+                            class="code">&lt;input type="file"&gt;</code></li>
+                </ul>
+
+                <p>En HTML5, de forma nativa, el navegador proporciona estos campos de entrada en los que el usuario
+                    puede introducir información específica. Cada uno de ellos tiene sus propias particularidades y
+                    características, además de que hay que tener cuidado con algunos, ya que pueden no estar soportados
+                    por completo en todos los navegadores.</p>
+
+                <p><u>Campos de entrada</u><br>Una de las etiquetas que más utilizaremos para obtener información a modo
+                    de campo de entrada de datos en un formulario es la etiqueta <code
+                        class="code">&lt;input&gt;</code>. Su funcionalidad más utilizada es la de servir como campo de
+                    texto:</p>
+                <pre><code>&lt;form name="formulario" method="post" action="/send.php"&gt;
+    &lt;!-- Primer campo de entrada de datos --&gt;
+    Nombre de usuario:
+    &lt;input type="text" name="nombre" value="" /&gt;
+    &lt;!-- Botón de envío del formulario --&gt;
+    &lt;input type="submit" value="Enviar" /&gt;
+&lt;/form&gt;</code></pre>
+
+                <p>En este ejemplo tenemos un pequeño formulario donde se le pide al usuario su nombre con la etiqueta
+                    <code class="code">&lt;input type="text"&gt;</code> y, posteriormente, se coloca un botón para
+                    enviar el formulario con la etiqueta <code class="code">&lt;input type="submit"&gt;</code>. Aunque
+                    vemos que se trata de la misma etiqueta <code class="code">&lt;input&gt;</code>, dependiendo del
+                    valor indicado en el atributo type realizará una tarea u otra.
+                </p>
+
+                <h3>La etiqueta Input</h3>
+
+                <p>La etiqueta <code class="code">&lt;input&gt;</code> tiene una gran cantidad de atributos (algunos
+                    dependiendo del valor de type, que mostraremos más adelante). Estos son los atributos que podemos
+                    utilizar de forma general para prácticamente cualquier campo de entrada de datos con la etiqueta
+                    <code class="code">&lt;input&gt;</code>:</p>
+
+                <ul>
+                    <li><code class="code">type</code> tipo de campo Indica el tipo de campo del que se trata.</li>
+                    <li><code class="code">name</code> nombre del campo Indica el nombre del campo para hacer referencia
+                        más tarde.</li>
+                    <li><code class="code">value</code> valor por defecto Indica el valor inicial que tendrá ese campo
+                        de datos.</li>
+                    <li><code class="code">form</code> nombre del formulario Asocia este campo de datos con un
+                        formulario específico.</li>
+                    <li><code class="code">placeholder</code> sugerencia Indica una sugerencia al usuario antes de
+                        escribir.</li>
+                    <li><code class="code">size</code> número Tamaño visual (número de carácteres) del campo de datos.
+                    </li>
+                    <li><code class="code">autocomplete</code> on | off Activa o desactiva el autocompletado para este
+                        campo.</li>
+                    <li><code class="code">autofocus</code> - Establece el foco (coloca el cursor) en este campo al
+                        cargar la página.</li>
+                </ul>
+
+                <p>El atributo type nos permitirá indicar que tipo de campo de dato mostrará en el navegador (text,
+                    number, date... ). Mediante el atributo name le daremos un nombre al campo de texto, así cuando
+                    enviemos la información del formulario, podremos manejarla desde javascript o desde el back-end
+                    haciendo referencia a dicho nombre.</p>
+            </div>
         </div>
 
         <aside class="sidebar">
             <div class="sticky">
-                <h3>Índice</h3>
+                <h3>HTML</h3>
                 <ul>
-                    <li><a href="#html-title">HyperText Markup Language</a></li>
-                    <li class="side-element"><a href="#estructura-html">Estructura fonamental de HTML</a></li>
-                    <li class="side-element"><a href="#etiquetes-principals">Etiquetes principals de la secció</a></li>
-                    <li class="side-element"><a href="#estructura-element">Etiquetes d'un element</a></li>
-                    <li class="side-element"><a href="#etiquetes-basiques">Etiquetes bàsiques de HTML</a></li>
-                    <li class="side-element"><a href="#llistes">Llistes: ordenades, no ordenades i símbols</a></li>
-                    <li class="side-element"><a href="#taules">Creació i personalització de taules</a></li>
-                    <li class="side-element"><a href="#enllacos">Creació d'enllaços interns i externs</a></li>
-                    <li class="side-element"><a href="#multimedia">Gestió i estils d'arxius multimedia</a></li>
-                    <li class="side-element"><a href="#formularis">Formularis: tipus d'inputs i configuració</a></li>
+                    <li><a href="#html-title">Lenguaje de Marcado de Hipertexto</a></li>
+                    <li class="side-element"><a href="#estructura-html">Estructura fundamental de HTML</a></li>
+                    <li class="side-element"><a href="#etiquetes-principals">Etiquetas principales de la sección</a></li>
+                    <li class="side-element"><a href="#estructura-element">Estructura de un elemento</a></li>
+                    <li class="side-element"><a href="#etiquetes-basiques">Etiquetas básicas de HTML</a></li>
+                    <li class="side-element"><a href="#llistes">Listas: ordenadas, no ordenadas y símbolos</a></li>
+                    <li class="side-element"><a href="#taules">Creación y personalización de tablas</a></li>
+                    <li class="side-element"><a href="#enllacos">Creación de enlaces internos y externos</a></li>
+                    <li class="side-element"><a href="#multimedia">Gestión y estilos de archivos multimedia</a></li>
+                    <li class="side-element"><a href="#formularis">Formularios: tipos de inputs y configuración</a></li>
                 </ul>
             </div>
         </aside>
