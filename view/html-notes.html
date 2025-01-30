@@ -26,6 +26,7 @@
 
             <h2 id="estructura-html">Estructura fonamental de HTML</h2>
             <div class="html-text">
+
                 <p>
                     Un documento HTML debe tener siempre una estructura inicial, con
                     algunas etiquetas y características obligatorias y otras
@@ -241,12 +242,29 @@
             <h2 id="estructura-element">Estructura d'un element</h2>
             <div class="html-text">
                 <p>Un elemento HTML está compuesto por varias partes fundamentales, que incluyen:</p>
-                <ul>
-                    <li>Tag - Nombre de elemento (example: <code class="code">a</code>)</li>
-                    <li>Attribute - modificadores HTML (example: <code class="code">href</code>)</li>
-                    <li>Value - valor aplicado a un atributo (example: http://tania.dev)</li>
-                    <li>Element -todo dentro de la etiqueta HTML: atributos, valores y contenido..</li>
-                </ul>
+                
+                <table class="table">
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Descripción</th>
+                        </tr>
+                        <tr>
+                            <td>Tag</td>
+                            <td>Nombre de elemento (example: <code class="code">a</code>)</td>
+                        </tr>
+                        <tr>
+                            <td>Attribute</td>
+                            <td>Modificadores HTML (example: <code class="code">href</code>)</td>
+                        </tr>
+                        <tr>
+                            <td>Value</td>
+                            <td>Valor aplicado a un atributo (example: http://tania.dev)</td>
+                        </tr>
+                        <tr>
+                            <td>Element</td>
+                            <td>Todo dentro de la etiqueta HTML: atributos, valores y contenido.</td>
+                        </tr>
+                </table>
 
                 <pre><code>&lt;tag attribute="value">Contenidos del elemento&lt;/tag&gt;</code></pre>
                 <pre><code>&lt;a href="http://tania.dev">La Web de Tania&lt;/a&gt;</code></pre>
@@ -394,7 +412,7 @@
     Hola, juan si les esto te deseo lo &lt;strong&gt;mejor&lt;/strong&gt;
 &lt;/p&gt;</code></pre>
 
-                <h3>Fragmentos de texto</h3>
+                <h4>Fragmentos de texto</h4>
                 <p>Existe una serie de etiquetas HTML simples para seleccionar un fragmento de texto y dotarlo de un
                     significado especial. Por ejemplo:</p>
 
@@ -422,11 +440,54 @@
                     mientras que la misión del <code class="code">&lt;div&gt;</code> es agrupar otras etiquetas HTML que
                     a su vez pueden agrupar otras y otras etiquetas HTML.</p>
 
-                <h3>Modificación de significado</h3>
+                <h4>Modificación de significado</h4>
 
-                <h3>Los saltos de línea</h3>
+                <p>Con las siguientes etiquetas HTML también podemos modificar el significado de la información que contienen:</p>
+                
+                    <ul>
+                        <li><code class="code">&lt;sup&gt;</code> Superíndice.</li>
+                        <li><code class="code">&lt;sub&gt;</code> Subíndice.</li>
+                        <li><code class="code">&lt;small&gt;</code> Anotaciones menores, pequeñas puntualizaciones.</li>
+                        <li><code class="code">&lt;q&gt;</code> cite Cita o frase extraída de otro contexto.</li>
+                        <li><code class="code">&lt;dfn&gt;</code> title Definición (término que posteriormente será definido).</li>
+                        <li><code class="code">&lt;abbr&gt;</code> title Abreviatura o acrónimo.</li>
+                    </ul>
 
-                <h3>Aspectos Informáticos</h3>
+                    <p>Las etiquetas HTML <code class="code">&lt;sup&gt;</code> y <code class="code">&lt;sub&gt;</code> se utilizan para indicar superíndices y subíndices. De esta forma tenemos un mecanismo que nos permite diferenciar el número 242 del número 24<sub>2</sub>:</p>
+
+                    <pre><code>&lt;p&gt;
+El resultado de 24&lt;sup&gt;2&lt;/sup&gt; es el valor de X&lt;sub&gt;a&lt;/sub&gt;.
+&lt;/p&gt;</code></pre>
+
+                <p>Por otra parte, la etiqueta HTML <code class="code">&lt;q&gt;</code> nos permite hacer referencia a una cita o frase extraída de otro contexto. Obsérvese que en esta etiqueta disponemos de un atributo opcional cite, mediante el cuál podemos hacer referencia a una URL (en este caso a la ficha de la película de Batman) que en este caso es de donde procede la frase:</p>
+                
+                <pre><code>&lt;p&gt;
+    &lt;q cite="http://www.imdb.com/title/tt0468569/"&gt;
+        Hay hombres que solo quieren ver arder el mundo.
+    &lt;/q&gt;
+&lt;/p&gt;</code></pre>
+
+                <h4>Los saltos de línea</h4>
+
+                <p>son etiquetas especiales de HTML para comenzar en una línea nueva (emular el efecto al pulsar ENTER). Al contrario que todas las que hemos visto, las etiquetas <code class="code">&lt;br&gt;</code> son etiquetas que no necesitan etiqueta de cierre, por lo que sólo se escribe la etiqueta de apertura.</p>
+                <ul>
+                    <li><code class="code">&lt;br&gt;</code> Salto de línea (nueva línea).</li>
+                    <li><code class="code">&lt;wbr&gt;</code> Oportunidad de salto de línea (división silábica con guión).
+                        También existe la etiqueta <code class="code">&lt;wbr&gt;</code> que se denomina oportunidad de salto de línea y posee el mismo funcionamiento de la división silábica con guión, es decir, indicamos donde es posible hacer un salto de línea si la situación lo requiere, como por ejemplo, si la palabra no cabe dentro de un elemento y se quiere evitar que desborde el contenido.</li>
+                </ul>
+
+                <h4>Aspectos Informáticos</h4>
+
+                <p>Existen una serie de etiquetas HTML ligeramente orientadas a aspectos informáticos como combinaciones de teclado del usuario o para representar variables matemáticas o informáticas:</p>
+
+                <ul>
+                    <li><code class="code">&lt;kbd&gt;</code> Entrada de información del usuario (generalmente, combinación de teclado).</li>
+                    <li><code class="code">&lt;samp&gt;</code> Salida de información de un programa informático.</li>
+                    <li><code class="code">&lt;var&gt;</code> Variable (contexto matemático o informático).</li>
+                    <li><code class="code">&lt;time&gt;</code> datetime Indica una fecha/hora legible para humanos, con formato para máquinas opcional.</li>
+                    <li><code class="code">&lt;data&gt;</code> value Información equivalente orientado a máquinas.</li>
+                    <li><code class="code">&lt;code&gt;</code> Fragmento de código fuente (en línea).</li>
+                </ul>
             </div>
 
 
@@ -572,10 +633,73 @@
 
             <h2 id="multimedia">Gestió i estils dels arxius multimedia</h2>
             <div class="html-text">
+                <h3>Audio</h3>
+                <p>Al igual que vimos en el tema anterior con los videos, es posible añadir archivos de audio a nuestras páginas web para colocar música, sonidos o simplemente usar música como ambientación. En versiones anteriores de HTML se usaba una etiqueta HTML obsoleta denominada <code class="code">&lt;bgsound&gt;</code> que realizaba algo similar. <br> En este caso, utilizaremos la etiqueta <code class="code">&lt;audio&gt;</code> que funciona exactamente igual que <code class="code">&lt;video&gt;</code>, pero con relación a archivos de audio.</p>
+
+                <p>La etiqueta <code class="code">&lt;audio&gt;</code> tiene varios atributos a nuestra disposición:</p>
+
+                <ul>
+                    <li><code class="code">src</code> Dirección URL Audio a reproducir. Obligatoria si actua como etiqueta contenedora.</li>
+                    <li><code class="code">preload</code> auto | metadata | none Indica como realizar la precarga del audio.</li>
+                    <li><code class="code">mediagroup</code> nombre Establece un nombre para un grupo de contenidos multimedia.</li>
+                    <li><code class="code">autoplay</code> Comienza a reproducir el audio automáticamente.</li>
+                    <li><code class="code">loop</code> Vuelve a iniciar el audio cuando finaliza su reproducción (bucle).</li>
+                    <li><code class="code">muted</code> Establece el audio sin sonido (silenciado).</li>
+                    <li><code class="code">controls</code> Muestra los controles de reproducción. Por defecto no se muestran.</li>
+                </ul>
+
+                <p>Un primer ejemplo muy básico para colocar un audio en nuestra página web:</p>
+
+                <pre><code>&lt;audio src="audio.mp3"&gt;&lt;/audio&gt;</code></pre>
+
+                <p>Sin embargo esto no mostrará nada visualmente, ni reproducirá ningún sonido. Realmente, el audio está ahí, pero no le hemos indicado el atributo controls para que muestre los controles y que el usuario pueda pulsar el botón «play». Tampoco le hemos colocado el atributo autoplay, en cuyo caso tampoco mostraría nada visualmente, pero si que se empezaría a escuchar el sonido o pista de música.</p>
+
+                <p>Otro ejemplos básicos para colocar audios en nuestra página:</p>
+
+                <pre><code class="code">&lt;audio src="audio.mp3" preload="none" controls&gt;&lt;/audio&gt;</code></pre>
+                <pre><code class="code">&lt;audio src="audio.ogg" autoplay loop&gt;&lt;/audio&gt;</code></pre>
+
+                <p>En el primer ejemplo, cargamos un audio en formato MP3, pero indicamos que no precargue nada. Empezará a descargarse sólo cuando el usuario pulse en los controles de reproducción. Este escenario puede ser interesante para evitar consumo de ancho de banda de archivos que es probable que el usuario no escuche o en dispositivos móviles donde las tarifas de datos son costosas.</p>
+
+                <p>Por otro lado, el segundo ejemplo, carga un archivo de audio en formato OGG y lo reproduce automáticamente y en bucle, de modo que vuelve a empezar cuando termina.</p>
+
                 <h3>Imagenes</h3>
 
-                <h3>Video</h3>
+                <h3>Video</h3> 
 
+                <p>En HTML5 se introduce la interesante posibilidad de mostrar videos directamente desde nuestro navegador. De hecho, si arrastramos un video a la ventana del navegador, veremos que comienza a reproducirse en él. Para poder insertar videos en nuestras páginas HTML tenemos que utilizar la etiqueta <code class="code">&lt;video&gt;</code>, que junto a la etiqueta <code class="code">&lt;source&gt;</code> podremos utilizar estas capacidades multimedia de HTML5.</p>
+
+                <p> Ojo: Si lo que quieres es insertar videos desde Youtube, Vimeo u otro servicio alternativo, debes utilizar la etiqueta HTML <code class="code">&lt;iframe&gt;</code> en lugar de la etiqueta <code class="code">&lt;video&gt;</code>.</p>
+
+                <p>La etiqueta <code class="code">&lt;video&gt;</code>; tiene varios atributos a nuestra disposición:</p>
+
+                <ul>
+                    <li><code class="code">src</code>: Dirección URL Video a reproducir. Obligatoria si actua como etiqueta contenedora.</li>
+                    <li><code class="code">poster</code>: Dirección URL Muestra una imagen a modo de presentación.</li>
+                    <li><code class="code">preload</code>: auto | metadata | none Indica como realizar la precarga del video.</li>
+                    <li><code class="code">mediagroup</code>: nombre Establece un nombre para un grupo de contenidos multimedia.</li>
+                    <li><code class="code">autoplay</code>: Comienza a reproducir el video automáticamente.</li>
+                    <li><code class="code">loop</code>: Vuelve a iniciar el video cuando finaliza su reproducción (bucle).</li>
+                    <li><code class="code">muted</code>: Establece el video sin sonido (silenciado).</li>
+                    <li><code class="code">controls</code>: Muestra los controles de reproducción. Por defecto no se muestran.</li>
+                    <li><code class="code">width</code>: tamaño Indica el tamaño de ancho del video.</li>
+                    <li><code class="code">height</code>: tamaño Indica el tamaño de alto del video.</li>
+                </ul>
+
+                <p>>Un primer ejemplo muy básico para colocar un video en nuestra página web:</p>
+                <pre><code>&lt;video src="video.mp4" width="640" height="480"&gt;&lt;/video&gt;</code></pre>
+                <p>Sin embargo, esto mostrará el primer fotograma del video, con un tamaño de 640x480, pero se verá como una imagen, ya que no muestra los controles del video y tampoco tiene la autoreproducción activada. Podríamos solucionarlo indicando los atributos controls o autoplay.</p>
+                
+                <p>Otro ejemplos básicos para colocar videos en nuestra página:</p>
+                
+                <pre><code>&lt;!-- Ejemplo 1 --&gt;
+&lt;video src="video.webm" poster="presentacion.jpg" controls&gt;&lt;/video&gt;
+&lt;!-- Ejemplo 2 --&gt;
+&lt;video src="video.mp4" autoplay muted loop&gt;&lt;/video&gt;</code></pre>
+                
+                <p>En este caso cargamos un video, pero que no se mostrará porque se ha indicado que se utilice una imagen de presentación que se mostrará hasta que el usuario pulse en el botón de reproducir de los controles. En el segundo ejemplo, tenemos un video que se reproduce automáticamente al cargar la página, en silencio y en bucle, iniciándose una y otra vez.</p>
+                
+                <p>Desde 2017, Chrome, Firefox y otros navegadores establecieron un cambio de políticas con el atributo de reproducción automática autoplay, por lo que no funcionará salvo que el usuario haya interactuado antes en la página.</p>
             </div>
 
 
@@ -591,7 +715,7 @@
                     <li>Leyenda para la etiqueta <code class="code">&lt;legend&gt;</code></li>
                 </ul>
 
-                <h3>Agrupación Visual</h3>
+                <h4>Agrupación Visual</h4>
 
                 <p>La primera etiqueta es <code class="code">&lt;fieldset&gt;</code>, un elemento utilizado como
                     etiqueta contenedora para agrupar visualmente, mediante un trazo simple, todos los campos de un
@@ -673,7 +797,7 @@
                     él (generalmente desde <code class="code">Javascript</code> o desde <code
                         class="code">backend</code>).</p>
 
-                <h3>Tipos de datos</h3>
+                <h4>Tipos de datos</h4>
 
                 <p>Para que un usuario pueda introducir información en un formulario, requiere que se le indiquen una
                     serie de campos que le permitan introducir la información de la forma más cómoda y rápida posible.
@@ -761,7 +885,6 @@
             <div class="sticky">
                 <h3>HTML</h3>
                 <ul>
-                    <li><a href="#html-title">Lenguaje de Marcado de Hipertexto</a></li>
                     <li class="side-element"><a href="#estructura-html">Estructura fundamental de HTML</a></li>
                     <li class="side-element"><a href="#etiquetes-principals">Etiquetas principales de la sección</a></li>
                     <li class="side-element"><a href="#estructura-element">Estructura de un elemento</a></li>
