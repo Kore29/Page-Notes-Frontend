@@ -17,8 +17,9 @@ html {
 }
 /**rgb(38, 38, 38);**/
 body {
-    background-color: rgb(38,38,38);
+    background-color: var(--background-color);
     margin-top: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 h1 {
@@ -145,7 +146,7 @@ pre code {
 /**Animaciones**/
 
 /**Hola Juan, se que esto no apareció en el temario, pero me hacia ilusión ponerlo porque hace poco hice un curso sobre esto**/
-.html-content h2:target, .css-content h2:target {
+.content h2:target, .css-content h2:target {
     animation: highlight 2s;
 }
 
@@ -160,6 +161,15 @@ pre code {
     }
 }
 
+/**Temas de la página**/
+
+:root {
+    --background-color: rgb(38,38,38);
+}
+
+[data-theme="white"] {
+    --background-color: rgb(199, 199, 199);
+}
 /**Principal**/
 
 #arrow-main {
@@ -272,7 +282,7 @@ table.animate {
 
 /**Table**/
 
-.html-text .table {
+.text .table {
     width: 95%;
     border-collapse: collapse;
     margin-left: 33px;
@@ -281,18 +291,18 @@ table.animate {
     margin-bottom: 3px;
 }
 
-.html-text th, .html-text td {
+.text th, .text td {
     padding: 12px 15px;
     border: 1px solid #2d2d2d;
     color: rgb(206, 206, 206);
 }
 
-.html-text th {
+.text th {
     background-color: #4b4b4b;
     font-weight: bold;
 }
 
-.html-text tr:nth-child(even) {
+.text tr:nth-child(even) {
     background-color: #2c2c2c;
 }
 
@@ -316,14 +326,14 @@ table.animate {
 
 /**Text**/
 
-.html-text p {
+.text p {
     color: rgb(206, 206, 206);
     margin: 30px;
     font-size: 20px;
     text-align: justify;
 }
 
-.html-text h3 {
+.text h3 {
     color: rgb(134, 134, 134);
     margin: 30px;
     font-size: 30px !important;
@@ -331,7 +341,7 @@ table.animate {
     font-weight: bold;
 }
 
-.html-text h4 {
+.text h4 {
     color: rgb(75, 75, 75);
     margin: 30px;
     font-size: 25px !important;
@@ -340,7 +350,7 @@ table.animate {
     padding-left: 10px; 
 }
 
-.html-text li {
+.text li {
     color: rgb(206, 206, 206);
     margin-top: 10px;
     margin-left: 35px;
@@ -348,120 +358,23 @@ table.animate {
     text-align: justify;
 }
 
-.html-text code pre {
+.text code pre {
     background-color: 0;
     font-size: 15px;
     border: #4c4c4c;
 }
 
-.html-text code {
+.text code {
     border-radius: 19px;
     margin-left: 15px;
 }
 
-.html-text pre {
+.text pre {
     margin: 20px;
 }
 
-#etiquetes-basiques, #etiquetes-principals, #estructura-element, #llistes, #taules, #enllacos, #multimedia, #formularis {
+#etiquetes-basiques, #etiquetes-principals, #estructura-element, #llistes, #taules, #enllacos, #multimedia, #formularis, #introduccion-css, #selectores, #box-model, #texto-fuentes, #colores-fondos, #diseno-posicionamiento, #flexbox, #css-grid, #animaciones-transiciones, #media-queries, #variables-css {
     scroll-margin-top: 200px;
 }
 
 /**CSS**/
-
-/**Table**/
-
-.css-text .table {
-    width: 95%;
-    border-collapse: collapse;
-    margin-left: 33px;
-    font-size: 18px;
-    text-align: left;
-    margin-bottom: 3px;
-}
-
-.css-text th, .css-text td {
-    padding: 12px 15px;
-    border: 1px solid #2d2d2d;
-    color: rgb(206, 206, 206);
-}
-
-.css-text th {
-    background-color: #4b4b4b;
-    font-weight: bold;
-}
-
-.css-text tr:nth-child(even) {
-    background-color: #2c2c2c;
-}
-
-/**General**/
-
-.css-container {
-    display: flex;
-    margin: 0;
-}
-
-.css-container h2 {
-    color: rgb(111, 113, 222) !important;
-    padding: 10px; padding-left: 0 !important;
-}
-
-.css-content {
-    flex: 5;
-    padding-right: 20px;
-    margin: 20px
-}
-
-/**Text**/
-
-.css-text p {
-    color: rgb(206, 206, 206);
-    margin: 30px;
-    font-size: 20px;
-    text-align: justify;
-}
-
-.css-text h3 {
-    color: rgb(134, 134, 134);
-    margin: 30px;
-    font-size: 30px !important;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.css-text h4 {
-    color: rgb(75, 75, 75);
-    margin: 30px;
-    font-size: 25px !important;
-
-    border-left: 4px solid rgb(75, 75, 75);
-    padding-left: 10px; 
-}
-
-.css-text li {
-    color: rgb(206, 206, 206);
-    margin-top: 10px;
-    margin-left: 35px;
-    font-size: 20px;
-    text-align: justify;
-}
-
-.css-text code pre {
-    background-color: 0;
-    font-size: 15px;
-    border: #4c4c4c;
-}
-
-.css-text code {
-    border-radius: 19px;
-    margin-left: 15px;
-}
-
-.css-text pre {
-    margin: 20px;
-}
-
-#etiquetes-basiques, #etiquetes-principals, #estructura-element, #llistes, #taules, #enllacos, #multimedia, #formularis {
-    scroll-margin-top: 200px;
-}

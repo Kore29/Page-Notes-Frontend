@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.8" />
     <title>Notes Frontend - HTML</title>
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"/>
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
 </head>
 
 <body>
@@ -17,15 +17,17 @@
             <li><a href="html-notes.html">HTML</a></li>
             <li><a href="css-notes.html">CSS</a></li>
             <li><a href="exercices.html">EXERCICES</a></li>
+
+            <input type="checkbox" id="darkmode-toggle"></input>
+            <label for="darkmode-toggle"></label>
         </ul>
     </nav>
     <div class="html-container">
         <div class="html-content">
             <h1 id="html-title">HyperText Markup Language</h1>
 
-
             <h2 id="estructura-html">Estructura fonamental de HTML</h2>
-            <div class="html-text">
+            <div class="text">
 
                 <p>
                     Un documento HTML debe tener siempre una estructura inicial, con
@@ -172,7 +174,7 @@
 
 
             <h2 id="etiquetes-principals">Etiquetes principals d'una secció</h2>
-            <div class="html-text">
+            <div class="text">
                 <p>Las etiquetas semánticas en HTML mejoran la estructura del contenido, haciéndolo más accesible y
                     comprensible para los navegadores y motores de búsqueda. A continuación, se presentan algunas de las
                     etiquetas semánticas más importantes y sus usos:</p>
@@ -240,7 +242,7 @@
 
 
             <h2 id="estructura-element">Estructura d'un element</h2>
-            <div class="html-text">
+            <div class="text">
                 <p>Un elemento HTML está compuesto por varias partes fundamentales, que incluyen:</p>
                 
                 <table class="table">
@@ -344,7 +346,7 @@
 
 
             <h2 id="etiquetes-basiques">Etiquetes bàsiques de HTML</h2>
-            <div class="html-text">
+            <div class="text">
                 <h3>Agrupaciones</h3>
 
                 <p>Las siguientes etiquetas se utilizan para agrupar información, como es el caso de las etiquetas <code
@@ -492,7 +494,7 @@ El resultado de 24&lt;sup&gt;2&lt;/sup&gt; es el valor de X&lt;sub&gt;a&lt;/sub&
 
 
             <h2 id="llistes">Llistes: ordenades, no ordenades i símbols</h2>
-            <div class="html-text">
+            <div class="text">
                 <p>En HTML podemos crear listas de información de una forma muy sencilla. Empecemos por las etiquetas
                     disponibles:</p>
                 <ul>
@@ -535,7 +537,7 @@ El resultado de 24&lt;sup&gt;2&lt;/sup&gt; es el valor de X&lt;sub&gt;a&lt;/sub&
             </div>
 
             <h2 id="taules">Creació i personalització de taules</h2>
-            <div class="html-text">
+            <div class="text">
                 <p>Las tablas están incluidas en HTML desde sus primeras versiones y son una forma fantástica de mostrar
                     datos claramente. Además, si las construimos de forma semántica y correctamente, es muy sencillo
                     darle estilos desde CSS y cambiar su diseño con unas cuantas propiedades CSS, puesto que mediante
@@ -623,7 +625,7 @@ El resultado de 24&lt;sup&gt;2&lt;/sup&gt; es el valor de X&lt;sub&gt;a&lt;/sub&
 
 
             <h2 id="enllacos">Creació d'enllaços interns i externs</h2>
-            <div class="html-text">
+            <div class="text">
                 <h3>Enlaces</h3>
 
                 <p>Una de las etiquetas más importantes de HTML (sino la que más) es la etiqueta <code class="code">&lt;a&gt;</code>. Esta etiqueta se utiliza para crear los llamados enlaces, vínculos o hipervínculos. La idea es establecer una referencia a una dirección o URL donde está alojado ese otro documento de destino, que puede ser una página web, un archivo PDF, una imagen o cualquier otro tipo de documento.</p>
@@ -688,7 +690,7 @@ El resultado de 24&lt;sup&gt;2&lt;/sup&gt; es el valor de X&lt;sub&gt;a&lt;/sub&
 
 
             <h2 id="multimedia">Gestió i estils dels arxius multimedia</h2>
-            <div class="html-text">
+            <div class="text">
                 <h3>Audio</h3>
                 <p>Al igual que vimos en el tema anterior con los videos, es posible añadir archivos de audio a nuestras páginas web para colocar música, sonidos o simplemente usar música como ambientación. En versiones anteriores de HTML se usaba una etiqueta HTML obsoleta denominada <code class="code">&lt;bgsound&gt;</code> que realizaba algo similar. <br> En este caso, utilizaremos la etiqueta <code class="code">&lt;audio&gt;</code> que funciona exactamente igual que <code class="code">&lt;video&gt;</code>, pero con relación a archivos de audio.</p>
 
@@ -777,7 +779,7 @@ El resultado de 24&lt;sup&gt;2&lt;/sup&gt; es el valor de X&lt;sub&gt;a&lt;/sub&
 
 
             <h2 id="formularis">Formularis: tipus d'inputs i configuració</h2>
-            <div class="html-text">
+            <div class="text">
                 <h3>Organización Campos</h3>
                 <p>Vamos a ver unos elementos que nos ayudan a organizar el formulario y a orientar al ususario en el
                     manejo del mismo. <br>Las etiquetas que veremos son las siguientes:</p>
@@ -974,7 +976,8 @@ El resultado de 24&lt;sup&gt;2&lt;/sup&gt; es el valor de X&lt;sub&gt;a&lt;/sub&
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="../assets/js/darkmode.js"></script>
 
 </body>
 
-</html>
+</html>  
