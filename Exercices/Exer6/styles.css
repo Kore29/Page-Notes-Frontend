@@ -1,0 +1,17 @@
+.personal {
+    background-color: aqua;
+}
+
+.acces {
+    background-color: rgb(234, 159, 159);
+}
+
+.documents {
+    background-color: rgb(158, 158, 158);
+}
+
+legend {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1.5px solid black
+}

@@ -1,0 +1,4 @@
+::placeholder {
+        color: red; /* Color del placeholder en rojo */
+        opacity: 0.6; /* Asegúrate de que el placeholder sea completamente opaco */
+}

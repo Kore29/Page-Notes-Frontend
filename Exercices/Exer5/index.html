@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Formulari d'inscripció</h1>
+    <p>Els camps marcats amb (*) són obligatoris.</p>
+        
+    <form method="post" action="http://daw.inspedralbes.cat/form/action.php">
+        <fieldset>
+            <legend>Dades Personals</legend>
+
+            <label for="name">(*) Nom i cognoms: </label>
+            <input  name="Nombre" type="text" placeholder="Escriu el teu nom" required><br><br>
+
+            <label for="birthday">Data naixement: </label>
+            <input name="Aniversari" type="date"><br><br>
+
+            <label for="email">Email: </label>
+            <input name="Email" type="email"><br><br>
+
+            <label for="genere">Gènere: </label> <br>
+            <input type="radio" id="masculi" >
+            <label for="masculi">Femení</label><br>
+
+            <input type="radio" id="femeni" >
+            <label for="femeni">Masculí</label><br>
+
+            <input type="radio" id="other" >
+            <label for="other">Un altre</label><br><br>
+            
+            <label for="poblacio">Població:</label>
+            <select id="poblacio" name="Població:">
+            <option value="insereix" selected>-insereix-</option>
+            <option value="lleida">Lleida</option>
+            <option value="girona">Girona</option>
+            <option value="tarragona">Tarragona</option>
+            <option value="barcelona">Barcelona</option>
+            </select> <br>  
+        </fieldset> <br>
+
+        <input type="checkbox" name="Invitació" checked>
+        <label>Vindras a dinar?</label> <br><br>
+
+        <label for="prov">Províncies on t'agradaria vire:</label> <br>
+        <select id="prov" name="Provincia opcional" size="4">
+            <option value="lleida">Lleida</option>
+            <option value="girona">Girona</option>
+            <option value="tarragona">Tarragona</option>
+            <option value="barcelona">Barcelona</option>
+        </select><br><br>
+
+        <label>Observacions</label> <br>
+        <textarea name="Observacions" rows="6" cols="53" style="resize: none">
+Pots posar aquí la teva observació. Fes que aquest quadre no es pugui redimensionar!
+        </textarea> <br>
+
+        <input type="button" value="Aquest butó no fa res"> <br>
+        <input type="reset" value="Aquest butó restableeix el formulari"> <br>
+        <input type="submit" value="Aquest butó envia el formulari a l'action del form">
+    </form>
+</body>
+</html>

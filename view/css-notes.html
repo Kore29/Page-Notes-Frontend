@@ -33,7 +33,7 @@
                 </p>
             </div>
 
-            <h2 id="introduccion-css">Introducción a CSS</h2>
+            <h2 id="introduccion-css">Introducción a CSS</h2> <!--Finiquitado-->
             <div class="css-text">
                 <h3>¿Qué es CSS?</h3>
                 <p>
@@ -80,9 +80,13 @@
                 <p>En las reglas tenemos tres cosas:</p>
 
                 <ul>
-                    <li>Los <code class="code">selectores</code>. En este caso queremos modificar como van a quedar todos los <code class="code">&lt;h1&gt;</code> y <code class="code">&lt;h3&gt;</code>.</li>
-                    <li>Las <code class="code">propiedades</code>. En el ejemplo se pretende cambiar el color de fondo y el color de las letras.</li>
-                    <li>Los <code class="code">valores</code>. En este caso se pone el valor <code class="code">blue</code> para la propiedad <code class="code">background-color</code> y el valor <code class="code">white</code> para la propiedad <code class="code">color</code>.</li>
+                    <li>Los <code class="code">selectores</code>. En este caso queremos modificar como van a quedar
+                        todos los <code class="code">&lt;h1&gt;</code> y <code class="code">&lt;h3&gt;</code>.</li>
+                    <li>Las <code class="code">propiedades</code>. En el ejemplo se pretende cambiar el color de fondo y
+                        el color de las letras.</li>
+                    <li>Los <code class="code">valores</code>. En este caso se pone el valor <code
+                            class="code">blue</code> para la propiedad <code class="code">background-color</code> y el
+                        valor <code class="code">white</code> para la propiedad <code class="code">color</code>.</li>
                 </ul>
 
                 <p>En el siguiente CSS se muestran los principales selectores.</p>
@@ -132,21 +136,34 @@
                 <p>Hay tres formas principales de aplicar <code class="code">CSS</code> a un documento HTML:</p>
 
                 <ul>
-                    <li><code class="code">CSS inline</code>: Se aplica directamente a un elemento HTML usando el atributo <code class="code">style</code>.</li>
-                    <li><code class="code">CSS interno</code>: Se define dentro de una etiqueta <code class="code">&lt;style&gt;</code> en el <code class="code">&lt;head&gt;</code> del documento HTML.</li>
-                    <li><code class="code">CSS externo</code>: Se escribe en un archivo separado con extensión <code class="code">.css</code> y se enlaza al HTML usando la etiqueta <code class="code">&lt;link&gt;</code>.</li>
+                    <li><code class="code">CSS inline</code>: Se aplica directamente a un elemento HTML usando el
+                        atributo <code class="code">style</code>.</li>
+                    <li><code class="code">CSS interno</code>: Se define dentro de una etiqueta <code
+                            class="code">&lt;style&gt;</code> en el <code class="code">&lt;head&gt;</code> del documento
+                        HTML.</li>
+                    <li><code class="code">CSS externo</code>: Se escribe en un archivo separado con extensión <code
+                            class="code">.css</code> y se enlaza al HTML usando la etiqueta <code
+                            class="code">&lt;link&gt;</code>.</li>
                 </ul>
-                
-                <h3>Ejemplos de código</h3>
 
-                <ul><li>CSS inline</li></ul>
+                <h4>Ejemplos de código</h4>
+
+                <ul>
+                    <li>CSS inline</li>
+                </ul>
 
                 <p>Se aplica directamente a un elemento HTML usando el atributo <code class="code">style</code>.</p>
-
+                
                 <pre><code class="language-css">&lt;h3 style="color: blue; font-size: 20px;"&gt;Este es un título con CSS inline&lt;/h3&gt;
                     &lt;p style="background-color: yellow; padding: 10px;"&gt;Este párrafo tiene un fondo amarillo y un relleno de 10px.&lt;/p&gt;</code></pre>
-            
-<pre><code>&lt;head&gt;
+
+                <ul>
+                    <li>CSS interno</li>
+                </ul>
+
+                <p>Se define dentro de una etiqueta <code class="code">&lt;style&gt;</code> en el <code class="code">&lt;head&gt;</code> del documento HTML.</p>
+
+                <pre><code>&lt;head&gt;
         &lt;style&gt;
                 h3 {
                     color: green;
@@ -163,15 +180,135 @@
             &lt;h3&gt;Este es un título con CSS interno&lt;/h3&gt;
             &lt;p&gt;Este párrafo tiene un fondo gris claro y un relleno de 15px.&lt;/p&gt;
 &lt;/body&gt;</code></pre>
-            
-                        <pre><code class="language-css">&lt;h3 style="color: blue; font-size: 20px;"&gt;Este es un título con CSS inline&lt;/h3&gt;
-                            &lt;p style="background-color: yellow; padding: 10px;"&gt;Este párrafo tiene un fondo amarillo y un relleno de 10px.&lt;/p&gt;</code></pre>
-                    
+
+                <ul>
+                    <li> CSS externo</li>
+                </ul>
+
+                <p>Se escribe en un archivo separado con extensión <code class="code">.css</code> y se enlaza al HTML usando la etiqueta <code class="code">&lt;link&gt;</code>.</p>
+
+                <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+        &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;Ejemplo de CSS externo&lt;/title&gt;
+                &lt;link rel="stylesheet" href="estilos.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+                &lt;h3&gt;Este es un título con CSS externo&lt;/h3&gt;
+                &lt;p&gt;Este párrafo tiene un fondo naranja y un relleno de 20px.&lt;/p&gt;
+        &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <h2 id="selectores">Selectores</h2> <!--Finiquitado-->
+            <div class="css-text">
+
+                <p>Los selectores en CSS son patrones que se utilizan para seleccionar los elementos HTML a los que se aplicarán los estilos. Hay varios tipos de selectores, desde los más básicos hasta los más avanzados.</p>
+
+                <h3>Selectores básicos</h3>
+                <li>Selector de elemento: Selecciona todos los elementos de un tipo específico.</li>
+                <pre><code> p {
+    color: blue;
+}</code></pre>
+                <p>Este selector aplica el color azul a todos los elementos <code class="code">&lt;p&gt;</code>.</p>
+
+                <li>Selector de clase: Selecciona elementos con un atributo <code class="code">class</code> específico. Se usa un punto (.) antes del nombre de la clase.</li>
+
+                <pre><code>.destacado {
+    background-color: yellow;
+}</code></pre>
+
+                <p>Este selector aplica un fondo amarillo a todos los elementos con la clase <code class="code">destacado</code>.</p>
+
+                <li>Selector de ID: Selecciona un elemento con un atributo <code class="code">id</code> específico. Se usa un hashtag <code class="code">#</code> antes del nombre del ID.</li>
+                <pre><code>#header {
+    font-size: 30px;
+}</code></pre>
+
+                <p>Este selector aplica un tamaño de fuente de 30px al elemento con el ID <code class="code">header</code>.</p>
+
+                <h3>Selectores avanzados</h3>
+
+                <p>Selector de pseudo-clase <code class="code">:hover</code>: Aplica estilos cuando el usuario pasa el cursor sobre un elemento.</p>
+
+                <pre><code class="language-css">a:hover {
+                    color: red;
+                }</code></pre>
+
+                <p>Este selector cambia el color del texto a rojo cuando el usuario pasa el cursor sobre un enlace.</p>
+
+                <p>Selector de pseudo-clase <code class="code">:nth-child()</code>: Selecciona elementos basados en su posición en un grupo de hermanos.</p>
+
+                <pre><code class="language-css">li:nth-child(odd) {
+                    background-color: lightgray;
+                }</code></pre>
+
+                <p>Este selector aplica un fondo gris claro a los elementos <code class="code">&lt;li&gt;</code> impares.</p>
+
+                <p>Selector de hijo directo (<code class="code">&gt;</code>): Selecciona elementos que son hijos directos de otro elemento.</p>
+
+                <pre><code class="language-css">ul > li {
+                    list-style: none;
+                }</code></pre>
+
+                <p>Este selector elimina los estilos de lista de los elementos <code class="code">&lt;li&gt;</code> que son hijos directos de un <code class="code">&lt;ul&gt;</code>.</p>
+
+                <p>Selector de hermano adyacente (<code class="code">+</code>): Selecciona un elemento que está inmediatamente después de otro.</p>
+
+                <pre><code class="language-css">h1 + p {
+                    font-weight: bold;
+                }</code></pre>
+
+                <p>Este selector aplica negrita al primer párrafo que sigue a un <code class="code">&lt;h1&gt;</code>.</p>
+
+                <p>Selector de hermano general (<code class="code">~</code>): Selecciona todos los elementos que son hermanos de otro elemento.</p>
+
+                <pre><code class="language-css">h1 ~ p {
+                    color: green;
+                }</code></pre>
+
+                <p>Este selector aplica color verde a todos los párrafos que son hermanos de un <code class="code">&lt;h1&gt;</code>.</p>
+
+
+                <h4>Selectores de atributos</h4>
+
+                <p>Selector de atributo básico: Selecciona elementos que tienen un atributo específico.</p>
+                <pre><code class="language-css">a[target] {
+                    color: purple;
+                }</code></pre>
+                <p>Este selector aplica color púrpura a todos los enlaces que tienen el atributo <code class="code">target</code>.</p>
+
+                <p>Selector de atributo con valor exacto: Selecciona elementos cuyo atributo tiene un valor específico.</p>
+                <pre><code class="language-css">input[type="text"] {
+                    border: 1px solid gray;
+                }</code></pre>
+                <p>Este selector aplica un borde gris a todos los campos de texto (<code class="code">&lt;input type="text"&gt;</code>).</p>
+
+                <p>Selector de atributo que comienza con un valor: Selecciona elementos cuyo atributo comienza con un valor específico.</p>
+                <pre><code class="language-css">a[href^="https"] {
+                    color: orange;
+                }</code></pre>
+                <p>Este selector aplica color naranja a todos los enlaces que comienzan con <code class="code">https</code>.</p>
+
+                <p>Selector de atributo que termina con un valor: Selecciona elementos cuyo atributo termina con un valor específico.</p>
+                <pre><code class="language-css">a[href$=".pdf"] {
+                    color: red;
+                }</code></pre>
+                <p>Este selector aplica color rojo a todos los enlaces que terminan con <code class="code">.pdf</code>.</p>
+
+                <p>Selector de atributo que contiene un valor: Selecciona elementos cuyo atributo contiene un valor específico.</p>
+                <pre><code class="language-css">a[href*="google"] {
+                    font-weight: bold;
+                }</code></pre>
+                <p>Este selector aplica negrita a todos los enlaces que contienen la palabra <code class="code">google</code> en su atributo <code class="code">href</code>.</p>
+            </div>
+
+            <h2 id="box-model">Modelo de Caja (Box Model)</h2>
+            <div class="css-text">
 
             </div>
 
-            <h2 id="selectores">Selectores</h2>
-            <h2 id="box-model">Modelo de Caja (Box Model)</h2>
             <h2 id="texto-fuentes">Propiedades de Texto y Fuentes</h2>
             <h2 id="colores-fondos">Colores y Fondos</h2>
             <h2 id="diseno-posicionamiento">Diseño y Posicionamiento</h2>
@@ -189,7 +326,8 @@
                     <li>
                         <a href="#introduccion-css" id="link-introduccion-css">Introducción a CSS</a>
                     </li>
-                    <li><a href="#selectores" id="link-selectores">Selectores</a></li>
+                    <li>
+                        <a href="#selectores" id="link-selectores">Selectores</a></li>
                     <li>
                         <a href="#box-model" id="link-box-model">Modelo de Caja (Box Model)</a>
                     </li>

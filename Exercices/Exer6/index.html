@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer6</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<h1>FULL D'INSCRIPCIÓ EN ELS CICLES FORMATIUS DE GRAU SUPERIOR</h1>
+<body>
+    <form method="post" action="http://daw.inspedralbes.cat/form/action.php">
+        <fieldset class="personal">
+            <legend>Dades Personals</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="nombre">Nom:</label> <br>
+                        <input type="text" id="nombre" name="nombre" style="width: 200px;">
+                    </td>
+                    <td>
+                        <label for="cognoms">Cognoms:</label> <br>
+                        <input type="text" id="cognoms" name="cognoms" style="width: 200px;">
+                    </td>
+                    <td>
+                        <label for="dni">DNI:</label> <br>
+                        <input type="text" id="dni" name="dni" style="width: 200px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="localitat">Localitat Naixement:</label> <br>
+                        <input type="text" id="localitat" name="localitat_naixement" style="width: 200px;">
+                    </td>
+                    <td>
+                        <label for="provincia">Província:</label> <br>
+                        <select id="provincia" name="provincia" style="width: 100px; background-color: white;">
+                            <option value="">-Selecciona-</option>
+                            <option value="lleida">Lleida</option>
+                            <option value="tarragona">Tarragona</option>
+                            <option value="barcelona">Barcelona</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="data-naixement">Data Naixement:</label> <br>
+                        <input type="date" id="data-naixement" name="data_naixement" style="width: 120px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="adreca">Adreça:</label> <br>
+                        <input type="email" id="adreca" name="adreca" style="width: 350px;">
+                    </td>
+                    <td>
+                        <label for="codi-postal">Codi Postal:</label> <br>
+                        <input type="text" id="codi-postal" name="codi_postal">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset class="acces">
+            <legend>Mode d'accés</legend>
+
+            <!-- Opción: Directe -->
+            <div>
+                <input type="radio" id="directe" name="mode_acces" value="directe">
+                <label for="directe">Directe</label>
+
+                <!-- Subopciones de Directe -->
+                <div style="margin-left: 20px;">
+                    <input type="radio" id="batxillerat" name="submode_acces" value="batxillerat" disabled>
+                    <label for="batxillerat">Batxillerat</label><br>
+
+                    <input type="radio" id="grau-mitja" name="submode_acces" value="grau-mitja" disabled>
+                    <label for="grau-mitja">Grau Mitja</label><br>
+
+                    <input type="radio" id="altres" name="submode_acces" value="altres" disabled>
+                    <label for="altres">Altres</label>
+                    <input type="text" id="altres-especifica" name="altres_especifica" placeholder="Especifica si 'Altres'" disabled>
+                </div>
+            </div>
+
+            <!-- Opción: Prova Lliure -->
+            <div>
+                <input type="radio" id="prova-lliure" name="mode_acces" value="prova-lliure">
+                <label for="prova-lliure">Prova Lliure</label>
+            </div>
+        </fieldset>
+        <fieldset class="documents">
+            <legend>Documents Adjuntats</legend>
+
+            <input type="checkbox" id="fotocopia-dni" name="documents" value="fotocopia-dni">
+            <label for="fotocopia-dni">Fotocopia DNI</label>
+            <button type="button" onclick="document.getElementById('file-fotocopia-dni').click()">Triar fitxer</button>
+            <input type="file" id="file-fotocopia-dni" name="file_fotocopia_dni" style="display: none;"
+                onchange="updateFileName('file-fotocopia-dni', 'file-name-fotocopia-dni')">
+            <span id="file-name-fotocopia-dni">No s'ha triat cap fitxer</span><br>
+
+            <input type="checkbox" id="certificat-academic" name="documents" value="certificat-academic">
+            <label for="certificat-academic">Certificat Acadèmic</label>
+            <button type="button" onclick="document.getElementById('file-certificat-academic').click()">Triar fitxer</button>
+            <input type="file" id="file-certificat-academic" name="file_certificat_academic" style="display: none;"
+                onchange="updateFileName('file-certificat-academic', 'file-name-certificat-academic')">
+            <span id="file-name-certificat-academic">No s'ha triat cap fitxer</span><br>
+
+            <input type="checkbox" id="altres-documents" name="documents" value="altres-documents">
+            <label for="altres-documents">Altres documents</label>
+            <button type="button" onclick="document.getElementById('file-altres-documents').click()">Triar fitxer</button>
+            <input type="file" id="file-altres-documents" name="file_altres_documents" style="display: none;"
+                onchange="updateFileName('file-altres-documents', 'file-name-altres-documents')">
+            <span id="file-name-altres-documents">No s'ha triat cap fitxer</span><br><br>
+        </fieldset>
+        <input type="submit" value="Enviar sol·licitud">
+    </form>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const directeRadio = document.getElementById('directe');
+        const subopciones = document.querySelectorAll('[name="submode_acces"], input[type="text"]');
+
+        const modoRadios = document.getElementsByName('mode_acces');
+
+        modoRadios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (directeRadio.checked) {
+                    // Habilitar subopciones de "Directe"
+                    subopciones.forEach(opcion => opcion.disabled = false);
+                } else {
+                    // Deshabilitar subopciones si no está seleccionado "Directe"
+                    subopciones.forEach(opcion => opcion.disabled = true);
+                }
+            });
+        });
+    });
+
+    function updateFileName(fileInputId, fileNameId) {
+        const fileInput = document.getElementById(fileInputId);
+        const fileNameDisplay = document.getElementById(fileNameId);
+        const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : "No s'ha triat cap fitxer";
+        fileNameDisplay.textContent = fileName;
+    }
+</script>
+
+</html>

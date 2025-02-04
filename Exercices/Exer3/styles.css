@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.gris {
+    background-color:rgb(121, 121, 121)
+}
+
+.amarillo {
+    background-color: yellow;
+}
+
+img {
+    width: 100px;
+}

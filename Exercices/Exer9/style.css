@@ -1,0 +1,57 @@
+body {
+    margin: 25px;
+    font-size: 15px;
+    background-color: #f08080;
+}
+
+hr {
+    border: groove white 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#black {
+    border: groove rgb(0, 0, 0) 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    background-color: #0000ff;
+    margin:auto;
+}
+
+#one {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+#two {
+    background-color: white;
+    border: solid black 1px;
+}
+
+#third {
+    margin:20px;
+    padding: 15px;
+    width: 200px;
+    display: inline-block;
+    background-color: white;
+    border: solid black 1px;
+}
+
+#blue {
+    background-color: #00ffff;
+    margin:30px;
+}
+
+#red {
+    background-color: #ff0000;
+    padding: 10px;
+    margin: 10px;
+}
+
+div {
+    background-color: #90ee90;
+    border: groove rgb(255, 255, 255) 10px;
+}
