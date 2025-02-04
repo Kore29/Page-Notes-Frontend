@@ -15,9 +15,9 @@ html {
 .header {
     background-color: rgb(136, 136, 136);
 }
-
+/**rgb(38, 38, 38);**/
 body {
-    background-color: rgb(38, 38, 38);
+    background-color: rgb(38,38,38);
     margin-top: 0;
 }
 
@@ -145,7 +145,7 @@ pre code {
 /**Animaciones**/
 
 /**Hola Juan, se que esto no apareció en el temario, pero me hacia ilusión ponerlo porque hace poco hice un curso sobre esto**/
-.html-content h2:target {
+.html-content h2:target, .css-content h2:target {
     animation: highlight 2s;
 }
 
@@ -162,10 +162,25 @@ pre code {
 
 /**Principal**/
 
+#arrow-main {
+    padding: 0px;
+    margin: 0;
+    width: 900px;
+    display: inline-block;
+    opacity: 0.5;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 40px;
+}
+
+#arrow-main:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
 .scroll-down {
     display: block;
     text-align: center;
-    margin: 20px auto;
+    transition: background-color 0.3s ease;
 }
 
 .main-container {
@@ -187,7 +202,7 @@ pre code {
 }
 
 .main-tittle:hover {
-    color: rgb(223, 223, 223)
+    color: rgb(223, 223, 223);
 }
 
 .main-flex {
@@ -348,9 +363,105 @@ table.animate {
     margin: 20px;
 }
 
-
 #etiquetes-basiques, #etiquetes-principals, #estructura-element, #llistes, #taules, #enllacos, #multimedia, #formularis {
     scroll-margin-top: 200px;
 }
 
 /**CSS**/
+
+/**Table**/
+
+.css-text .table {
+    width: 95%;
+    border-collapse: collapse;
+    margin-left: 33px;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.css-text th, .css-text td {
+    padding: 12px 15px;
+    border: 1px solid #2d2d2d;
+    color: rgb(206, 206, 206);
+}
+
+.css-text th {
+    background-color: #4b4b4b;
+    font-weight: bold;
+}
+
+.css-text tr:nth-child(even) {
+    background-color: #2c2c2c;
+}
+
+/**General**/
+
+.css-container {
+    display: flex;
+    margin: 0;
+}
+
+.css-container h2 {
+    color: rgb(111, 113, 222) !important;
+    padding: 10px; padding-left: 0 !important;
+}
+
+.css-content {
+    flex: 5;
+    padding-right: 20px;
+    margin: 20px
+}
+
+/**Text**/
+
+.css-text p {
+    color: rgb(206, 206, 206);
+    margin: 30px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.css-text h3 {
+    color: rgb(134, 134, 134);
+    margin: 30px;
+    font-size: 30px !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.css-text h4 {
+    color: rgb(75, 75, 75);
+    margin: 30px;
+    font-size: 25px !important;
+
+    border-left: 4px solid rgb(75, 75, 75);
+    padding-left: 10px; 
+}
+
+.css-text li {
+    color: rgb(206, 206, 206);
+    margin-top: 10px;
+    margin-left: 35px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.css-text code pre {
+    background-color: 0;
+    font-size: 15px;
+    border: #4c4c4c;
+}
+
+.css-text code {
+    border-radius: 19px;
+    margin-left: 15px;
+}
+
+.css-text pre {
+    margin: 20px;
+}
+
+#etiquetes-basiques, #etiquetes-principals, #estructura-element, #llistes, #taules, #enllacos, #multimedia, #formularis {
+    scroll-margin-top: 200px;
+}

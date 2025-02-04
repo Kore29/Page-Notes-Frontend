@@ -1,25 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Highlight Example</title>
-    <!-- Incluye el CSS de Highlight.js -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <title>Notes Frontend - HTML</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
 </head>
+
 <body>
-    <h1>Ejemplo de resaltado de código</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="html-notes.html">HTML</a></li>
+            <li><a href="css-notes.html">CSS</a></li>
+            <li><a href="exercices.html">EXERCICES</a></li>
+        </ul>
+    </nav>
+    <div class="css-container">
+        <div class="css-content">
+            <h1>Cascading Style Sheets</h1>
+            <div class="css-text">
+                <p>
+                    A diferencia de HTML donde las bases de aprendizaje son más claras y
+                    con una información más concreta, en CSS hay miles de opciones para
+                    personalizar y estilizar tu página. Dependiendo de cada ocasión, las
+                    ramas para solucionar un problema se dividen mucho, por lo tanto
+                    intentaré explicar los métodos más comunes y prácticos para utilizar
+                    en CSS, explicando cómo funciona.
+                </p>
+            </div>
 
-    <!-- Código con resaltado -->
-    <pre><code class="language-java">
-int name = sc.nextInt();
-    </code></pre>
+            <h2 id="introduccion-css">Introducción a CSS</h2>
+            <div class="css-text">
+                <h3>¿Qué es CSS?</h3>
+                <p>
+                    <code>CSS</code> (Cascading Style Sheets, o Hojas de Estilo en
+                    Cascada) es un lenguaje de diseño utilizado para controlar la
+                    presentación y el estilo de los documentos HTML. Con
+                    <code>CSS</code>, puedes definir cómo se ven los elementos en una
+                    página web, como colores, fuentes, márgenes, tamaños, posiciones y
+                    más. Separa el contenido (HTML) de su presentación (diseño), lo que
+                    facilita el mantenimiento y la actualización de los estilos.
+                </p>
 
-    <!-- Incluye la librería Highlight.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+                <h3>Sintaxis básica</h3>
+
+                <p>La sintaxis de <code>CSS</code> se compone de:</p>
+
+                <ul>
+                    <li>
+                        Un selector: Indica a qué elemento(s) HTML se aplicarán los
+                        estilos.
+                    </li>
+                    <li>
+                        Un bloque de declaración: Contiene una o más declaraciones entre
+                        llaves <code class="code">{}</code>.
+                    </li>
+                    <li>
+                        Declaraciones: Cada declaración incluye una propiedad y un valor,
+                        separados por dos puntos <code class="code">:</code> y terminados
+                        con un punto y coma <code class="code">;</code>.
+                    </li>
+                </ul>
+
+                <pre><code class="language-css">selector {
+    propiedad: valor;
+}</code></pre>
+
+                <p>CSS funciona mediante reglas, de las cuales se muestra un ejemplo a continuación.</p>
+
+                <pre><code class="language-css">h1, h3 {
+    background-color: blue;
+    color: white;
+}</code></pre>
+
+                <p>En las reglas tenemos tres cosas:</p>
+
+                <ul>
+                    <li>Los <code class="code">selectores</code>. En este caso queremos modificar como van a quedar todos los <code class="code">&lt;h1&gt;</code> y <code class="code">&lt;h3&gt;</code>.</li>
+                    <li>Las <code class="code">propiedades</code>. En el ejemplo se pretende cambiar el color de fondo y el color de las letras.</li>
+                    <li>Los <code class="code">valores</code>. En este caso se pone el valor <code class="code">blue</code> para la propiedad <code class="code">background-color</code> y el valor <code class="code">white</code> para la propiedad <code class="code">color</code>.</li>
+                </ul>
+
+                <p>En el siguiente CSS se muestran los principales selectores.</p>
+
+                <pre><code class="language-css">
+    h1{ /*Selecciona TODOS los h1 y les pone fondo azul*/
+        background-color: blue;
+    }
+    h1, h2{ /*Selecciona TODOS LOS H1 Y TODOS LOS H2 y les pone fondo azul*/
+        background-color: blue;
+    }
+    h1.titular{ /*Selecciona TODOS LOS H1 con el class "titular"*/
+        background-color: blue;
+    }
+    h1#titulonoticia{ /*Selecciona SOLO UN H1, el que tenga el id indicado*/
+        background-color: blue;
+    }
+
+    /* Selecciona todos los elementos li que sean hijos de un ul*/
+    ul>li {
+        background-color: blue;
+    }
+
+    /* Selecciona los párrafos que vayan justo detrás de un div*/
+    div + p{
+        background-color: blue;
+    }
+
+    /* Selecciona todos los elementos li que estén dentro de algun ul,
+    INCLUSO AUNQUE NO SEAN HIJOS DIRECTOS, sino "nietos", "bisnietos"...*/
+    ul li {
+        background-color: blue;
+    }
+
+    /* Esto es una "pseudo-clase" selecciona los enlaces no visitados
+    y los pone con fondo azul*/
+    a:link{
+        background-color: blue;
+    }
+
+    /* Pone en fondo rojo los enlaces ya visitados*/
+    a:visited{
+        background-color: blue;
+}</code></pre>
+
+                <h3>Formas de aplicar CSS</h3>
+                <p>Hay tres formas principales de aplicar <code class="code">CSS</code> a un documento HTML:</p>
+
+                <ul>
+                    <li><code class="code">CSS inline</code>: Se aplica directamente a un elemento HTML usando el atributo <code class="code">style</code>.</li>
+                    <li><code class="code">CSS interno</code>: Se define dentro de una etiqueta <code class="code">&lt;style&gt;</code> en el <code class="code">&lt;head&gt;</code> del documento HTML.</li>
+                    <li><code class="code">CSS externo</code>: Se escribe en un archivo separado con extensión <code class="code">.css</code> y se enlaza al HTML usando la etiqueta <code class="code">&lt;link&gt;</code>.</li>
+                </ul>
+                
+                <h3>Ejemplos de código</h3>
+
+                <ul><li>CSS inline</li></ul>
+
+                <p>Se aplica directamente a un elemento HTML usando el atributo <code class="code">style</code>.</p>
+
+                <pre><code class="language-css">&lt;h3 style="color: blue; font-size: 20px;"&gt;Este es un título con CSS inline&lt;/h3&gt;
+                    &lt;p style="background-color: yellow; padding: 10px;"&gt;Este párrafo tiene un fondo amarillo y un relleno de 10px.&lt;/p&gt;</code></pre>
+            
+<pre><code>&lt;head&gt;
+        &lt;style&gt;
+                h3 {
+                    color: green;
+                    font-size: 24px;
+                }
+                p {
+                    background-color: lightgray;
+                    padding: 15px;
+                }
+        &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+            &lt;h3&gt;Este es un título con CSS interno&lt;/h3&gt;
+            &lt;p&gt;Este párrafo tiene un fondo gris claro y un relleno de 15px.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+            
+                        <pre><code class="language-css">&lt;h3 style="color: blue; font-size: 20px;"&gt;Este es un título con CSS inline&lt;/h3&gt;
+                            &lt;p style="background-color: yellow; padding: 10px;"&gt;Este párrafo tiene un fondo amarillo y un relleno de 10px.&lt;/p&gt;</code></pre>
+                    
+
+            </div>
+
+            <h2 id="selectores">Selectores</h2>
+            <h2 id="box-model">Modelo de Caja (Box Model)</h2>
+            <h2 id="texto-fuentes">Propiedades de Texto y Fuentes</h2>
+            <h2 id="colores-fondos">Colores y Fondos</h2>
+            <h2 id="diseno-posicionamiento">Diseño y Posicionamiento</h2>
+            <h2 id="flexbox">Flexbox (Diseño flexible)</h2>
+            <h2 id="css-grid">CSS Grid (Diseño en cuadrícula)</h2>
+            <h2 id="animaciones-transiciones">Animaciones y Transiciones</h2>
+            <h2 id="media-queries">Media Queries y Diseño Responsivo</h2>
+            <h2 id="variables-css">Variables en CSS y Preprocesadores</h2>
+        </div>
+
+        <aside class="sidebar">
+            <div class="sticky">
+                <h3>CSS</h3>
+                <ul>
+                    <li>
+                        <a href="#introduccion-css" id="link-introduccion-css">Introducción a CSS</a>
+                    </li>
+                    <li><a href="#selectores" id="link-selectores">Selectores</a></li>
+                    <li>
+                        <a href="#box-model" id="link-box-model">Modelo de Caja (Box Model)</a>
+                    </li>
+                    <li>
+                        <a href="#texto-fuentes" id="link-texto-fuentes">Propiedades de Texto y Fuentes</a>
+                    </li>
+                    <li>
+                        <a href="#colores-fondos" id="link-colores-fondos">Colores y Fondos</a>
+                    </li>
+                    <li>
+                        <a href="#diseno-posicionamiento" id="link-diseno-posicionamiento">Diseño y Posicionamiento</a>
+                    </li>
+                    <li>
+                        <a href="#flexbox" id="link-flexbox">Flexbox (Diseño flexible)</a>
+                    </li>
+                    <li>
+                        <a href="#css-grid" id="link-css-grid">CSS Grid (Diseño en cuadrícula)</a>
+                    </li>
+                    <li>
+                        <a href="#animaciones-transiciones" id="link-animaciones-transiciones">Animaciones y
+                            Transiciones</a>
+                    </li>
+                    <li>
+                        <a href="#media-queries" id="link-media-queries">Media Queries y Diseño Responsivo</a>
+                    </li>
+                    <li>
+                        <a href="#variables-css" id="link-variables-css">Variables en CSS y Preprocesadores</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>
-        // Inicializa Highlight.js
         hljs.highlightAll();
     </script>
 </body>
+
 </html>

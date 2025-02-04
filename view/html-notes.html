@@ -626,6 +626,62 @@ El resultado de 24&lt;sup&gt;2&lt;/sup&gt; es el valor de X&lt;sub&gt;a&lt;/sub&
             <div class="html-text">
                 <h3>Enlaces</h3>
 
+                <p>Una de las etiquetas más importantes de HTML (sino la que más) es la etiqueta <code class="code">&lt;a&gt;</code>. Esta etiqueta se utiliza para crear los llamados enlaces, vínculos o hipervínculos. La idea es establecer una referencia a una dirección o URL donde está alojado ese otro documento de destino, que puede ser una página web, un archivo PDF, una imagen o cualquier otro tipo de documento.</p>
+
+                <p><code class="code">&lt;a&gt;</code> Etiqueta para hacer referencia a otras páginas web o recursos como documentos o archivos.</p>
+                
+                <p>Esta etiqueta debe tener, como mínimo, el atributo <code class="code">href</code>, ya que es el atributo con el que se especifica la dirección URL al documento que se quiere enlazar. Aún así, la etiqueta <code class="code">&lt;a&gt;</code> también tiene varios atributos opcionales, veamos un resumen de todos ellos:</p>
+                
+                <p>Atributos</p>
+                <ul>
+                    <li><code class="code">href</code> URL Enlace al documento que se quiere cargar. Atributo obligatorio.</li>
+                    <li><code class="code">download</code> nombre.ext Descarga el enlace (<code class="code">href</code>) en lugar de abrirlo. Si se indica valor, se renombra.</li>
+                    <li><code class="code">target</code> Valores:
+                        <ul>
+                            <li><code class="code">_blank</code> Abre el enlace en una nueva pestaña.</li>
+                            <li><code class="code">_self</code> Abre el enlace en la pestaña o <code class="code">&lt;iframe&gt;</code> actual.</li>
+                            <li><code class="code">_parent</code> Abre el enlace en el documento padre.</li>
+                            <li><code class="code">_top</code> Abre el enlace en el documento raíz (padre global).</li>
+                            <li><code class="code">name</code> Abre el enlace en el <code class="code">&lt;iframe&gt;</code> con el name especificado.</li>
+                        </ul>
+                    </li>
+                    <li><code class="code">rel</code> (con los siguientes valores):
+                        <ul>
+                            <li><code class="code">alternate</code> Indica que el enlace es una versión alternativa (idioma o formato diferente).</li>
+                            <li><code class="code">author</code> Indica que el enlace es la web del autor de la página actual.</li>
+                            <li><code class="code">bookmark</code> El enlace es un permalink a la sección de la página actual.</li>
+                            <li><code class="code">help</code> Indica que el enlace ofrece ayuda para la página actual.</li>
+                            <li><code class="code">license</code> Indica que la página actual está cubierta por la licencia referenciada.</li>
+                            <li><code class="code">prev</code> Indica que el enlace es la parte previa del documento actual.</li>
+                            <li><code class="code">next</code> Indica que el enlace es la parte siguiente del documento actual.</li>
+                            <li><code class="code">nofollow</code> Indica que el enlace no está supervisado por el autor del sitio web.</li>
+                            <li><code class="code">noreferrer</code> El navegador no envía la página de procedencia al visitar el enlace.</li>
+                            <li><code class="code">prefetch</code> El navegador precarga el enlace (es probable que se haga clic)</li>
+                            <li><code class="code">search</code> Indica que el enlace es una página para realizar búsquedas.</li>
+                            <li><code class="code">tag</code> Asocia una etiqueta al enlace especificado, en relación al documento actual.</li>
+                        </ul>
+                    </li>
+                    <li><code class="code">hreflang</code> Idioma Código ISO 639-1 del idioma del documento.</li>
+                    <li><code class="code">type</code> Tipo Tipo de contenido MIME al que se enlaza. Atributo no obligatorio.</li>
+                </ul>
+                <p>El soporte del atributo <code class="code">download</code> podría no funcionar en navegadores no actuales, como versiones antiguas de Chrome o Firefox, o desde Internet Explorer:</p>
+                
+                <p>Veamos a continuación algunos ejemplos de enlaces utilizando algunos atributos indicados en la tabla superior para comprender así su funcionamiento:</p>
+
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;&lt;a rel="author" href="http://www.emezeta.com/"&gt;Emezeta&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="http://lenguajecss.com/" target="_blank"&gt;LenguajeCSS&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="http://pagina.com/documento.pdf" download="A-38.pdf"&gt;PDF&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="http://pagina.com/documento-en.pdf" hreflang="en"&gt;PDF&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                <h4>Estados de un enlace</h4>
+
+                <ul>
+                    <li>Enlaces sin visitas: Un enlace que no ha sido visitado aún (pseudoclase :link en CSS) es representado por los navegadores como un enlace de color azul y subrayado. Se suele aconsejar no realizar cambios bruscos en los estilos de los enlaces, ya que los usuarios que no estén acostumbrados al sitio web no reconocerán instantáneamente un enlace si no es de color azul y/o está subrayado.</li>
+                    <li>Enlaces visitados: Un enlace que ha sido visitado previamente (pseudoclase :visited en CSS) es representado por los navegadores como un enlace de color lila y subrayado.</li>
+                    <li>Enlaces activos: Un enlace está en estado activo (pseudoclase :active en CSS) cuando el usuario está pulsando sobre el enlace con el ratón y a la misma vez no ha dejado de pulsar en él. Se suele utilizar para destacar el clic visualmente.</li>
+                </ul>
                 <h3>URLs y rutas</h3>
 
             </div>
@@ -664,6 +720,23 @@ El resultado de 24&lt;sup&gt;2&lt;/sup&gt; es el valor de X&lt;sub&gt;a&lt;/sub&
                 <p>Por otro lado, el segundo ejemplo, carga un archivo de audio en formato OGG y lo reproduce automáticamente y en bucle, de modo que vuelve a empezar cuando termina.</p>
 
                 <h3>Imagenes</h3>
+
+                <p>En HTML, las imágenes se insertan mediante la etiqueta <code class="code">&lt;img&gt;</code>, que es un elemento vacío (no tiene etiqueta de cierre). La sintaxis básica es:</p>
+
+                <h4>Atributos principales</h4>
+
+                <ul>
+                    <li><code class="code">src</code>: Especifica la ruta de la imagen.</li>
+                    <li><code class="code">alt</code>: Proporciona un texto alternativo en caso de que la imagen no se cargue.</li>
+                    <li><code class="code">width</code> y <code class="code">height</code>: Definen el ancho y alto de la imagen (en píxeles o porcentaje).</li>
+                    <li><code class="code">title</code>: Muestra un texto emergente cuando el usuario pasa el cursor sobre la imagen.</li>
+                    <li><code class="code">loading</code>: Permite definir si la imagen se carga de forma diferida (<code class="code">lazy</code>) o inmediata (<code class="code">eager</code>).</li>
+                </ul>
+                
+                <h4>Ejemplos de uso</h4>
+
+                    <pre><code>&lt;img src="imagen.jpg" alt="Ejemplo de imagen" width="300" height="200" title="Imagen de ejemplo" loading="lazy"&gt;
+                    </code></pre>
 
                 <h3>Video</h3> 
 
