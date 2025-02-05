@@ -6,21 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.8" />
     <title>Notes Frontend - CSS</title>
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+    <link rel="stylesheet" href="../assets/css/darkmode.css">
+
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="html-notes.html">HTML</a></li>
-            <li><a href="css-notes.html">CSS</a></li>
-            <li><a href="exercices.html">EXERCICES</a></li>
+    <nav>
+        <ul class="navbar">
+            <div class="div-btn-n">
+                <button class="nav-btn" type="button" onclick="location.href='index.html'">INICIO</button>
+                <button class="nav-btn" type="button" onclick="location.href='html-notes.html'">HTML</button>
+                <button class="nav-btn" type="button" onclick="location.href='css-notes.html'">CSS</button>
+                <button class="nav-btn" type="button" onclick="location.href='exercices.html'">EJERCICIOS</button>
+            </div>
+            <div class="div-btn-l">
+                <input type="checkbox" id="darkmode-toggle"></input>
+                <label for="darkmode-toggle"></label>
+            </div>
         </ul>
     </nav>
-    <div class="css-container">
-        <div class="css-content">
+    <div class="container">
+        <div class="content">
             <h1>Cascading Style Sheets</h1>
             <div class="text">
                 <p>
@@ -362,9 +369,8 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script>
-        hljs.highlightAll();
-    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="../assets/js/darkmode.js"></script>
 </body>
 
 </html>
