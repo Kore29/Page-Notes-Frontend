@@ -72,7 +72,7 @@ pre code {
     
     color: #1e1c1b;
     border: 2px solid black;
-    background-color: var(--navbar-btn-background);
+    background: var(--navbar-btn-background);
 
     border-radius: 20px;
     font-size: 22px;
@@ -187,7 +187,7 @@ pre code {
     --aside-background: #4a4a4a;
     
     --navbar-background: rgb(56, 56, 56);
-    --navbar-btn-background: rgba(75, 65, 150, 0.5);
+    --navbar-btn-background: linear-gradient(180deg, rgb(63, 64, 125), rgb(111, 113, 222));
 }
 
 [data-theme="white"] {
@@ -202,7 +202,7 @@ pre code {
     --aside-background: #F5F5F5;
     
     --navbar-background: #c4c4c4;
-    --navbar-btn-background: rgb(200, 131, 63);
+    --navbar-btn-background: linear-gradient(180deg,#ffcc89,#d8860b);
 }
 
 /**Principal**/

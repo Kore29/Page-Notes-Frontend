@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/darkmode.css">
 
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
 </head>
 
 <body>
@@ -160,7 +161,7 @@
                 </ul>
 
                 <p>Se aplica directamente a un elemento HTML usando el atributo <code class="code">style</code>.</p>
-                
+
                 <pre><code class="language-css">&lt;h3 style="color: blue; font-size: 20px;"&gt;Este es un título con CSS inline&lt;/h3&gt;
                     &lt;p style="background-color: yellow; padding: 10px;"&gt;Este párrafo tiene un fondo amarillo y un relleno de 10px.&lt;/p&gt;</code></pre>
 
@@ -168,7 +169,8 @@
                     <li>CSS interno</li>
                 </ul>
 
-                <p>Se define dentro de una etiqueta <code class="code">&lt;style&gt;</code> en el <code class="code">&lt;head&gt;</code> del documento HTML.</p>
+                <p>Se define dentro de una etiqueta <code class="code">&lt;style&gt;</code> en el <code
+                        class="code">&lt;head&gt;</code> del documento HTML.</p>
 
                 <pre><code>&lt;head&gt;
         &lt;style&gt;
@@ -192,7 +194,8 @@
                     <li> CSS externo</li>
                 </ul>
 
-                <p>Se escribe en un archivo separado con extensión <code class="code">.css</code> y se enlaza al HTML usando la etiqueta <code class="code">&lt;link&gt;</code>.</p>
+                <p>Se escribe en un archivo separado con extensión <code class="code">.css</code> y se enlaza al HTML
+                    usando la etiqueta <code class="code">&lt;link&gt;</code>.</p>
 
                 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="es"&gt;
@@ -211,7 +214,9 @@
             <h2 id="selectores">Selectores</h2> <!--Finiquitado-->
             <div class="text">
 
-                <p>Los selectores en CSS son patrones que se utilizan para seleccionar los elementos HTML a los que se aplicarán los estilos. Hay varios tipos de selectores, desde los más básicos hasta los más avanzados.</p>
+                <p>Los selectores en CSS son patrones que se utilizan para seleccionar los elementos HTML a los que se
+                    aplicarán los estilos. Hay varios tipos de selectores, desde los más básicos hasta los más
+                    avanzados.</p>
 
                 <h3>Selectores básicos</h3>
                 <li>Selector de elemento: Selecciona todos los elementos de un tipo específico.</li>
@@ -220,24 +225,29 @@
 }</code></pre>
                 <p>Este selector aplica el color azul a todos los elementos <code class="code">&lt;p&gt;</code>.</p>
 
-                <li>Selector de clase: Selecciona elementos con un atributo <code class="code">class</code> específico. Se usa un punto (.) antes del nombre de la clase.</li>
+                <li>Selector de clase: Selecciona elementos con un atributo <code class="code">class</code> específico.
+                    Se usa un punto (.) antes del nombre de la clase.</li>
 
                 <pre><code>.destacado {
     background-color: yellow;
 }</code></pre>
 
-                <p>Este selector aplica un fondo amarillo a todos los elementos con la clase <code class="code">destacado</code>.</p>
+                <p>Este selector aplica un fondo amarillo a todos los elementos con la clase <code
+                        class="code">destacado</code>.</p>
 
-                <li>Selector de ID: Selecciona un elemento con un atributo <code class="code">id</code> específico. Se usa un hashtag <code class="code">#</code> antes del nombre del ID.</li>
+                <li>Selector de ID: Selecciona un elemento con un atributo <code class="code">id</code> específico. Se
+                    usa un hashtag <code class="code">#</code> antes del nombre del ID.</li>
                 <pre><code>#header {
     font-size: 30px;
 }</code></pre>
 
-                <p>Este selector aplica un tamaño de fuente de 30px al elemento con el ID <code class="code">header</code>.</p>
+                <p>Este selector aplica un tamaño de fuente de 30px al elemento con el ID <code
+                        class="code">header</code>.</p>
 
                 <h3>Selectores avanzados</h3>
 
-                <p>Selector de pseudo-clase <code class="code">:hover</code>: Aplica estilos cuando el usuario pasa el cursor sobre un elemento.</p>
+                <p>Selector de pseudo-clase <code class="code">:hover</code>: Aplica estilos cuando el usuario pasa el
+                    cursor sobre un elemento.</p>
 
                 <pre><code class="language-css">a:hover {
                     color: red;
@@ -245,37 +255,45 @@
 
                 <p>Este selector cambia el color del texto a rojo cuando el usuario pasa el cursor sobre un enlace.</p>
 
-                <p>Selector de pseudo-clase <code class="code">:nth-child()</code>: Selecciona elementos basados en su posición en un grupo de hermanos.</p>
+                <p>Selector de pseudo-clase <code class="code">:nth-child()</code>: Selecciona elementos basados en su
+                    posición en un grupo de hermanos.</p>
 
                 <pre><code class="language-css">li:nth-child(odd) {
                     background-color: lightgray;
                 }</code></pre>
 
-                <p>Este selector aplica un fondo gris claro a los elementos <code class="code">&lt;li&gt;</code> impares.</p>
+                <p>Este selector aplica un fondo gris claro a los elementos <code class="code">&lt;li&gt;</code>
+                    impares.</p>
 
-                <p>Selector de hijo directo (<code class="code">&gt;</code>): Selecciona elementos que son hijos directos de otro elemento.</p>
+                <p>Selector de hijo directo (<code class="code">&gt;</code>): Selecciona elementos que son hijos
+                    directos de otro elemento.</p>
 
                 <pre><code class="language-css">ul > li {
                     list-style: none;
                 }</code></pre>
 
-                <p>Este selector elimina los estilos de lista de los elementos <code class="code">&lt;li&gt;</code> que son hijos directos de un <code class="code">&lt;ul&gt;</code>.</p>
+                <p>Este selector elimina los estilos de lista de los elementos <code class="code">&lt;li&gt;</code> que
+                    son hijos directos de un <code class="code">&lt;ul&gt;</code>.</p>
 
-                <p>Selector de hermano adyacente (<code class="code">+</code>): Selecciona un elemento que está inmediatamente después de otro.</p>
+                <p>Selector de hermano adyacente (<code class="code">+</code>): Selecciona un elemento que está
+                    inmediatamente después de otro.</p>
 
                 <pre><code class="language-css">h1 + p {
                     font-weight: bold;
                 }</code></pre>
 
-                <p>Este selector aplica negrita al primer párrafo que sigue a un <code class="code">&lt;h1&gt;</code>.</p>
+                <p>Este selector aplica negrita al primer párrafo que sigue a un <code class="code">&lt;h1&gt;</code>.
+                </p>
 
-                <p>Selector de hermano general (<code class="code">~</code>): Selecciona todos los elementos que son hermanos de otro elemento.</p>
+                <p>Selector de hermano general (<code class="code">~</code>): Selecciona todos los elementos que son
+                    hermanos de otro elemento.</p>
 
                 <pre><code class="language-css">h1 ~ p {
                     color: green;
                 }</code></pre>
 
-                <p>Este selector aplica color verde a todos los párrafos que son hermanos de un <code class="code">&lt;h1&gt;</code>.</p>
+                <p>Este selector aplica color verde a todos los párrafos que son hermanos de un <code
+                        class="code">&lt;h1&gt;</code>.</p>
 
 
                 <h4>Selectores de atributos</h4>
@@ -284,46 +302,1349 @@
                 <pre><code class="language-css">a[target] {
                     color: purple;
                 }</code></pre>
-                <p>Este selector aplica color púrpura a todos los enlaces que tienen el atributo <code class="code">target</code>.</p>
+                <p>Este selector aplica color púrpura a todos los enlaces que tienen el atributo <code
+                        class="code">target</code>.</p>
 
-                <p>Selector de atributo con valor exacto: Selecciona elementos cuyo atributo tiene un valor específico.</p>
+                <p>Selector de atributo con valor exacto: Selecciona elementos cuyo atributo tiene un valor específico.
+                </p>
                 <pre><code class="language-css">input[type="text"] {
                     border: 1px solid gray;
                 }</code></pre>
-                <p>Este selector aplica un borde gris a todos los campos de texto (<code class="code">&lt;input type="text"&gt;</code>).</p>
+                <p>Este selector aplica un borde gris a todos los campos de texto (<code
+                        class="code">&lt;input type="text"&gt;</code>).</p>
 
-                <p>Selector de atributo que comienza con un valor: Selecciona elementos cuyo atributo comienza con un valor específico.</p>
+                <p>Selector de atributo que comienza con un valor: Selecciona elementos cuyo atributo comienza con un
+                    valor específico.</p>
                 <pre><code class="language-css">a[href^="https"] {
                     color: orange;
                 }</code></pre>
-                <p>Este selector aplica color naranja a todos los enlaces que comienzan con <code class="code">https</code>.</p>
+                <p>Este selector aplica color naranja a todos los enlaces que comienzan con <code
+                        class="code">https</code>.</p>
 
-                <p>Selector de atributo que termina con un valor: Selecciona elementos cuyo atributo termina con un valor específico.</p>
+                <p>Selector de atributo que termina con un valor: Selecciona elementos cuyo atributo termina con un
+                    valor específico.</p>
                 <pre><code class="language-css">a[href$=".pdf"] {
                     color: red;
                 }</code></pre>
-                <p>Este selector aplica color rojo a todos los enlaces que terminan con <code class="code">.pdf</code>.</p>
+                <p>Este selector aplica color rojo a todos los enlaces que terminan con <code class="code">.pdf</code>.
+                </p>
 
-                <p>Selector de atributo que contiene un valor: Selecciona elementos cuyo atributo contiene un valor específico.</p>
+                <p>Selector de atributo que contiene un valor: Selecciona elementos cuyo atributo contiene un valor
+                    específico.</p>
                 <pre><code class="language-css">a[href*="google"] {
                     font-weight: bold;
                 }</code></pre>
-                <p>Este selector aplica negrita a todos los enlaces que contienen la palabra <code class="code">google</code> en su atributo <code class="code">href</code>.</p>
+                <p>Este selector aplica negrita a todos los enlaces que contienen la palabra <code
+                        class="code">google</code> en su atributo <code class="code">href</code>.</p>
             </div>
 
             <h2 id="box-model">Modelo de Caja (Box Model)</h2>
             <div class="text">
+                <p>En el diseño web, los elementos HTML tienen un modelo de caja que define cómo se estructuran
+                    visualmente. Este modelo incluye:</p>
 
+                <h3>1. El Modelo de Caja</h3>
+                <p>El modelo de caja está compuesto por cuatro partes principales:</p>
+                <ul>
+                    <li><strong>Margen (<code class="code">margin</code>):</strong> Espacio externo alrededor del
+                        elemento.</li>
+                    <li><strong>Borde (<code class="code">border</code>):</strong> Línea que rodea el contenido y el
+                        padding.</li>
+                    <li><strong>Relleno (<code class="code">padding</code>):</strong> Espacio entre el contenido y el
+                        borde.</li>
+                    <li><strong>Contenido (<code class="code">content</code>):</strong> Área donde se muestra el texto o
+                        las imágenes.</li>
+                </ul>
+
+                <h4>Ejemplo de Código</h4>
+                <pre><code>
+.box-example {
+    width: 200px;
+    height: 100px;
+    margin: 20px auto; /* Margen externo */
+    padding: 20px;     /* Relleno interno */
+    border: 5px solid #3498db; /* Borde */
+    background-color: #ecf0f1; /* Fondo del contenido */
+}
+    </code></pre>
+
+                <h3>2. Ancho (<code class="code">width</code>) y Alto (<code class="code">height</code>)</h3>
+                <p>Los valores de <code class="code">width</code> y <code class="code">height</code> definen el tamaño
+                    del área de contenido.</p>
+                <p>Sin embargo, el tamaño total del elemento incluye también el <code class="code">padding</code>, el
+                    <code class="code">border</code> y el <code class="code">margin</code>.
+                </p>
+
+                <h4>Ejemplo</h4>
+                <pre><code>
+.elemento {
+    width: 300px; /* Ancho del contenido */
+    height: 150px; /* Alto del contenido */
+    padding: 10px; /* Añade 10px en cada lado interno */
+    border: 5px solid black; /* Añade 5px en cada lado externo */
+    margin: 20px; /* Añade 20px en cada lado externo */
+}
+    </code></pre>
+
+                <h3>3. Propiedad <code class="code">box-sizing</code></h3>
+                <p>Por defecto, el tamaño total de un elemento incluye el contenido, el padding y el borde. Esto puede
+                    ser confuso al calcular dimensiones.</p>
+                <p>La propiedad <code class="code">box-sizing</code> permite cambiar este comportamiento:</p>
+                <ul>
+                    <li><code class="code">content-box</code>: El tamaño del contenido es igual a <code
+                            class="code">width</code> y <code class="code">height</code>.</li>
+                    <li><code class="code">border-box</code>: El tamaño total incluye el contenido, el padding y el
+                        borde.</li>
+                </ul>
+
+                <h4>Ejemplo</h4>
+                <pre><code>
+.elemento {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 20px;
+    border: 10px solid black;
+}
+    </code></pre>
+                <p>Con <code class="code">box-sizing: border-box</code>, el ancho total será siempre 300px,
+                    independientemente del padding y el borde.</p>
+
+                <h3>4. Propiedad <code class="code">overflow</code></h3>
+                <p>La propiedad <code class="code">overflow</code> controla qué sucede cuando el contenido es demasiado
+                    grande para caber en su área asignada.</p>
+                <ul>
+                    <li><code class="code">visible</code>: El contenido se desborda (valor predeterminado).</li>
+                    <li><code class="code">hidden</code>: El contenido que se desborda se oculta.</li>
+                    <li><code class="code">scroll</code>: Se agregan barras de desplazamiento.</li>
+                    <li><code class="code">auto</code>: Se agregan barras de desplazamiento solo si es necesario.</li>
+                </ul>
+
+                <h4>Ejemplo</h4>
+                <pre><code>
+.contenedor {
+    width: 200px;
+    height: 100px;
+    overflow: auto; /* Agrega barras de desplazamiento si es necesario */
+}
+    </code></pre>
+
+                <h3>Resumen</h3>
+                <p>El modelo de caja es fundamental en CSS. Entender cómo funcionan el <code class="code">margin</code>,
+                    <code class="code">border</code>, <code class="code">padding</code> y <code
+                        class="code">content</code> te permitirá controlar mejor el diseño de tus páginas web. Además,
+                    las propiedades como <code class="code">width</code>, <code class="code">height</code>, <code
+                        class="code">box-sizing</code> y <code class="code">overflow</code> son herramientas clave para
+                    gestionar el espacio y el comportamiento de los elementos.
+                </p>
             </div>
 
             <h2 id="texto-fuentes">Propiedades de Texto y Fuentes</h2>
+            <div class="text">
+                <p>Las propiedades de texto y fuentes en CSS permiten controlar cómo se muestran los textos en una
+                    página web. Estas propiedades son esenciales para mejorar la legibilidad y el diseño visual.</p>
+
+                <h3>1. Propiedades Básicas de Texto</h3>
+                <p>Estas propiedades definen aspectos fundamentales del texto, como su color, tipo de fuente y tamaño.
+                </p>
+
+                <h4><code class="code">color</code></h4>
+                <p>Define el color del texto. Puede especificarse en formato hexadecimal, RGB o nombres de colores.</p>
+                <pre><code>
+            p {
+                color: #3498db; /* Azul claro */
+            }
+                </code></pre>
+
+                <h4><code class="code">font-family</code></h4>
+                <p>Especifica la fuente del texto. Se recomienda proporcionar varias opciones en caso de que la primera
+                    no esté disponible.</p>
+                <pre><code>
+            body {
+                font-family: Arial, sans-serif;
+            }
+                </code></pre>
+
+                <h4><code class="code">font-size</code></h4>
+                <p>Define el tamaño del texto. Puede expresarse en píxeles (<code class="code">px</code>), ems (<code
+                        class="code">em</code>) o porcentajes (<code class="code">%</code>).</p>
+                <pre><code>
+            h1 {
+                font-size: 24px;
+            }
+                </code></pre>
+
+                <h3>2. Propiedades de Estilo de Texto</h3>
+                <p>Estas propiedades controlan el peso, alineación y espaciado del texto.</p>
+
+                <h4><code class="code">font-weight</code></h4>
+                <p>Define el grosor de la fuente. Los valores comunes son <code class="code">normal</code>, <code
+                        class="code">bold</code> o números como <code class="code">400</code> (normal) y <code
+                        class="code">700</code> (negrita).</p>
+                <pre><code>
+            strong {
+                font-weight: bold;
+            }
+                </code></pre>
+
+                <h4><code class="code">line-height</code></h4>
+                <p>Controla el espacio entre líneas de texto. Un valor mayor mejora la legibilidad.</p>
+                <pre><code>
+            p {
+                line-height: 1.6; /* Espacio relativo al tamaño del texto */
+            }
+                </code></pre>
+
+                <h4><code class="code">text-align</code></h4>
+                <p>Alinea el texto horizontalmente. Los valores comunes son <code class="code">left</code>, <code
+                        class="code">right</code>, <code class="code">center</code> y <code class="code">justify</code>.
+                </p>
+                <pre><code>
+            h2 {
+                text-align: center;
+            }
+                </code></pre>
+
+                <h3>3. Propiedades de Decoración de Texto</h3>
+                <p>Estas propiedades añaden efectos visuales al texto, como subrayados o transformaciones.</p>
+
+                <h4><code class="code">text-decoration</code></h4>
+                <p>Añade decoraciones al texto, como subrayados, tachados o líneas superiores.</p>
+                <pre><code>
+            a {
+                text-decoration: none; /* Elimina el subrayado de los enlaces */
+            }
+                </code></pre>
+
+                <h4><code class="code">text-transform</code></h4>
+                <p>Transforma el texto a mayúsculas, minúsculas o capitalización.</p>
+                <pre><code>
+            h3 {
+                text-transform: uppercase; /* Convierte el texto a mayúsculas */
+            }
+                </code></pre>
+
+                <h3>4. Ejemplo Completo</h3>
+                <p>A continuación, un ejemplo que combina todas estas propiedades:</p>
+                <pre><code>
+&lt;style&gt;
+    .ejemplo {
+        color: #e74c3c; /* Color rojo */
+        font-family: 'Georgia', serif; /* Fuente serif */
+        font-size: 18px; /* Tamaño de fuente */
+        font-weight: bold; /* Negrita */
+        line-height: 1.8; /* Espaciado entre líneas */
+        text-align: center; /* Alineación centrada */
+        text-decoration: underline; /* Subrayado */
+        text-transform: capitalize; /* Primera letra en mayúscula */
+}
+&lt;/style&gt;</pre></code>
+
+                <p class="ejemplo">este es un ejemplo de texto con múltiples propiedades css.</p>
+                </code></pre>
+
+                <h3>Resumen</h3>
+                <p>Las propiedades de texto y fuentes en CSS son herramientas poderosas para controlar la apariencia del
+                    contenido textual. Al dominar propiedades como <code class="code">color</code>, <code
+                        class="code">font-family</code>, <code class="code">font-size</code>, <code
+                        class="code">font-weight</code>, <code class="code">line-height</code>, <code
+                        class="code">text-align</code>, <code class="code">text-decoration</code> y <code
+                        class="code">text-transform</code>, puedes crear páginas web visualmente atractivas y fáciles de
+                    leer.</p>
+
+            </div>
+
             <h2 id="colores-fondos">Colores y Fondos</h2>
+            <div class="text">
+                <p>Las propiedades de colores y fondos en CSS permiten controlar el aspecto visual de los elementos,
+                    desde el color del texto hasta imágenes de fondo complejas.</p>
+
+                <h3>1. Colores en CSS</h3>
+                <p>Los colores se pueden definir de varias formas en CSS, dependiendo de la precisión y el contexto que
+                    necesites.</p>
+
+                <h4><code class="code">rgb</code></h4>
+                <p>Define un color usando valores de rojo, verde y azul (cada uno entre 0 y 255).</p>
+                <pre><code>
+            p {
+                color: rgb(255, 99, 71); /* Rojo tomate */
+            }
+                </code></pre>
+
+                <h4><code class="code">rgba</code></h4>
+                <p>Igual que <code class="code">rgb</code>, pero añade un canal alfa para la transparencia (valor entre
+                    0 y 1).</p>
+                <pre><code>
+            div {
+                background-color: rgba(0, 0, 255, 0.5); /* Azul semitransparente */
+            }
+                </code></pre>
+
+                <h4><code class="code">hsl</code></h4>
+                <p>Define un color usando matiz (hue), saturación y luminosidad. Es útil para ajustar tonos.</p>
+                <pre><code>
+            h1 {
+                color: hsl(120, 100%, 50%); /* Verde brillante */
+            }
+                </code></pre>
+
+                <h4><code class="code">hex</code></h4>
+                <p>Define un color usando un código hexadecimal de 6 dígitos (o 3 para abreviar).</p>
+                <pre><code>
+            span {
+                color: #ff5733; /* Naranja */
+            }
+                </code></pre>
+
+                <h3>2. Propiedades de Fondo</h3>
+                <p>Las propiedades de fondo permiten personalizar el área detrás del contenido de un elemento.</p>
+
+                <h4><code class="code">background-color</code></h4>
+                <p>Establece el color de fondo de un elemento.</p>
+                <pre><code>
+            body {
+                background-color: #f0f0f0; /* Gris claro */
+            }
+                </code></pre>
+
+                <h4><code class="code">background-image</code></h4>
+                <p>Añade una imagen como fondo de un elemento.</p>
+                <pre><code>
+            section {
+                background-image: url('imagen.jpg'); /* Ruta de la imagen */
+            }
+                </code></pre>
+
+                <h4><code class="code">background-size</code></h4>
+                <p>Controla el tamaño de la imagen de fondo. Los valores comunes son <code class="code">cover</code>
+                    (ajusta la imagen al contenedor) y <code class="code">contain</code> (muestra toda la imagen).</p>
+                <pre><code>
+            div {
+                background-size: cover; /* Ajusta la imagen al contenedor */
+            }
+                </code></pre>
+
+                <h4><code class="code">background-position</code></h4>
+                <p>Define la posición inicial de la imagen de fondo. Se puede usar palabras clave como <code
+                        class="code">top</code>, <code class="code">center</code> o coordenadas.</p>
+                <pre><code>
+            header {
+                background-position: center top; /* Centra horizontalmente y alinea arriba */
+            }
+                </code></pre>
+
+                <h4><code class="code">background-repeat</code></h4>
+                <p>Controla si la imagen de fondo se repite. Los valores comunes son <code class="code">repeat</code>
+                    (repite en ambas direcciones), <code class="code">no-repeat</code> (no se repite) y <code
+                        class="code">repeat-x</code>/<code class="code">repeat-y</code>.</p>
+                <pre><code>
+            footer {
+                background-repeat: no-repeat; /* No repite la imagen */
+            }
+                </code></pre>
+
+                <h3>3. Ejemplo Completo</h3>
+                <p>A continuación, un ejemplo que combina todas estas propiedades:</p>
+                <pre><code>
+&lt;style&gt;
+    .ejemplo {
+        background-color: #3498db; /* Color de fondo azul */
+        background-image: url('paisaje.jpg'); /* Imagen de fondo */
+        background-size: cover; /* Ajusta la imagen al contenedor */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* No repite la imagen */
+        color: #ffffff; /* Texto blanco */
+        padding: 20px;
+        text-align: center;
+    }
+&lt;/style&gt;
+
+&lt;div class="ejemplo"&gt;
+    Este es un ejemplo de fondo con imagen y color.
+&lt;/div&gt;
+                </code></pre>
+
+                <h3>Resumen</h3>
+                <p>Las propiedades de colores y fondos en CSS son herramientas poderosas para mejorar el diseño visual
+                    de una página web. Al dominar propiedades como <code class="code">rgb</code>, <code
+                        class="code">rgba</code>, <code class="code">hsl</code>, <code class="code">hex</code>, <code
+                        class="code">background-color</code>, <code class="code">background-image</code>, <code
+                        class="code">background-size</code>, <code class="code">background-position</code> y <code
+                        class="code">background-repeat</code>, puedes crear interfaces atractivas y funcionales.</p>
+            </div>
+
             <h2 id="diseno-posicionamiento">Diseño y Posicionamiento</h2>
+            <div class="text">
+                <p>El diseño y el posicionamiento son aspectos fundamentales en el desarrollo web que determinan cómo se
+                    organizan y muestran los elementos en una página. CSS proporciona varias propiedades clave para
+                    controlar el comportamiento de los elementos, como <code class="code">display</code>, <code
+                        class="code">position</code>, <code class="code">z-index</code>, <code class="code">float</code>
+                    y <code class="code">clear</code>. Estas propiedades permiten crear diseños estructurados, dinámicos
+                    y visualmente atractivos.</p>
+
+                ---
+
+                <h3>Propiedad <code class="code">display</code></h3>
+
+                <p>La propiedad <code class="code">display</code> define cómo un elemento se comporta en el flujo del
+                    documento y cómo interactúa con otros elementos. Los valores más comunes incluyen:</p>
+
+                <ul>
+                    <li><strong><code class="code">block</code>:</strong> El elemento ocupa todo el ancho disponible y
+                        comienza en una nueva línea. Ejemplos comunes son <code class="code">&lt;div&gt;</code>, <code
+                            class="code">&lt;p&gt;</code> y <code class="code">&lt;h1&gt;</code>.</li>
+                    <li><strong><code class="code">inline</code>:</strong> El elemento solo ocupa el espacio necesario
+                        para su contenido y no inicia una nueva línea. Ejemplos incluyen <code
+                            class="code">&lt;span&gt;</code> y <code class="code">&lt;a&gt;</code>.</li>
+                    <li><strong><code class="code">inline-block</code>:</strong> Combina las características de <code
+                            class="code">inline</code> y <code class="code">block</code>. El elemento se comporta como
+                        un elemento en línea pero permite establecer dimensiones (ancho y alto).</li>
+                    <li><strong><code class="code">flex</code>:</strong> Activa el modelo de diseño flexible (Flexbox),
+                        que permite alinear y distribuir elementos de manera eficiente en una dimensión (fila o
+                        columna).</li>
+                    <li><strong><code class="code">grid</code>:</strong> Activa el modelo de diseño en cuadrícula (CSS
+                        Grid), que permite organizar elementos en filas y columnas simultáneamente.</li>
+                </ul>
+
+                <p>Por ejemplo, si queremos que un botón tenga un ancho fijo y se comporte como un elemento en línea,
+                    podemos usar:</p>
+
+                <pre><code>
+.button {
+    display: inline-block;
+    width: 150px;
+}
+</code></pre>
+
+                <p>Esta propiedad es esencial para definir la estructura básica de un diseño y garantizar que los
+                    elementos se comporten según lo esperado.</p>
+
+                ---
+
+                <h3>Propiedad <code class="code">position</code></h3>
+
+                <p>La propiedad <code class="code">position</code> controla cómo un elemento se posiciona en relación
+                    con su contexto. Los valores más comunes son:</p>
+
+                <ul>
+                    <li><strong><code class="code">static</code>:</strong> Es el valor predeterminado. El elemento sigue
+                        el flujo normal del documento y no se ve afectado por propiedades como <code
+                            class="code">top</code>, <code class="code">right</code>, <code class="code">bottom</code> o
+                        <code class="code">left</code>.</li>
+                    <li><strong><code class="code">relative</code>:</strong> El elemento se posiciona en relación con su
+                        posición original en el flujo del documento. Las propiedades <code class="code">top</code>,
+                        <code class="code">right</code>, <code class="code">bottom</code> y <code
+                            class="code">left</code> desplazan el elemento desde su posición inicial.</li>
+                    <li><strong><code class="code">absolute</code>:</strong> El elemento se posiciona en relación con su
+                        ancestro más cercano que tenga una posición distinta de <code class="code">static</code>. Si no
+                        hay tal ancestro, se posiciona respecto al viewport.</li>
+                    <li><strong><code class="code">fixed</code>:</strong> El elemento se posiciona en relación con el
+                        viewport y permanece fijo incluso cuando se desplaza la página.</li>
+                    <li><strong><code class="code">sticky</code>:</strong> El elemento se comporta como <code
+                            class="code">relative</code> hasta que alcanza un punto específico en el viewport, momento
+                        en el que se convierte en <code class="code">fixed</code>.</li>
+                </ul>
+
+                <h4>Ejemplo de Posicionamiento</h4>
+
+                <p>Supongamos que queremos crear un encabezado fijo en la parte superior de la página:</p>
+
+                <pre><code>
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+</code></pre>
+
+                <p>En este caso, el encabezado permanecerá visible en la parte superior de la pantalla incluso cuando el
+                    usuario desplace la página hacia abajo.</p>
+
+                ---
+
+                <h3>Propiedad <code class="code">z-index</code></h3>
+
+                <p>La propiedad <code class="code">z-index</code> controla el orden de apilamiento de los elementos
+                    posicionados (<code class="code">relative</code>, <code class="code">absolute</code>, <code
+                        class="code">fixed</code> o <code class="code">sticky</code>). Los elementos con un valor mayor
+                    de <code class="code">z-index</code> aparecen encima de los elementos con un valor menor.</p>
+
+                <p>Por ejemplo:</p>
+
+                <pre><code>
+.box1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+.box2 {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    z-index: 2;
+}
+</code></pre>
+
+                <p>En este caso, <code class="code">box2</code> aparecerá encima de <code class="code">box1</code>
+                    porque tiene un valor mayor de <code class="code">z-index</code>.</p>
+
+                ---
+
+                <h3>Propiedades <code class="code">float</code> y <code class="code">clear</code></h3>
+
+                <p>La propiedad <code class="code">float</code> se utiliza tradicionalmente para posicionar elementos a
+                    la izquierda o derecha de su contenedor, permitiendo que el contenido fluya a su alrededor. Los
+                    valores comunes son <code class="code">left</code>, <code class="code">right</code> y <code
+                        class="code">none</code>.</p>
+
+                <p>Por ejemplo, si queremos que una imagen flote a la izquierda del texto:</p>
+
+                <pre><code>
+.image {
+    float: left;
+    margin-right: 10px;
+}
+</code></pre>
+
+                <p>La propiedad <code class="code">clear</code> se utiliza para evitar que los elementos floten
+                    alrededor de otros elementos. Sus valores incluyen <code class="code">left</code>, <code
+                        class="code">right</code>, <code class="code">both</code> y <code class="code">none</code>.</p>
+
+                <p>Por ejemplo, si queremos que un párrafo no flote junto a una imagen:</p>
+
+                <pre><code>
+.paragraph {
+    clear: both;
+}
+</code></pre>
+
+                <p>Aunque <code class="code">float</code> ha sido ampliamente reemplazado por Flexbox y Grid para
+                    diseños modernos, sigue siendo útil para ciertos casos específicos, como imágenes dentro de texto.
+                </p>
+
+                ---
+
+                <h3>Conclusión</h3>
+
+                <p>El diseño y el posicionamiento son pilares esenciales del desarrollo web que permiten controlar cómo
+                    se organizan y muestran los elementos en una página. La propiedad <code class="code">display</code>
+                    define el comportamiento básico de los elementos, mientras que <code class="code">position</code>
+                    permite ajustar su ubicación precisa. Además, herramientas como <code class="code">z-index</code>,
+                    <code class="code">float</code> y <code class="code">clear</code> ofrecen un control adicional sobre
+                    la superposición y el flujo del contenido.</p>
+
+                <p>Al dominar estas propiedades, puedes crear diseños estructurados, dinámicos y adaptables que
+                    funcionen correctamente en diferentes dispositivos y contextos.</p>
+            </div>
+
             <h2 id="flexbox">Flexbox (Diseño flexible)</h2>
+            <div class="text">
+                <p>Flexbox es un modelo de diseño en CSS que permite crear interfaces flexibles y responsivas de manera
+                    más sencilla. A diferencia de los modelos tradicionales, como el flujo normal o las tablas, Flexbox
+                    ofrece una solución moderna para alinear elementos de forma precisa y adaptar su comportamiento
+                    según el espacio disponible. En este artículo, exploraremos cómo funciona Flexbox, sus propiedades
+                    principales y cómo se aplican tanto a contenedores como a elementos flexibles.</p>
+
+                <h3>El Contenedor Flex</h3>
+
+                <p>El primer paso para trabajar con Flexbox es definir un contenedor como <code
+                        class="code">flex</code>. Esto se logra utilizando la propiedad <code
+                        class="code">display: flex;</code> en el elemento padre. Al hacer esto, todos los elementos
+                    hijos directos del contenedor se convierten automáticamente en elementos flexibles, lo que significa
+                    que pueden ser manipulados mediante las propiedades de Flexbox.</p>
+
+                <p>Una vez que el contenedor está configurado como <code class="code">flex</code>, podemos controlar la
+                    disposición de los elementos hijos utilizando varias propiedades clave:</p>
+
+                <h4>Dirección del Eje Principal (<code class="code">flex-direction</code>)</h4>
+
+                <p>La propiedad <code class="code">flex-direction</code> define la dirección principal en la que se
+                    colocarán los elementos flexibles. Por defecto, el valor es <code class="code">row</code>, lo que
+                    significa que los elementos se distribuirán horizontalmente de izquierda a derecha. Sin embargo,
+                    también podemos cambiar esta dirección a <code class="code">column</code> para una disposición
+                    vertical, o incluso invertir el orden con <code class="code">row-reverse</code> o <code
+                        class="code">column-reverse</code>.</p>
+
+                <pre><code>
+.container {
+    display: flex;
+    flex-direction: row; /* Opciones: row, column, row-reverse, column-reverse */
+}
+</code></pre>
+
+                <p>Esta propiedad es fundamental porque establece el eje principal (main axis) y el eje transversal
+                    (cross axis), que son los ejes en los que se basan otras propiedades de alineación.</p>
+
+                <h4>Alineación Horizontal (<code class="code">justify-content</code>)</h4>
+
+                <p>La propiedad <code class="code">justify-content</code> controla cómo se distribuyen los elementos
+                    flexibles a lo largo del eje principal. Esta propiedad es especialmente útil cuando hay espacio
+                    sobrante en el contenedor y queremos decidir cómo ocuparlo. Las opciones incluyen:</p>
+
+                <ul>
+                    <li><code class="code">flex-start</code>: Los elementos se alinean al inicio del contenedor.</li>
+                    <li><code class="code">flex-end</code>: Los elementos se alinean al final del contenedor.</li>
+                    <li><code class="code">center</code>: Los elementos se centran en el contenedor.</li>
+                    <li><code class="code">space-between</code>: Los elementos se distribuyen uniformemente, dejando el
+                        mismo espacio entre ellos.</li>
+                    <li><code class="code">space-around</code>: Los elementos tienen el mismo espacio alrededor de
+                        ellos.</li>
+                </ul>
+
+                <p>Estas opciones permiten un control preciso sobre la disposición de los elementos, lo que facilita la
+                    creación de diseños equilibrados y estéticamente agradables.</p>
+
+                <h4>Alineación Vertical (<code class="code">align-items</code>)</h4>
+
+                <p>Por otro lado, la propiedad <code class="code">align-items</code> maneja la alineación de los
+                    elementos flexibles a lo largo del eje transversal. Al igual que <code
+                        class="code">justify-content</code>, ofrece varias opciones:</p>
+
+                <ul>
+                    <li><code class="code">stretch</code>: Los elementos se estiran para ocupar todo el espacio
+                        disponible en el eje transversal (valor por defecto).</li>
+                    <li><code class="code">flex-start</code>: Los elementos se alinean al inicio del eje transversal.
+                    </li>
+                    <li><code class="code">flex-end</code>: Los elementos se alinean al final del eje transversal.</li>
+                    <li><code class="code">center</code>: Los elementos se centran en el eje transversal.</li>
+                    <li><code class="code">baseline</code>: Los elementos se alinean según su línea base.</li>
+                </ul>
+
+                <p>Esta propiedad es particularmente útil cuando queremos asegurar que los elementos tengan una
+                    alineación consistente, independientemente de su tamaño o contenido.</p>
+
+                <h3>Los Elementos Flexibles</h3>
+
+                <p>Una vez que el contenedor está configurado, los elementos flexibles dentro de él pueden ajustarse
+                    dinámicamente según las propiedades que les asignemos. Estas propiedades permiten controlar cómo los
+                    elementos crecen, se encogen o mantienen su tamaño inicial.</p>
+
+                <h4>Crecimiento (<code class="code">flex-grow</code>)</h4>
+
+                <p>La propiedad <code class="code">flex-grow</code> define qué tan rápido crecerá un elemento flexible
+                    en comparación con sus hermanos cuando haya espacio disponible en el contenedor. El valor
+                    predeterminado es <code class="code">0</code>, lo que significa que el elemento no crecerá. Si
+                    asignamos un valor mayor a <code class="code">0</code>, el elemento comenzará a expandirse
+                    proporcionalmente al espacio restante.</p>
+
+                <p>Por ejemplo, si un elemento tiene <code class="code">flex-grow: 2</code> y otro tiene <code
+                        class="code">flex-grow: 1</code>, el primero ocupará el doble de espacio que el segundo.</p>
+
+                <h4>Encogimiento (<code class="code">flex-shrink</code>)</h4>
+
+                <p>De manera similar, la propiedad <code class="code">flex-shrink</code> determina qué tan rápido se
+                    encogerá un elemento cuando el espacio en el contenedor sea insuficiente. El valor predeterminado es
+                    <code class="code">1</code>, lo que significa que el elemento puede reducirse. Si establecemos <code
+                        class="code">flex-shrink: 0</code>, el elemento no se encogerá bajo ninguna circunstancia.
+                </p>
+
+                <p>Esta propiedad es útil para evitar que ciertos elementos se vean afectados por la falta de espacio,
+                    mientras que otros pueden ajustarse dinámicamente.</p>
+
+                <h4>Tamaño Base (<code class="code">flex-basis</code>)</h4>
+
+                <p>Finalmente, la propiedad <code class="code">flex-basis</code> define el tamaño inicial de un elemento
+                    flexible antes de que se apliquen las reglas de crecimiento o encogimiento. Puede expresarse en
+                    unidades absolutas (como <code class="code">px</code>) o relativas (como <code
+                        class="code">%</code>). El valor predeterminado es <code class="code">auto</code>, lo que
+                    significa que el tamaño se basará en el contenido del elemento.</p>
+
+                <p>Combinando estas tres propiedades (<code class="code">flex-grow</code>, <code
+                        class="code">flex-shrink</code> y <code class="code">flex-basis</code>), podemos controlar
+                    completamente el comportamiento de los elementos flexibles en cualquier situación.</p>
+
+                <pre><code>
+.item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+</code></pre>
+
+                <p>En resumen, Flexbox proporciona un conjunto robusto de herramientas para crear diseños flexibles y
+                    adaptables. Ya sea que estés trabajando en una interfaz compleja o simplemente quieras alinear
+                    algunos elementos de manera precisa, Flexbox es una solución poderosa que simplifica el proceso de
+                    diseño web.</p>
+            </div>
+
             <h2 id="css-grid">CSS Grid (Diseño en cuadrícula)</h2>
+            <div class="text">
+                <p>CSS Grid es una de las herramientas más poderosas para crear diseños bidimensionales en CSS. A
+                    diferencia
+                    de Flexbox, que se enfoca principalmente en disposiciones unidimensionales (ya sea filas o
+                    columnas),
+                    CSS Grid permite controlar tanto las filas como las columnas simultáneamente. Esto lo convierte en
+                    una
+                    opción ideal para diseños complejos, como maquetaciones de páginas web, dashboards o interfaces con
+                    múltiples secciones organizadas en una cuadrícula.</p>
+
+                <p>En esta sección, exploraremos las propiedades clave de CSS Grid y cómo se aplican tanto al contenedor
+                    como a los elementos dentro de la cuadrícula.</p>
+
+                <h3>El Contenedor Grid</h3>
+
+                <p>Al igual que con Flexbox, el primer paso para trabajar con CSS Grid es definir un contenedor como
+                    <code class="code">grid</code>. Esto se logra utilizando la propiedad <code
+                        class="code">display: grid;</code> en el elemento padre. Una vez configurado, podemos definir la
+                    estructura de la cuadrícula utilizando varias propiedades específicas.
+                </p>
+
+                <h4>Definición de Columnas y Filas (<code class="code">grid-template-columns</code> y <code
+                        class="code">grid-template-rows</code>)</h4>
+
+                <p>Las propiedades <code class="code">grid-template-columns</code> y <code
+                        class="code">grid-template-rows</code> son fundamentales para establecer la estructura básica de
+                    la
+                    cuadrícula. Estas propiedades permiten definir cuántas columnas y filas tendrá la cuadrícula, así
+                    como
+                    sus tamaños respectivos.</p>
+
+                <p>Por ejemplo, si queremos una cuadrícula con tres columnas de diferentes anchos y dos filas de altura
+                    fija, podemos escribir:</p>
+
+                <pre><code>
+    .container {
+        display: grid;
+        grid-template-columns: 100px 200px auto; /* Tres columnas */
+        grid-template-rows: 50px 100px; /* Dos filas */
+    }
+    </code></pre>
+
+                <p>En este caso, la primera columna tiene un ancho fijo de 100px, la segunda de 200px y la tercera se
+                    ajustará automáticamente al espacio restante. Las filas tienen alturas fijas de 50px y 100px,
+                    respectivamente. Este enfoque proporciona un control preciso sobre la disposición de los elementos.
+                </p>
+
+                <h4>Espaciado entre Elementos (<code class="code">gap</code>)</h4>
+
+                <p>La propiedad <code class="code">gap</code> (también conocida como <code class="code">grid-gap</code>
+                    en
+                    versiones anteriores) define el espacio entre las filas y las columnas de la cuadrícula. Esta
+                    propiedad
+                    es especialmente útil para evitar que los elementos se superpongan o queden demasiado juntos,
+                    mejorando
+                    la legibilidad y el diseño visual.</p>
+
+                <p>Podemos especificar un único valor para aplicar el mismo espaciado tanto a filas como a columnas, o
+                    bien
+                    definir valores separados para cada uno:</p>
+
+                <pre><code>
+    .container {
+        gap: 20px; /* Espacio uniforme entre filas y columnas */
+        /* O también */
+        gap: 10px 30px; /* 10px entre filas, 30px entre columnas */
+    }
+    </code></pre>
+
+                <p>Esta propiedad simplifica el proceso de añadir márgenes consistentes entre los elementos de la
+                    cuadrícula
+                    sin necesidad de usar márgenes individuales en cada elemento.</p>
+
+                <h4>Áreas de Cuadrícula (<code class="code">grid-area</code> y <code
+                        class="code">grid-template-areas</code>)</h4>
+
+                <p>Una de las características más poderosas de CSS Grid es la capacidad de definir áreas de cuadrícula
+                    mediante nombres descriptivos. Esto se logra utilizando las propiedades <code
+                        class="code">grid-template-areas</code> y <code class="code">grid-area</code>.</p>
+
+                <p>La propiedad <code class="code">grid-template-areas</code> permite crear un mapa visual de la
+                    cuadrícula,
+                    donde cada área tiene un nombre asignado. Luego, podemos asignar estos nombres a los elementos
+                    individuales usando <code class="code">grid-area</code>.</p>
+
+                <p>Por ejemplo, supongamos que queremos crear un diseño básico con un encabezado, un pie de página, una
+                    barra lateral y un área de contenido principal:</p>
+
+                <pre><code>
+    .container {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+        grid-template-columns: 200px auto; /* Dos columnas */
+        grid-template-rows: 100px auto 50px; /* Tres filas */
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+    </code></pre>
+
+                <p>Este enfoque facilita la creación de diseños complejos de manera intuitiva, ya que podemos visualizar
+                    la
+                    estructura de la cuadrícula directamente en el código.</p>
+
+                <h3>Alineación de Elementos</h3>
+
+                <p>Además de definir la estructura de la cuadrícula, CSS Grid ofrece propiedades para controlar la
+                    alineación de los elementos dentro de las celdas. Estas propiedades son similares a las de Flexbox,
+                    pero
+                    están adaptadas al contexto bidimensional de las cuadrículas.</p>
+
+                <h4>Alineación Horizontal (<code class="code">justify-items</code>)</h4>
+
+                <p>La propiedad <code class="code">justify-items</code> controla la alineación horizontal de los
+                    elementos
+                    dentro de sus celdas. Las opciones incluyen:</p>
+
+                <ul>
+                    <li><code class="code">start</code>: Los elementos se alinean al inicio de la celda.</li>
+                    <li><code class="code">end</code>: Los elementos se alinean al final de la celda.</li>
+                    <li><code class="code">center</code>: Los elementos se centran horizontalmente.</li>
+                    <li><code class="code">stretch</code>: Los elementos se estiran para ocupar todo el ancho de la
+                        celda
+                        (valor por defecto).</li>
+                </ul>
+
+                <p>Esta propiedad es útil cuando queremos asegurar que los elementos tengan una alineación consistente
+                    en
+                    todas las columnas de la cuadrícula.</p>
+
+                <h4>Alineación Vertical (<code class="code">align-items</code>)</h4>
+
+                <p>De manera similar, la propiedad <code class="code">align-items</code> maneja la alineación vertical
+                    de
+                    los elementos dentro de sus celdas. Las opciones son idénticas a las de <code
+                        class="code">justify-items</code>, pero actúan en el eje vertical:</p>
+
+                <ul>
+                    <li><code class="code">start</code>: Los elementos se alinean en la parte superior de la celda.</li>
+                    <li><code class="code">end</code>: Los elementos se alinean en la parte inferior de la celda.</li>
+                    <li><code class="code">center</code>: Los elementos se centran verticalmente.</li>
+                    <li><code class="code">stretch</code>: Los elementos se estiran para ocupar toda la altura de la
+                        celda
+                        (valor por defecto).</li>
+                </ul>
+
+                <p>Estas propiedades permiten un control preciso sobre la posición de los elementos dentro de las
+                    celdas, lo
+                    que es especialmente útil para crear diseños equilibrados y visualmente atractivos.</p>
+
+                <h3>Conclusión</h3>
+
+                <p>CSS Grid es una herramienta versátil y potente para crear diseños bidimensionales complejos. Con su
+                    capacidad para definir estructuras de cuadrícula precisas, gestionar el espaciado entre elementos y
+                    controlar la alineación de manera intuitiva, Grid se ha convertido en una solución indispensable
+                    para el
+                    diseño web moderno. Ya sea que estés trabajando en una página simple o en una interfaz compleja, CSS
+                    Grid ofrece las herramientas necesarias para implementar tus ideas de manera eficiente y efectiva.
+                </p>
+            </div>
+
             <h2 id="animaciones-transiciones">Animaciones y Transiciones</h2>
+            <div class="text">
+
+                <p>Las animaciones y transiciones son herramientas esenciales en CSS para añadir dinamismo y mejorar la
+                    experiencia del usuario en una página web. Aunque ambas técnicas se utilizan para crear efectos
+                    visuales, tienen propósitos y niveles de complejidad diferentes. Las transiciones son ideales para
+                    cambios simples y rápidos, mientras que las animaciones permiten crear efectos más elaborados y
+                    controlados.</p>
+
+                <p>A continuación, exploraremos cómo funcionan las transiciones y las animaciones, sus propiedades
+                    principales y cómo aplicarlas en tus proyectos.</p>
+
+                <h3>Transiciones (<code class="code">transition</code>)</h3>
+
+                <p>Las transiciones permiten cambiar suavemente el valor de una propiedad CSS durante un período de
+                    tiempo específico. Son útiles para crear efectos como cambios de color, desplazamientos o ajustes de
+                    tamaño cuando un usuario interactúa con un elemento (por ejemplo, al pasar el cursor sobre él).</p>
+
+                <p>La propiedad <code class="code">transition</code> es una forma abreviada que combina varias
+                    subpropiedades:</p>
+
+                <ul>
+                    <li><code class="code">transition-property</code>: Especifica qué propiedad CSS se animará.</li>
+                    <li><code class="code">transition-duration</code>: Define cuánto tiempo durará la transición.</li>
+                    <li><code class="code">transition-timing-function</code>: Controla la velocidad de la transición a
+                        lo largo del tiempo.</li>
+                    <li><code class="code">transition-delay</code>: Indica cuánto tiempo debe esperarse antes de que
+                        comience la transición.</li>
+                </ul>
+
+                <h4>Propiedad Animada (<code class="code">transition-property</code>)</h4>
+
+                <p>La propiedad <code class="code">transition-property</code> define qué propiedad CSS será afectada por
+                    la transición. Puede ser cualquier propiedad animable, como <code class="code">color</code>, <code
+                        class="code">background-color</code>, <code class="code">width</code>, <code
+                        class="code">opacity</code>, etc. También puedes usar el valor <code class="code">all</code>
+                    para aplicar la transición a todas las propiedades animables del elemento.</p>
+
+                <h4>Duración de la Transición (<code class="code">transition-duration</code>)</h4>
+
+                <p>La propiedad <code class="code">transition-duration</code> especifica cuánto tiempo durará la
+                    transición. Se expresa en segundos (<code class="code">s</code>) o milisegundos (<code
+                        class="code">ms</code>). Por ejemplo, un valor de <code class="code">0.5s</code> indica que la
+                    transición tardará medio segundo en completarse.</p>
+
+                <h4>Función de Tiempo (<code class="code">transition-timing-function</code>)</h4>
+
+                <p>La propiedad <code class="code">transition-timing-function</code> determina cómo progresa la
+                    transición a lo largo del tiempo. Algunas opciones comunes incluyen:</p>
+
+                <ul>
+                    <li><code class="code">ease</code>: Comienza lentamente, acelera y luego desacelera nuevamente
+                        (valor predeterminado).</li>
+                    <li><code class="code">linear</code>: Progresa a una velocidad constante.</li>
+                    <li><code class="code">ease-in</code>: Comienza lentamente y luego acelera.</li>
+                    <li><code class="code">ease-out</code>: Comienza rápidamente y luego desacelera.</li>
+                    <li><code class="code">ease-in-out</code>: Combina <code class="code">ease-in</code> y <code
+                            class="code">ease-out</code>.</li>
+                </ul>
+
+                <h4>Ejemplo de Transición</h4>
+
+                <p>Supongamos que queremos crear un botón que cambie de color suavemente cuando el usuario pase el
+                    cursor sobre él. Podríamos escribir:</p>
+
+                <pre><code>
+.button {
+    background-color: blue;
+    transition: background-color 0.5s ease;
+}
+
+.button:hover {
+    background-color: red;
+}
+</code></pre>
+
+                <p>En este ejemplo, la propiedad <code class="code">background-color</code> cambia de azul a rojo
+                    durante medio segundo con una función de tiempo <code class="code">ease</code>. El resultado es un
+                    efecto visual suave y atractivo.</p>
+
+                <h3>Animaciones (<code class="code">@keyframes</code> y <code class="code">animation</code>)</h3>
+
+                <p>Mientras que las transiciones son ideales para cambios simples, las animaciones permiten crear
+                    efectos más complejos y personalizados. Esto se logra mediante la combinación de la regla <code
+                        class="code">@keyframes</code> y la propiedad <code class="code">animation</code>.</p>
+
+                <h4>Definición de Animaciones con <code class="code">@keyframes</code></h4>
+
+                <p>La regla <code class="code">@keyframes</code> define los pasos intermedios de una animación. Permite
+                    especificar cómo deben cambiar las propiedades CSS en diferentes puntos del tiempo. Cada punto se
+                    define como un porcentaje, donde <code class="code">0%</code> representa el inicio y <code
+                        class="code">100%</code> el final.</p>
+
+                <p>Por ejemplo, si queremos que un cuadro cambie de color gradualmente, podríamos escribir:</p>
+
+                <pre><code>
+@keyframes changeColor {
+    0% {
+        background-color: blue;
+    }
+    50% {
+        background-color: green;
+    }
+    100% {
+        background-color: red;
+    }
+}
+</code></pre>
+
+                <p>Este conjunto de reglas define una animación llamada <code class="code">changeColor</code> que cambia
+                    el color de fondo de azul a verde y luego a rojo.</p>
+
+                <h4>Aplicación de Animaciones con <code class="code">animation</code></h4>
+
+                <p>Una vez definida la animación con <code class="code">@keyframes</code>, podemos aplicarla a un
+                    elemento utilizando la propiedad <code class="code">animation</code>. Esta propiedad es una forma
+                    abreviada que combina varias subpropiedades:</p>
+
+                <ul>
+                    <li><code class="code">animation-name</code>: Especifica el nombre de la animación definida con
+                        <code class="code">@keyframes</code>.
+                    </li>
+                    <li><code class="code">animation-duration</code>: Define cuánto tiempo durará la animación.</li>
+                    <li><code class="code">animation-timing-function</code>: Controla la velocidad de la animación a lo
+                        largo del tiempo.</li>
+                    <li><code class="code">animation-delay</code>: Indica cuánto tiempo debe esperarse antes de que
+                        comience la animación.</li>
+                    <li><code class="code">animation-iteration-count</code>: Determina cuántas veces se repetirá la
+                        animación (puede ser un número o <code class="code">infinite</code>).</li>
+                    <li><code class="code">animation-direction</code>: Especifica si la animación debe reproducirse
+                        hacia adelante, hacia atrás o alternar entre ambos.</li>
+                </ul>
+
+                <h4>Ejemplo de Animación</h4>
+
+                <p>Supongamos que queremos que un cuadro realice una animación infinita de cambio de color. Podríamos
+                    escribir:</p>
+
+                <pre><code>
+.box {
+    width: 100px;
+    height: 100px;
+    animation: changeColor 5s infinite alternate;
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: blue;
+    }
+    100% {
+        background-color: red;
+    }
+}
+</code></pre>
+
+                <p>En este ejemplo, el cuadro cambiará su color de fondo de azul a rojo y viceversa durante 5 segundos,
+                    repitiendo la animación indefinidamente (<code class="code">infinite</code>) y alternando la
+                    dirección (<code class="code">alternate</code>).</p>
+
+                <h3>Conclusión</h3>
+
+                <p>Las transiciones y animaciones son herramientas poderosas para mejorar la interactividad y el
+                    atractivo visual de una página web. Mientras que las transiciones son ideales para cambios simples y
+                    rápidos, las animaciones permiten crear efectos más elaborados y personalizados. Al dominar estas
+                    técnicas, puedes crear experiencias de usuario más dinámicas y atractivas, mejorando
+                    significativamente la calidad de tus diseños web.</p>
+
+            </div>
+
             <h2 id="media-queries">Media Queries y Diseño Responsivo</h2>
+            <div class="text">
+                <p>El diseño responsivo es una técnica fundamental en el desarrollo web moderno que permite que una
+                    página web se adapte a diferentes tamaños de pantalla, desde dispositivos móviles hasta pantallas de
+                    escritorio. Las <code class="code">media queries</code> son la herramienta principal para
+                    implementar este tipo de diseño, ya que permiten aplicar estilos específicos según las
+                    características del dispositivo, como su ancho, alto o resolución.</p>
+
+                <p>En esta sección, exploraremos cómo funcionan las <code class="code">media queries</code>, los
+                    breakpoints más comunes y las unidades relativas que complementan el diseño responsivo.</p>
+
+                <h3>Media Queries (<code class="code">@media</code>)</h3>
+
+                <p>Las <code class="code">media queries</code> son reglas CSS que permiten aplicar estilos condicionales
+                    basados en características específicas del dispositivo, como su ancho de pantalla, orientación o
+                    densidad de píxeles. La sintaxis básica de una media query es:</p>
+
+                <pre><code>
+@media (condición) {
+    /* Estilos específicos */
+}
+</code></pre>
+
+                <p>La condición puede incluir propiedades como <code class="code">max-width</code>, <code
+                        class="code">min-width</code>, <code class="code">orientation</code>, entre otras. Esto permite
+                    ajustar el diseño de manera dinámica según el contexto del usuario.</p>
+
+                <h4>Breakpoints Comunes</h4>
+
+                <p>Los breakpoints son puntos específicos en los que el diseño cambia para adaptarse a diferentes
+                    tamaños de pantalla. Aunque no hay reglas estrictas sobre qué valores usar, existen algunos
+                    breakpoints comunes que se utilizan para categorizar dispositivos:</p>
+
+                <ul>
+                    <li><strong>Móviles pequeños:</strong> Hasta 480px (<code class="code">max-width: 480px</code>)</li>
+                    <li><strong>Móviles grandes y tablets pequeñas:</strong> Entre 481px y 768px (<code
+                            class="code">max-width: 768px</code>)</li>
+                    <li><strong>Tablets y pantallas pequeñas de escritorio:</strong> Entre 769px y 1024px (<code
+                            class="code">max-width: 1024px</code>)</li>
+                    <li><strong>Pantallas de escritorio:</strong> Más de 1025px (<code
+                            class="code">min-width: 1025px</code>)</li>
+                </ul>
+
+                <p>Estos valores son solo una guía general y pueden ajustarse según las necesidades del proyecto. Lo
+                    importante es que los breakpoints se definan en función del contenido y no de dispositivos
+                    específicos.</p>
+
+                <h4>Ejemplo de Media Query</h4>
+
+                <p>Supongamos que queremos cambiar el tamaño de un encabezado cuando la pantalla sea menor a 768px.
+                    Podríamos escribir:</p>
+
+                <pre><code>
+h1 {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+</code></pre>
+
+                <p>En este ejemplo, el tamaño del encabezado se reduce cuando la pantalla tiene un ancho máximo de
+                    768px, lo que mejora la legibilidad en dispositivos más pequeños.</p>
+
+                <h3>Propiedades <code class="code">max-width</code> y <code class="code">min-width</code></h3>
+
+                <p>Las propiedades <code class="code">max-width</code> y <code class="code">min-width</code> son las más
+                    utilizadas en las media queries para definir rangos de ancho de pantalla. Aquí está la diferencia
+                    entre ambas:</p>
+
+                <ul>
+                    <li><code class="code">max-width</code>: Aplica estilos cuando el ancho de la pantalla es igual o
+                        menor al valor especificado.</li>
+                    <li><code class="code">min-width</code>: Aplica estilos cuando el ancho de la pantalla es igual o
+                        mayor al valor especificado.</li>
+                </ul>
+
+                <p>Por ejemplo, si queremos aplicar estilos solo a pantallas con un ancho entre 768px y 1024px,
+                    podríamos combinar ambas propiedades:</p>
+
+                <pre><code>
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tablets */
+}
+</code></pre>
+
+                <p>Esta combinación asegura que los estilos solo se apliquen dentro de ese rango específico.</p>
+
+                <h3>Unidades Relativas</h3>
+
+                <p>Además de las media queries, el uso de unidades relativas es clave para crear diseños responsivos.
+                    Estas unidades permiten que los elementos se ajusten dinámicamente según el tamaño de la pantalla o
+                    el contexto del usuario.</p>
+
+                <h4><code class="code">em</code> y <code class="code">rem</code></h4>
+
+                <p>Las unidades <code class="code">em</code> y <code class="code">rem</code> son relativas al tamaño de
+                    fuente. La diferencia entre ambas es que <code class="code">em</code> es relativa al tamaño de
+                    fuente del elemento padre, mientras que <code class="code">rem</code> es relativa al tamaño de
+                    fuente del elemento raíz (<code class="code">html</code>).</p>
+
+                <p>Por ejemplo, si el tamaño de fuente del elemento raíz es 16px:</p>
+
+                <ul>
+                    <li><code class="code">1rem</code> equivale a 16px.</li>
+                    <li><code class="code">2rem</code> equivale a 32px.</li>
+                </ul>
+
+                <p>El uso de <code class="code">rem</code> es especialmente útil para mantener una escala consistente en
+                    todo el diseño.</p>
+
+                <h4><code class="code">%</code></h4>
+
+                <p>La unidad <code class="code">%</code> define el tamaño de un elemento en relación con su contenedor
+                    padre. Por ejemplo, si un contenedor tiene un ancho de 500px y un elemento hijo tiene un ancho del
+                    50%, este último tendrá un ancho de 250px.</p>
+
+                <p>Esta unidad es ideal para crear diseños fluidos que se ajusten al tamaño del contenedor.</p>
+
+                <h4><code class="code">vw</code> y <code class="code">vh</code></h4>
+
+                <p>Las unidades <code class="code">vw</code> (viewport width) y <code class="code">vh</code> (viewport
+                    height) son relativas al tamaño de la ventana del navegador. Un valor de <code
+                        class="code">1vw</code> equivale al 1% del ancho de la ventana, mientras que <code
+                        class="code">1vh</code> equivale al 1% de su altura.</p>
+
+                <p>Por ejemplo:</p>
+
+                <ul>
+                    <li><code class="code">50vw</code>: Ocupa el 50% del ancho de la ventana.</li>
+                    <li><code class="code">100vh</code>: Ocupa el 100% de la altura de la ventana.</li>
+                </ul>
+
+                <p>Estas unidades son útiles para crear diseños que ocupen todo el espacio disponible en la pantalla.
+                </p>
+
+                <h3>Conclusión</h3>
+
+                <p>El diseño responsivo es esencial para garantizar que una página web funcione correctamente en todos
+                    los dispositivos. Las <code class="code">media queries</code> permiten adaptar el diseño según el
+                    tamaño de la pantalla, mientras que las unidades relativas aseguran que los elementos se ajusten
+                    dinámicamente al contexto del usuario.</p>
+
+                <p>Al combinar estas herramientas, puedes crear experiencias web fluidas y accesibles que se adapten a
+                    cualquier dispositivo, mejorando tanto la usabilidad como la satisfacción del usuario.</p>
+
+            </div>
+
             <h2 id="variables-css">Variables en CSS y Preprocesadores</h2>
+            <div class="text">
+
+                <p>El uso de variables en CSS y preprocesadores como SASS y LESS es una práctica fundamental para
+                    escribir código más limpio, mantenible y reutilizable. Las variables permiten almacenar valores que
+                    se pueden usar repetidamente en un proyecto, lo que facilita la gestión de estilos globales y la
+                    implementación de cambios consistentes.</p>
+
+                <p>A continuación, exploraremos cómo funcionan las variables nativas en CSS y cómo los preprocesadores
+                    como SASS y LESS amplían estas capacidades con características adicionales.</p>
+
+                ---
+
+                <h3>Variables en CSS</h3>
+
+                <p>Las variables nativas en CSS son una característica introducida en CSS3 que permite definir valores
+                    reutilizables utilizando la sintaxis <code class="code">--nombre-variable</code>. Estas variables se
+                    declaran dentro de un selector y se utilizan con la función <code
+                        class="code">var(--nombre-variable)</code>.</p>
+
+                <h4>Declaración de Variables</h4>
+
+                <p>Para declarar una variable en CSS, se utiliza la sintaxis <code
+                        class="code">--nombre-variable: valor;</code>. Las variables deben declararse dentro de un
+                    selector, generalmente en el selector <code class="code">:root</code> para hacerlas accesibles
+                    globalmente en todo el documento.</p>
+
+                <pre><code>
+:root {
+    --color-primario: #3498db;
+    --fuente-principal: 'Arial', sans-serif;
+    --espaciado: 1rem;
+}
+</code></pre>
+
+                <p>En este ejemplo, hemos definido tres variables globales: un color primario, una fuente principal y un
+                    espaciado base. Estas variables pueden ser utilizadas en cualquier parte del documento.</p>
+
+                <h4>Uso de Variables</h4>
+
+                <p>Para usar una variable, se utiliza la función <code class="code">var(--nombre-variable)</code>. Por
+                    ejemplo:</p>
+
+                <pre><code>
+body {
+    background-color: var(--color-primario);
+    font-family: var(--fuente-principal);
+    margin: var(--espaciado);
+}
+
+.button {
+    padding: var(--espaciado);
+    background-color: var(--color-primario);
+}
+</code></pre>
+
+                <p>Este enfoque simplifica la gestión de estilos, ya que si necesitamos cambiar el color primario o la
+                    fuente principal, solo tenemos que actualizar la variable en un solo lugar.</p>
+
+                <h4>Ventajas de las Variables en CSS</h4>
+
+                <ul>
+                    <li><strong>Reutilización:</strong> Evita la duplicación de valores en el código.</li>
+                    <li><strong>Mantenibilidad:</strong> Facilita la implementación de cambios globales.</li>
+                    <li><strong>Consistencia:</strong> Asegura que los mismos valores se utilicen en todo el proyecto.
+                    </li>
+                </ul>
+
+                ---
+
+                <h3>Introducción a Preprocesadores: SASS y LESS</h3>
+
+                <p>Los preprocesadores como SASS (Syntactically Awesome Style Sheets) y LESS son herramientas que
+                    extienden las capacidades de CSS al agregar características avanzadas como variables, funciones,
+                    mixins y anidamiento. Estos preprocesadores generan CSS estándar que puede ser interpretado por los
+                    navegadores.</p>
+
+                <h4>Variables en SASS y LESS</h4>
+
+                <p>Tanto SASS como LESS permiten declarar variables de manera similar a CSS, pero con algunas
+                    diferencias en la sintaxis. En SASS, las variables se declaran con el símbolo <code
+                        class="code">$</code>, mientras que en LESS se usan dos guiones bajos <code
+                        class="code">@</code>.</p>
+
+                <h4>Ejemplo en SASS</h4>
+
+                <pre><code>
+$color-primario: #3498db;
+$fuente-principal: 'Arial', sans-serif;
+$espaciado: 1rem;
+
+body {
+    background-color: $color-primario;
+    font-family: $fuente-principal;
+    margin: $espaciado;
+}
+</code></pre>
+
+                <h4>Ejemplo en LESS</h4>
+
+                <pre><code>
+@color-primario: #3498db;
+@fuente-principal: 'Arial', sans-serif;
+@espaciado: 1rem;
+
+body {
+    background-color: @color-primario;
+    font-family: @fuente-principal;
+    margin: @espaciado;
+}
+</code></pre>
+
+                <p>Al igual que en CSS, estas variables pueden ser reutilizadas en todo el proyecto, pero los
+                    preprocesadores ofrecen funcionalidades adicionales que las hacen aún más poderosas.</p>
+
+                <h4>Otras Características de SASS y LESS</h4>
+
+                <p>Además de las variables, SASS y LESS incluyen características avanzadas que facilitan el desarrollo
+                    de estilos complejos:</p>
+
+                <ul>
+                    <li><strong>Anidamiento:</strong> Permite escribir selectores CSS de manera jerárquica, lo que
+                        mejora la legibilidad del código.</li>
+                    <li><strong>Mixins:</strong> Son bloques de código reutilizables que pueden incluir múltiples
+                        propiedades y reglas. Los mixins son útiles para evitar la repetición de código.</li>
+                    <li><strong>Funciones:</strong> Permiten realizar operaciones matemáticas, manipular colores y
+                        trabajar con valores dinámicos.</li>
+                    <li><strong>Importación de Archivos:</strong> Facilita la organización del código al dividirlo en
+                        múltiples archivos que se pueden importar en un archivo principal.</li>
+                </ul>
+
+                <h4>Ejemplo de Anidamiento en SASS</h4>
+
+                <pre><code>
+.navbar {
+    background-color: $color-primario;
+
+    ul {
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin-right: $espaciado;
+        }
+    }
+}
+</code></pre>
+
+                <p>Este ejemplo muestra cómo el anidamiento en SASS simplifica la escritura de selectores complejos,
+                    mejorando la estructura del código.</p>
+
+                <h4>Ventajas de Usar Preprocesadores</h4>
+
+                <ul>
+                    <li><strong>Mayor Flexibilidad:</strong> Ofrecen características avanzadas que no están disponibles
+                        en CSS puro.</li>
+                    <li><strong>Mejor Organización:</strong> Facilita la división del código en múltiples archivos y su
+                        posterior compilación.</li>
+                    <li><strong>Productividad:</strong> Reduce la cantidad de código repetitivo y acelera el proceso de
+                        desarrollo.</li>
+                </ul>
+
+                ---
+
+                <h3>Conclusión</h3>
+
+                <p>Las variables en CSS y los preprocesadores como SASS y LESS son herramientas esenciales para el
+                    desarrollo web moderno. Mientras que las variables nativas en CSS proporcionan una forma sencilla de
+                    gestionar valores reutilizables, los preprocesadores amplían estas capacidades con características
+                    avanzadas que mejoran la productividad y la organización del código.</p>
+
+                <p>Al dominar estas herramientas, puedes crear proyectos más eficientes, mantenibles y escalables,
+                    asegurando que tus estilos sean consistentes y adaptables a futuros cambios.</p>
+
+            </div>
         </div>
 
         <aside class="sidebar">
@@ -334,7 +1655,8 @@
                         <a href="#introduccion-css" id="link-introduccion-css">Introducción a CSS</a>
                     </li>
                     <li>
-                        <a href="#selectores" id="link-selectores">Selectores</a></li>
+                        <a href="#selectores" id="link-selectores">Selectores</a>
+                    </li>
                     <li>
                         <a href="#box-model" id="link-box-model">Modelo de Caja (Box Model)</a>
                     </li>
