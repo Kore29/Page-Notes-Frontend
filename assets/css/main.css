@@ -19,7 +19,6 @@ html {
 body {
     background-color: var(--background-color);
     margin-top: 0;
-    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 h1 {
@@ -54,14 +53,18 @@ pre code {
 }
 
 .code {
-    color:#979797;
+    color: var(--code-color);
     font-family: 'Cascadia Code', sans-serif;
     font-size: 20px;
-    background-color: #363A3F;
+    background-color: var(--code-background);
     border-radius: 8px !important; 
     margin: 0 !important;
     margin-left: 0;
     padding:4px;
+}
+
+body, .sidebar, .navbar, .nav-btn {
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 
@@ -120,7 +123,7 @@ pre code {
     flex: 1;
     background-color: var(--aside-background);
     padding: 20px;
-    border-left: 1px solid #4c4c4c;
+    border-left: 1px solid #0000003d;
 }
 
 .sticky {
@@ -141,7 +144,7 @@ pre code {
 .sidebar ul li a {
     margin-left: 0;
     text-decoration: underline;
-    color: #bbbbbb;
+    color: var(--aside-color);
     font-size: 20px;
 
     transition: color 0.3s ease, transform 0.3s ease;
@@ -149,7 +152,7 @@ pre code {
 
 .sidebar ul li:hover a {
     text-decoration: underline;
-    color: var(--aside-color);
+    color: var(--aside-color-hover);
     font-size: 20px;
 }
 
@@ -164,7 +167,7 @@ pre code {
 
 @keyframes highlight {
     from { 
-        background-color: rgb(80, 80, 80); 
+        background-color: var(--highlight); 
         border-radius: 10px;
     }
     to { 
@@ -183,25 +186,37 @@ pre code {
     --h3-color: rgb(134, 134, 134);
     --text-color: rgb(206, 206, 206);
 
-    --aside-color: #615ac5;
+    --highlight: rgb(80, 80, 80);
+
+    --aside-color: #bbbbbb;
+    --aside-color-hover: #615ac5;
     --aside-background: #4a4a4a;
+
+    --code-color: #979797;
+    --code-background: #363A3F;
     
     --navbar-background: rgb(56, 56, 56);
     --navbar-btn-background: linear-gradient(180deg, rgb(63, 64, 125), rgb(111, 113, 222));
 }
 
 [data-theme="white"] {
-    --background-color: rgb(220, 220, 220);
+    --background-color: rgb(241, 230, 214);
     --h1-color: rgb(66, 66, 66);  
 
     --h2-color: rgb(234, 153, 66);
     --h3-color: rgb(63, 63, 63);
     --text-color: rgb(40, 40, 40);
 
-    --aside-color: rgb(234, 153, 66);
-    --aside-background: #F5F5F5;
+    --highlight: rgb(241, 241, 241);
+
+    --aside-color: rgb(41, 41, 41);
+    --aside-color-hover: rgb(234, 153, 66);
+    --aside-background: #e2d8c8;
+
+    --code-color: #1e1e1e;
+    --code-background: #ffffff;
     
-    --navbar-background: #c4c4c4;
+    --navbar-background: #d1c9be;
     --navbar-btn-background: linear-gradient(180deg,#ffcc89,#d8860b);
 }
 
@@ -228,7 +243,14 @@ pre code {
     transition: background-color 0.3s ease;
 }
 
-.main-container {
+.main-img {
+    max-width: auto;
+    height: 350px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.container-text {
     display: flex;
     align-items: center;
     margin-top: 100px;
@@ -246,56 +268,6 @@ pre code {
     transition: color 0.5s ease;
 }
 
-.main-tittle:hover {
-    color: rgb(223, 223, 223);
-}
-
-.main-flex {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin-top: 20px;
-}
-
-.main-table {
-    opacity: 0;
-    transform: scale(0.1);
-    transition: opacity 1s ease, transform 1s ease;
-
-    border-collapse: collapse;
-    margin: auto;
-}
-
-table.animate {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.main-table td {
-    vertical-align: top;
-    padding: 0px;
-    text-align: center;
-}
-
-.main-img {
-    max-width: auto;
-    height: 350px;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-.main-content-text {
-    margin-right: 100px;
-    margin-left: 100px;
-    font-size: 22px;
-    color: aliceblue;
-    text-align: justify;
-}
-
-.main-content-text p {
-    margin-bottom: 20px;
-}
-
 .container-icons {
     display: flex;
     margin-left: 180px;
@@ -311,6 +283,37 @@ table.animate {
 .main-icons:hover {
     transform: scale(1.1);
     opacity: 0.5;
+}
+
+.main-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.main-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 45%; 
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.main-item img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+}
+
+.main-item p {
+    color: var(--text-color);
+    margin: 15px;
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1.6; /* Espacio entre líneas */
 }
 
 /**HTML**/
