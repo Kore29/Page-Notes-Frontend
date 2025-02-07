@@ -1,4 +1,4 @@
-const tables = document.querySelectorAll(".main-table"); // Selecciona todas las tablas
+const tables = document.querySelectorAll(".main-down"); // Selecciona todas las tablas
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
