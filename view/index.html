@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="shortcut icon" href="../assets/img/k-icon.png" type="image/x-icon">
 
-    <link id="highlight-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <link id="highlight-theme" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
     <script src="../assets/js/theme-loader.js"></script>
 </head>
 
@@ -37,12 +38,12 @@
                 <h1 class="main-tittle">FRONTEND NOTES</h1>
             </div>
             <div id="container-icons">
-                <img class="main-icons" src="../assets/img/css-icon.png">
-                <img class="main-icons" src="../assets/img/html-icon.png">
+                <a href="../view/css-notes.html"><img class="main-icons" src="../assets/img/css-icon.png"></a>
+                <a href="../view/html-notes.html"><img class="main-icons" src="../assets/img/html-icon.png"></a>
             </div>
         </div>
 
-        <hr id="hr-main">
+        <hr class="hr-main">
 
 
         <div class="main-down">
@@ -58,11 +59,55 @@
             <div class="main-item">
                 <p>El desarrollo frontend implica la creación de componentes visuales como botones, menús, formularios y otros elementos interactivos. Además, los desarrolladores frontend aseguran que el diseño sea adaptable (responsive) para que funcione correctamente en distintos dispositivos y navegadores, desde computadoras de escritorio hasta smartphones. <br><br> El front-end surgió como respuesta a la necesidad de mejorar la interacción entre los usuarios y las aplicaciones en la web. Al principio, las páginas web eran estáticas y simples, creadas solo con HTML. Con el tiempo, para hacerlas más dinámicas, se añadieron tecnologías como CSS (para el diseño) y JavaScript (para la interactividad).</p>
             </div>
+        
+            <hr class="hr-main">
+        
+            <div class="main-item">
+                <h2>¿Qué es HTML?</h2>
+                <p>
+                    HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Se utiliza para estructurar el contenido en la web, definiendo elementos como títulos, párrafos, imágenes, enlaces, etc.
+                </p>
+                <ul>
+                    <li><strong>¿Por qué se creó?</strong> HTML fue creado para permitir la creación y estructuración de documentos que pudieran ser visualizados en navegadores web.</li>
+                    <li><strong>¿Qué tiene de especial?</strong> Es el esqueleto de cualquier página web, sin HTML no habría contenido estructurado en la web.</li>
+                    <li><strong>¿Por qué se usa hoy?</strong> Sigue siendo la base de todas las páginas web modernas, y es esencial para cualquier desarrollo web.</li>
+                </ul>
+            </div>
+            <div class="main-item">
+                <h2>¿Qué es CSS?</h2>
+                <p>
+                    CSS (Cascading Style Sheets) es un lenguaje de diseño utilizado para controlar la presentación y el estilo de los documentos HTML. Con CSS, puedes definir colores, fuentes, márgenes, diseños, y mucho más.
+                </p>
+                <ul>
+                    <li><strong>¿Por qué se creó?</strong> CSS fue creado para separar el contenido (HTML) de su presentación, permitiendo un diseño más flexible y mantenible.</li>
+                    <li><strong>¿Qué tiene de especial?</strong> Permite crear diseños complejos y responsivos, adaptándose a diferentes dispositivos y pantallas.</li>
+                    <li><strong>¿Por qué se usa hoy?</strong> Es esencial para crear interfaces de usuario atractivas y funcionales en la web.</li>
+                </ul>
+            </div>
+            <div class="main-item full-width" id="javaScript">
+                <h2 style="text-align: center; font-size: 50px;">Honorario especial (JavaScript)</h2>
+                <div class="js-content">
+                    <div class="js-text">
+                        <p>
+                            JavaScript es un lenguaje de programación que permite agregar interactividad y dinamismo a las páginas web. Con JavaScript, puedes crear animaciones, validar formularios, cargar contenido dinámico, y mucho más.
+                        </p>
+                        <ul>
+                            <li><strong>¿Por qué se creó?</strong> JavaScript fue creado para hacer que las páginas web fueran más interactivas y dinámicas, permitiendo a los desarrolladores crear experiencias de usuario más ricas.</li>
+                            <li><strong>¿Qué tiene de especial?</strong> Es el único lenguaje de programación que se ejecuta directamente en el navegador, lo que lo hace esencial para el desarrollo web frontend.</li>
+                            <li><strong>¿Por qué se usa hoy?</strong> Es fundamental para crear aplicaciones web modernas, interactivas y dinámicas.</li>
+                        </ul>
+                    </div>
+                    <div class="js-image">
+                        <img class="main-icons" src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="javaScript">
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="../assets/js/visual-main.js"></script>
 </body>
 
 </html>
