@@ -10,7 +10,6 @@
 
 html {
     scroll-behavior: smooth;
-    /* Transición suave */
 }
 
 .header {
@@ -139,18 +138,17 @@ content,
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute; /* Cambiar a posición absoluta */
+    position: absolute;
     top: 6px;
-    left: 750px; /* Ajustar la posición a la izquierda */
+    left: 750px;
     border: none;
     cursor: pointer;
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Añadir transición */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 
 #theme-switch:hover {
-     /* Cambiar color de fondo al pasar el ratón */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Añadir sombra al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transform: scale(1.2);
 }
 
@@ -306,7 +304,6 @@ content,
 
     margin-bottom: 350px;
     margin-top: 100px;
-    /* Adjust this value to move it further down */
 }
 
 .hr {
@@ -536,7 +533,7 @@ content,
     justify-content: space-between;
     margin: 20px;
     width: 400px;
-    height: 650px;
+    height: 500px;
     background-color: var(--card-background);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -555,13 +552,13 @@ content,
     margin-left: 20px;
     margin-right: 30px;
     font-size: 20px;
-    text-align: justify;
+    text-align:left;
     flex-grow: 1;
 }
 
 .card ul {
     margin-top: 10px;
-    padding-bottom: 30%;
+    padding-bottom: 20%;
     margin-bottom: 20px;
     border-radius: 10px;
     background-color: var(--aside-background);
@@ -569,6 +566,7 @@ content,
 
 .card:hover {
     transform: translateY(-5px);
+    transform: scale(1.1);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
