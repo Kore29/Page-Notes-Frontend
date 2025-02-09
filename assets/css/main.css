@@ -70,12 +70,12 @@ body, .sidebar, .navbar, .nav-btn {
 .nav-btn {
     align-items: center;
     appearance: none;
-    background-color: #FCFCFD;
+    background-color: var(--navbar-btn-background);
     border-radius: 4px;
     border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-shadow: rgba(68, 68, 68, 0.4) 0 2px 4px, rgba(35, 35, 35, 0.3) 0 7px 13px -3px, var(--navbar-btn-shadow) 0 -3px 0 inset;
     box-sizing: border-box;
-    color: #36395A;
+    color: var(--navbar-btn-color);
     cursor: pointer;
     display: inline-flex;
     font-family: "JetBrains Mono", monospace;
@@ -99,16 +99,16 @@ body, .sidebar, .navbar, .nav-btn {
 }
 
 .nav-btn:focus {
-    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-shadow: var(--navbar-btn-shadow) 0 0 0 1.5px inset, rgba(51, 51, 51, 0.4) 0 2px 4px, rgba(44, 44, 44, 0.3) 0 7px 13px -3px, var(--navbar-btn-shadow) 0 -3px 0 inset;
 }
 
 .nav-btn:hover {
-    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-shadow: rgba(46, 46, 46, 0.4) 0 4px 8px, rgba(50, 50, 50, 0.3) 0 7px 13px -3px, var(--navbar-btn-shadow) 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
 .nav-btn:active {
-    box-shadow: #D6D6E7 0 3px 7px inset;
+    box-shadow: var(--navbar-btn-shadow) 0 3px 7px inset;
     transform: translateY(2px);
 }
 
@@ -121,6 +121,49 @@ body, .sidebar, .navbar, .nav-btn {
 .div-btn-n button, .div-btn-l button {
     margin: 30px;
 }
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--navbar-theme-switch-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 20px;
+    border: none;
+}
+
+#theme-switch img {
+    height: 35px;
+    transition: filter 0.3s ease;
+    border: none;
+    outline: none; 
+}
+
+#theme-switch img:hover {
+    cursor: pointer;
+}
+
+#theme-switch img:first-child {
+    filter: invert(1);
+}
+
+#theme-switch img:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch img:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch img:last-child {
+    display: block;
+    filter: invert(1);
+}
+
 
 /**Todo el Asidebar here**/
 
@@ -201,10 +244,14 @@ body, .sidebar, .navbar, .nav-btn {
     --code-background: #363A3F;
     
     --navbar-background: rgb(56, 56, 56);
-    --navbar-btn-background: linear-gradient(180deg, rgb(63, 64, 125), rgb(111, 113, 222));
+    --navbar-theme-switch-background: rgb(73, 73, 73);
+
+    --navbar-btn-background: #575757;
+    --navbar-btn-color: #b1b1b1;
+    --navbar-btn-shadow: #272727;
 }
 
-[data-theme="white"] {
+.darkmode {
     --background-color: rgb(241, 230, 214);
     --h1-color: rgb(66, 66, 66);  
 
@@ -222,13 +269,16 @@ body, .sidebar, .navbar, .nav-btn {
     --code-background: #ffffff;
     
     --navbar-background: #d1c9be;
-    --navbar-btn-background: linear-gradient(180deg,#ffcc89,#d8860b);
+    --navbar-theme-switch-background: rgb(118, 118, 118);
+    
+    --navbar-btn-background: #FCFCFD;
+    --navbar-btn-color: #36395A;
+    --navbar-btn-shadow: #D6D6E7;
 }
 
 /**Principal**/
 
 #hr-main {
-
     border-radius: 10px;
     border: none;
     height: 8px;

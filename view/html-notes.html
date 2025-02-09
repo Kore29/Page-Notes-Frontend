@@ -5,13 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=0.8" />
     <title>Notes Frontend - HTML</title>
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/darkmode.css">
 
+    <link rel="stylesheet" href="../assets/css/main.css" />
     <link id="highlight-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
 </head>
 
-<body>
+<body class="">
     <nav>
         <ul class="navbar">
             <div class="div-btn-n">
@@ -21,8 +20,10 @@
                 <button class="nav-btn" type="button" onclick="location.href='exercices.html'">EJERCICIOS</button>
             </div>
             <div class="div-btn-l">
-                <input type="checkbox" id="darkmode-toggle"></input>
-                <label for="darkmode-toggle"></label>
+                <button id="theme-switch">
+                    <img src="../assets/img/dark-icon.png" alt="icon-switch">
+                    <img src="../assets/img/light-icon.png" alt="icon-switch">
+                </button>
             </div>
         </ul>
     </nav>
@@ -981,7 +982,7 @@ El resultado de 24&lt;sup&gt;2&lt;/sup&gt; es el valor de X&lt;sub&gt;a&lt;/sub&
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <script src="../assets/js/darkmode.js"></script>
+    <script type="text/javascript" src="../assets/js/darkmode.js" defer></script>
 
 </body>
 
